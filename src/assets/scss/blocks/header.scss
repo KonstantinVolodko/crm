@@ -1,3 +1,78 @@
 .header {
-    
+    background: black;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    padding-top: 1.7rem;
+    padding-bottom: 1.8rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
+    justify-content: space-between;
+
+    .menuItemsContainer {
+        display: flex;
+        align-items: center;
+
+        .menuItemsHelper {
+            display: flex;
+            gap: 2.4rem;
+        }
+
+        .menuItem {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: #FFFFFF;
+        }
+        
+        .btnCall {
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: center;
+            color: #3A3A3B;
+            background: #FFFFFF;
+            border-radius: 0.6rem;
+            border-top: 0.1rem solid #3A3A3B;
+            border-left: 0.1rem solid #3A3A3B;
+            border-bottom: 0.3rem solid #3A3A3B;
+            border-right: 0.3rem solid #3A3A3B;
+            padding: 1rem 2rem;
+            margin-left: 2rem;
+            margin-right: 0.5rem;
+        }
+
+        .btnInit {
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: center;
+            color: #3A3A3B;
+            padding: 1rem 2rem;
+            background: #9FF612;
+            border-top: 0.1rem solid #F86247;
+            border-left: 0.1rem solid #F86247;
+            border-bottom: 0.3rem solid #F86247;
+            border-right: 0.3rem solid #F86247;
+            border-radius: 0.6rem;
+            margin-right: 0.5rem;
+        }
+
+        .burgerBtn {
+            background: #F86247;
+            border-top: 0.1rem solid #9FF612;
+            border-left: 0.1rem solid #9FF612;
+            border-bottom: 0.3rem solid #9FF612;
+            border-right: 0.3rem solid #9FF612;
+            border-radius: 0.6rem;
+            padding: 0.8rem 1.4rem;
+
+            svg {
+                width: 2.4rem;
+                height: 2rem;
+            }
+        }
+        
+    }
 }

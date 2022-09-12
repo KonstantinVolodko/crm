@@ -1,6 +1,9 @@
 .footer {
     background-image: url(../images/footer/footerBg.png);
     background-color: #3A3A3B;
+    padding-top: 15rem;
+    padding-left: 18rem;
+    padding-right: 18rem;
 
     .title {
         font-family: 'Mulish';
@@ -10,6 +13,8 @@
         line-height: 9rem;
         text-transform: uppercase;
         color: #FFFFFF;
+        width: 80.4rem;
+        margin-bottom: 7rem;
 
         span {
             color: #9FF612;
@@ -17,10 +22,24 @@
     }
 
     .cartContainer {
+        display: flex;
+        gap: 9.2rem;
+
+        .frame {
+            border-radius: 2.4rem;
+            width: 71.2rem;
+            height: 30rem;
+        }
 
         .contactsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
 
             .contacts {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
 
                 p {
                     font-family: 'Nunito Sans';
@@ -40,10 +59,87 @@
                 line-height: 2rem;
                 text-align: center;
                 color: #FFFFFF;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-right: 2rem;
+                padding-left: 2rem;
 
                 background: #124BF6;
-                border: 0.1rem solid #F86247;
+                border-bottom: 0.3rem solid #F86247;
+                border-right: 0.3rem solid #F86247;
+                border-top: 0.1rem solid #F86247;
+                border-left: 0.1rem solid #F86247;
                 border-radius: 0.6rem;
+                
+            }
+        }
+    }
+
+    .adres {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        color: #FFFFFF;
+        width: 64.4rem;
+        margin-top: 5rem;
+        margin-bottom: 7rem;
+    }
+
+    .socialNetworkContainer {
+        border: 0.1rem solid #9FF612;
+        border-radius: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 3rem;
+        padding-right: 4.2rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        .btnContainer {
+            display: flex;
+            gap: 2rem;
+
+            button {
+                background: #F86247;
+                border-top: 0.1rem solid #9FF612;
+                border-left: 0.1rem solid #9FF612;
+                border-right: 0.4rem solid #9FF612;
+                border-bottom: 0.4rem solid #9FF612;
+                border-radius: 1.2rem;
+                padding: 1.8rem;
+
+                svg {
+                    width: 4rem;
+                    height: 4rem;
+                    fill: #FFFFFF;
+                }
+            }
+        }
+
+        .socialTitle {
+            font-family: 'Nunito Sans';
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .textTitle {
+                
+                font-style: normal;
+                font-weight: 800;
+                font-size: 2.4rem;
+                line-height: 3.3rem;
+                color: #9FF612;
+            }
+
+            .textSubtitle {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                color: #FFFFFF;
+                width: 45.4rem;
             }
         }
     }

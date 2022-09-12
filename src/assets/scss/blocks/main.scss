@@ -1,4 +1,102 @@
-
 .main {
-    
+    .nearHeaderContainer {
+        background: url(../images/nearHeaderContainer/bgArrows.png);
+        background-color: #144CF6;
+        padding-top: 8.7rem;
+        padding-left: 17.8rem;
+        padding-bottom: 15rem;
+        .mainTitle {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 9.6rem;
+            line-height: 12rem;
+            text-transform: uppercase;
+            color: #FFFFFF;
+
+            span {
+                color: #9FF612;
+            }
+        }
+
+        .btnContainer {
+            display: flex;
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            align-items: flex-start;
+            margin-top: 4rem;
+
+            .more {
+                background: #F86247;
+                border: 1px solid #9FF612;
+                border-radius: 0.6rem;
+                border-top: 0.1rem solid #9FF612;
+                border-left: 0.1rem solid #9FF612;
+                border-bottom: 0.3rem solid #9FF612;
+                border-right: 0.3rem solid #9FF612;
+                font-weight: 600;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                text-align: center;
+                color: #FFFFFF;
+                padding: 1rem 2rem;
+            }
+
+            .demo {
+                background: #FFFFFF;
+                border-radius: 0.6rem;
+                border-top: 0.1rem solid #3A3A3B;
+                border-left: 0.1rem solid #3A3A3B;
+                border-bottom: 0.3rem solid #3A3A3B;
+                border-right: 0.3rem solid #3A3A3B;
+                font-weight: 600;
+                font-size: 1.6rem;
+                line-height: 2rem;
+                text-align: center;
+                color: #3A3A3B;
+                margin-left: 1rem;
+                padding: 1rem 2rem;
+            }
+
+            div {
+                font-weight: 400;
+                font-size: 2.4rem;
+                line-height: 3.3rem;
+                color: #FFFFFF;
+                width: 31.9rem;
+                margin-left: 8.4rem;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .formContainer {
+
+            .verticalContainer {
+
+                .vertText {
+                    display: flex;
+                    flex-direction: column;
+                    p {
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        line-height: 2.2rem;
+                        color: #3A3A3B;
+                        writing-mode: vertical-lr;
+                        transform: rotate(180deg);
+                    }
+
+                    svg {
+                        fill: #3A3A3B;
+                        width: 1.6rem;
+                        height: 2.6rem;
+                    }
+                }
+            }
+        }
+    }
 }
