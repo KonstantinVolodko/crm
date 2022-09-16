@@ -1372,8 +1372,6 @@
     }
 
     .more {
-        // background-color: #3A3A3B;
-        // background-image: url(../images/footer/footerBg.png);
         background: url(../images/more/arrowBg.png) no-repeat bottom right, url(../images/footer/footerBg.png), #3A3A3B ;
         padding-bottom: 15rem;
 
@@ -1587,8 +1585,7 @@
                         gap: 1rem;
 
                         span {
-                            width: 4rem;
-                            height: 4rem;
+                            padding: 0.7rem 1.5rem;
                             border: #9FF612 solid 0.2rem;
                             border-radius: 50%;
                             font-size: 2rem;
@@ -1639,6 +1636,392 @@
                     margin-top: 3rem;
                 }
             }
+        }
+    }
+
+    .steps {
+        margin-top: 15rem;
+        padding-left: 11rem;
+
+        .stepsTitle {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 7.2rem;
+            line-height: 9rem;
+            text-transform: uppercase;
+            color: #3A3A3B;
+            width: 66.8rem;
+        }
+
+        .stepsSubtitle {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 2.4rem;
+            line-height: 3.3rem;
+            color: #124BF6;
+            margin-top: 5rem;
+        }
+
+        .stepsArrowsContainer {
+            display: flex;
+            margin-top: 3rem;
+            align-items: center;
+
+            .stepsArrowsText {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                color: #3A3A3B;
+                width: 41.5rem;
+                margin-right: 13.7rem;
+            }
+
+            .arrowsImgContainer {
+                display: flex;
+                gap: 2rem;
+                margin-right: 3rem;
+
+                button {
+                    background: none;
+                    border: none;
+                }
+            }
+
+            .listLeftContainer {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                color: #3A3A3B;
+            }
+        }
+
+        .mySwiper {
+            margin-top: 5rem;
+
+            .slide1 {
+                padding: 5rem;
+                box-shadow: 0px 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+                border-radius: 2.4rem;
+                background: url(../images/steps/letterC.png) no-repeat right top, #124BF6;
+
+                .slideNumber {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 7.2rem;
+                    line-height: 9rem;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    margin-bottom: 6.1rem;
+                }
+
+                .slideTitle {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 3.2rem;
+                    line-height: 4.4rem;
+                    color: #FFFFFF;
+                }
+
+                button {
+                    margin-top: 6.5rem;
+                    width: 100%;
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    text-align: center;
+                    color: #FFFFFF;
+                    padding: 1rem 0;
+                    background: #F86247;
+                    border-radius: 0.6rem;
+                    border-top: 0.1rem solid #9FF612;
+                    border-left: 0.1rem solid #9FF612;
+                    border-bottom: 0.3rem solid #9FF612;
+                    border-right: 0.3rem solid #9FF612;
+                }
+            }
+
+            .slide2 {
+                background: url(../images/steps/letterD.png) no-repeat right top, #FFFFFF;
+                border: 0.1rem solid #DADADB;
+                border-radius: 2.4rem;
+                padding-top: 5rem;
+                padding-left: 5rem;
+                padding-bottom: 6.9rem;
+                padding-right: 5rem;
+                
+
+                .slideNumber {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 7.2rem;
+                    line-height: 9rem;
+                    text-transform: uppercase;
+                    color: #124BF6;
+                    margin-bottom: 6.1rem;
+                }
+
+                .slideTitle {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 3.2rem;
+                    line-height: 4.4rem;
+                    color: #3A3A3B;
+                }
+            }
+
+            .slide3 {
+                background: url(../images/steps/letterE.png) no-repeat right top, #F86247;
+                border: 0.1rem solid #F86247;
+                border-radius: 2.4rem;
+                padding: 5rem;
+                
+                .slideNumber {
+                    display: flex;
+                    margin-bottom: 6.2rem;
+                }
+
+                .slideTitle {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                    color: #FFFFFF;
+                    margin-bottom: 2rem;
+                }
+
+                .slideText {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                    color: #FFFFFF;
+                }
+            }
+
+            .slide4 {
+                background: url(../images/steps/letterL.png) no-repeat left top, #3A3A3B;
+                border-radius: 2.4rem;
+                padding: 5rem;
+                // display: flex;
+                width: max-content;
+
+                .slideNumber {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 7.2rem;
+                    line-height: 9rem;
+                    text-transform: uppercase;
+                    color: #9FF612;
+                    margin-bottom: 4.8rem;
+                }
+
+                .slideTitle {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                    color: #FFFFFF;
+                    margin-bottom: 1.3rem;
+                    width: 20rem;
+                }
+
+                .greenContainer {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                    color: #9FF612;
+                    width: 35rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    li {
+                        position: relative;
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.8rem;
+                        line-height: 2.5rem;
+                        color: #FFFFFF;
+                        width: 35rem;
+                    }
+
+                    li:before {
+                        content: "";
+                        position: absolute;
+                        width: 1rem;
+                        height: 1rem;
+                        background: #F86247;
+                        top: 0.7rem;
+                        left: -2rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+            .slide5 {
+                padding: 5rem;
+                background: url(../images/steps/letterK.png) no-repeat right top, #FFFFFF;
+                border: 0.1rem solid #DADADB;
+                border-radius: 2.4rem;
+
+                .slideNumber {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 7.2rem;
+                    line-height: 9rem;
+                    text-transform: uppercase;
+                    color: #124BF6;
+                    margin-bottom: 2.4rem;
+                }
+
+                .slideTitle {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                    color: #3A3A3B;
+                    margin-bottom: 2rem;
+                }
+
+                .slideText {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                    color: #3A3A3B;
+                }
+            }
+
+            .slide6 {
+                padding: 5rem;
+                background: url(../images/steps/letterA.png) no-repeat right top, #F86247;
+                border-radius: 2.4rem;
+
+                .slideNumber {
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 7.2rem;
+                    line-height: 9rem;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    margin-bottom: 4.2rem;
+                }
+
+                .slideTitle {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 2.8rem;
+                    line-height: 3.8rem;
+                    color: #FFFFFF;
+                    margin-bottom: 4rem;
+                }
+
+                .slideText {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    line-height: 2.7rem;
+                    color: #FFFFFF;
+                    margin-bottom: 3.5rem;
+                }
+
+                button {
+                    padding: 1rem 0;
+                    width: 100%;
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                    line-height: 2rem;
+                    color: #FFFFFF;
+                    background: #124BF6;
+                    border-radius: 0.6rem;
+                    border-top: 0.1rem solid #9FF612;
+                    border-left: 0.1rem solid #9FF612;
+                    border-right: 0.3rem solid #9FF612;
+                    border-bottom: 0.3rem solid #9FF612;
+                }
+            }
+        }
+    }
+
+    .cta2 {
+        background-image: url(../images/cta2/cta2Bg.png);
+        padding-top: 11.5rem;
+        padding-left: 18rem;
+        padding-bottom: 13.2rem;
+
+        .cta2Title {
+            font-family: 'Mulish';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 4.8rem;
+            line-height: 6rem;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            width: 69.1rem;
+            margin-bottom: 3rem;
+
+            span {
+                color: #9FF612;
+            }
+        }
+
+        .cta2Subtitle {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 3.3rem;
+            color: #FFFFFF;
+            margin-bottom: 4rem;
+        }
+
+        button {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 3.4rem;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            background: #F86247;
+            border-top: 0.1rem solid #9FF612;
+            border-left: 0.1rem solid #9FF612;
+            border-right: 0.3rem solid #9FF612;
+            border-bottom: 0.3rem solid #9FF612;
+            border-radius: 0.6rem;
         }
     }
 }
