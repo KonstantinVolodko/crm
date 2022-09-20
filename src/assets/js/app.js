@@ -17,9 +17,18 @@ let swiper = new Swiper(".mySwiper", {
 let swiper2 = new Swiper(".tarifSwiper", {
   slidesPerView: 3.3,
   spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: ".tarifArrowRight",
+    prevEl: ".tarifArrowLeft",
+  },
+});
+
+let swiper3 = new Swiper(".helpSwiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".helpArrowRight",
+    prevEl: ".helpArrowLeft",
   },
 });
   
