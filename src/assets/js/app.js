@@ -31,6 +31,15 @@ let swiper3 = new Swiper(".helpSwiper", {
     prevEl: ".helpArrowLeft",
   },
 });
+
+let swiper4 = new Swiper(".keysesSwiper", {
+  slidesPerView: 2.2,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: ".keysesArrowLeft",
+    prevEl: ".keysesArrowRight",
+  },
+});
   
 })
 
