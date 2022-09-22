@@ -1,5 +1,4 @@
 .header {
-    background: black;
     font-family: 'Nunito Sans';
     font-style: normal;
     display: flex;
@@ -9,6 +8,8 @@
     padding-left: 18rem;
     padding-right: 18rem;
     justify-content: space-between;
+    position: absolute;
+    width: 100%;
 
     .menuItemsContainer {
         display: flex;
