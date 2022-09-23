@@ -27,6 +27,11 @@
             font-style: normal;
             align-items: flex-start;
             margin-top: 4rem;
+            overflow: hidden;
+
+            .hiddenText {
+
+            }
 
             .more {
                 background: #F86247;
@@ -75,6 +80,35 @@
         }
 
         .formContainer {
+            .vertText {
+                display: flex;
+                flex-direction: column;
+                background: #9FF612;
+                padding-left: 2.2rem;
+                padding-top: 6.5rem;
+                padding-bottom: 6.5rem;
+                border-radius: 2.4rem;
+                padding-right: 6rem;
+                position: absolute;
+                align-items: end;
+                p {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    color: #3A3A3B;
+                    writing-mode: vertical-lr;
+                    transform: rotate(180deg);
+                }
+
+                svg {
+                    fill: #3A3A3B;
+                    width: 2.1rem;
+                    height: 3.7rem;
+                }
+            }
+            
 
             .verticalContainer {
                 display: flex;
@@ -82,34 +116,7 @@
                 margin-top: 15.8rem;
                 
 
-                .vertText {
-                    display: flex;
-                    flex-direction: column;
-                    background: #9FF612;
-                    padding-left: 2.2rem;
-                    padding-top: 6.5rem;
-                    padding-bottom: 6.5rem;
-                    border-radius: 2.4rem;
-                    padding-right: 6rem;
-                    position: absolute;
-                    align-items: end;
-                    p {
-                        font-family: 'Nunito Sans';
-                        font-style: normal;
-                        font-weight: 700;
-                        font-size: 1.6rem;
-                        line-height: 2.2rem;
-                        color: #3A3A3B;
-                        writing-mode: vertical-lr;
-                        transform: rotate(180deg);
-                    }
-
-                    svg {
-                        fill: #3A3A3B;
-                        width: 2.1rem;
-                        height: 3.7rem;
-                    }
-                }
+                
             }
 
             .recallContainer {

@@ -41,73 +41,70 @@ let swiper4 = new Swiper(".keysesSwiper", {
   },
 });
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-// gsap.to(".marqSpan", {
+
+// gsap.to('.marqSpan', {
+//   x: 1500,
+//   duration: 3,
 //   scrollTrigger: {
 //     trigger: ".marqSpan",
 //     start: "top 80%",
 //     end: "top 30%",
+//     toggleActions: 'restart reverse none none',
 //     scrub: true,
-//     toggleActions: "restart none none none",
+
 //   }
 // })
 
-// const tl = gsap.timeline({
+// gsap.to('.siteLineSpan', {
+//   x: -3000,
+//   duration: 3,
 //   scrollTrigger: {
-//     trigger: '.blueBox',
-//     markers: true,
-//     start: 'top 80%',
-//     end: 'top 10%',
+//     trigger: ".siteLineSpan",
+//     start: "top 80%",
+//     end: "top 30%",
+//     toggleActions: 'restart reverse none none',
 //     scrub: true,
+
 //   }
-// });
+// })
+
+// gsap.to('.businessLineSpan', {
+//   x: 1000,
+//   duration: 3,
+//   scrollTrigger: {
+//     trigger: ".businessLineSpan",
+//     start: "top 80%",
+//     end: "top 30%",
+//     toggleActions: 'restart reverse none none',
+//     scrub: true,
+
+//   }
+// })
 
 
-// tl.to('.blueBox', {x: 500, duration: 5})
-//   .to('.blueBox', {y: 200, duration: 3})
-//   .to(".blueBox", {x: 0, duration: 2})
+let benefitsContainer = document.querySelector('.benefitsContainer')
+let nearHeaderContainer = document.querySelector('.nearHeaderContainer')
+let mainTitle = document.querySelector('.mainTitle')
 
-gsap.to('.marqSpan', {
-  x: 1500,
-  duration: 3,
-  scrollTrigger: {
-    trigger: ".marqSpan",
-    start: "top 80%",
-    end: "top 30%",
-    toggleActions: 'restart reverse none none',
-    scrub: true,
+const tl = gsap.timeline();
 
-  }
+tl.from('.mainTitle', {x: '-200%'})
+tl.from('.hiddenText', {x: '600%', duration: 1})
+tl.from('.more', {x: '-100%', duration: 1})
+tl.from('.demo', {opacity: 0, y: 100, duration: 1})
+tl.from('.verticalContainer', {opacity: 0, y: 200, duration: 1})
+tl.from('.vertText', {x: '-300%',})
+
+ScrollTrigger.create({
+  animation: tl,
+  trigger: '.mainTitle',
+  start: 'top top',
+  end: "1000px",
+  scrub: true,
+  pin: '.nearHeaderContainer',
 })
-
-gsap.to('.siteLineSpan', {
-  x: -3000,
-  duration: 3,
-  scrollTrigger: {
-    trigger: ".siteLineSpan",
-    start: "top 80%",
-    end: "top 30%",
-    toggleActions: 'restart reverse none none',
-    scrub: true,
-
-  }
-})
-
-gsap.to('.businessLineSpan', {
-  x: 1000,
-  duration: 3,
-  scrollTrigger: {
-    trigger: ".businessLineSpan",
-    start: "top 80%",
-    end: "top 30%",
-    toggleActions: 'restart reverse none none',
-    scrub: true,
-
-  }
-})
-
-
   
 })
 
