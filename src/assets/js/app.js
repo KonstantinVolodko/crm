@@ -84,10 +84,6 @@ let swiper4 = new Swiper(".keysesSwiper", {
 // })
 
 
-let benefitsContainer = document.querySelector('.benefitsContainer')
-let nearHeaderContainer = document.querySelector('.nearHeaderContainer')
-let mainTitle = document.querySelector('.mainTitle')
-
 const tl = gsap.timeline();
 
 tl.from('.mainTitle', {x: '-200%'})
@@ -104,6 +100,34 @@ ScrollTrigger.create({
   end: "1000px",
   scrub: true,
   pin: '.nearHeaderContainer',
+})
+
+const tl2 = gsap.timeline();
+
+tl2.to('.orangeSpan', {y: 200, color: '#F86247'})
+tl2.to('.blackText1', {y: 200, color: '#3A3A3B'})
+tl2.to('.blackText2', {y: 200, color: '#3A3A3B'})
+
+ScrollTrigger.create({
+  animation: tl2,
+  trigger: '.benefitsTitle',
+    start: "top 80%",
+    end: "top 30%",
+  scrub: true,
+})
+
+const tl3 = gsap.timeline();
+
+tl3.from('.ctaTitle', {x: '-50%', duration: 2})
+tl3.from('.ctaSubtitle', {opacity: 0, y: 100, duration: 1})
+tl3.from('.btnCta1', {x: '-200%'})
+
+ScrollTrigger.create({
+  animation: tl3,
+  trigger: '.cta1',
+  start: "top 60%",
+    end: "top 20%",
+  scrub: true,
 })
   
 })

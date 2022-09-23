@@ -259,11 +259,6 @@
     }
 
     .benefitsContainer {
-        .blueBox {
-            background-color: #124BF6;
-            width: 200px;
-            height: 200px;
-        }
 
         .benefitsTitle {
             padding-left: 18rem;
@@ -274,10 +269,14 @@
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #3A3A3B;
+            color: #DADADB;
+
+            .orangeSpan {
+
+            }
 
             span {
-                color: #F86247;
+                color: #DADADB;
             }
         }
 
@@ -297,29 +296,29 @@
         .algoritmContainer {
             margin-top: 7rem;
 
-            // .algoritmLine {
-            //     background-image: url(../images/footer/footerBg.png);
-            //     background-color: #3A3A3B;
-            //     font-family: 'Mulish';
-            //     font-style: normal;
-            //     font-weight: 900;
-            //     font-size: 7.2rem;
-            //     line-height: 9rem;
-            //     text-transform: uppercase;
-            //     color: #FFFFFF;
-            //     white-space: nowrap;
-            //     overflow: hidden;
-            //     transform: rotate(-1deg);
-            //     margin-right: 0.1rem;
+            .algoritmLine {
+                background-image: url(../images/footer/footerBg.png);
+                background-color: #3A3A3B;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 7.2rem;
+                line-height: 9rem;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                white-space: nowrap;
+                overflow: hidden;
+                transform: rotate(-1deg);
+                margin-right: 0.1rem;
 
 
-            //     span {
-            //         color: #9FF612;
-            //     }
+                span {
+                    color: #9FF612;
+                }
 
                 
                      
-            // }
+            }
 
             .marquee{
                 background-image: url(../images/footer/footerBg.png);
@@ -339,7 +338,7 @@
                  
                 .marquee .marqSpan {
                 display:inline-block;
-                transform: translateX(-83%);
+                padding-left: 100%;
                 -webkit-animation: marquee 10s infinite linear;
                 animation: marquee 20s infinite linear;
 
@@ -348,14 +347,14 @@
                 }
                 }
                  
-                // @-webkit-keyframes marquee {
-                // 0%{-webkit-transform: translate(0, 0);}
-                // 100%{-webkit-transform: translate(-100%, 0);}
-                // }
-                // @keyframes marquee{
-                // 0%{transform: translate(0, 0);}
-                // 100%{transform: translate(-100%, 0)}
-                // }
+                @-webkit-keyframes marquee {
+                0%{-webkit-transform: translate(0, 0);}
+                100%{-webkit-transform: translate(-100%, 0);}
+                }
+                @keyframes marquee{
+                0%{transform: translate(0, 0);}
+                100%{transform: translate(-100%, 0)}
+                }
 
             .requestContainer {
                 margin-top: 5.6rem;
@@ -438,23 +437,23 @@
                 .siteLineSpan {
                     
                         display:inline-block;
-                        transform: translateX(110%);
-                        // -webkit-animation: marquee 10s infinite linear;
-                        // animation: marquee 20s infinite linear;
+                        padding-left: 100%;
+                        -webkit-animation: siteLine 10s infinite linear;
+                        animation: siteLine 20s infinite linear;
         
                         span {
                             color: #9FF612;
                         }
                         
                          
-                        // @-webkit-keyframes siteLine {
-                        // 0%{-webkit-transform: translate(0, 0);}
-                        // 100%{-webkit-transform: translate(-100%, 0);}
-                        // }
-                        // @keyframes siteLine{
-                        // 0%{transform: translate(0, 0);}
-                        // 100%{transform: translate(-100%, 0)}
-                        // }
+                        @-webkit-keyframes siteLine {
+                        0%{-webkit-transform: translate(0, 0);}
+                        100%{-webkit-transform: translate(-100%, 0);}
+                        }
+                        @keyframes siteLine{
+                        0%{transform: translate(0, 0);}
+                        100%{transform: translate(-100%, 0)}
+                        }
                 }
 
             }
@@ -537,7 +536,7 @@
 
                 .businessLineSpan {
                     display:inline-block;
-                        transform: translateX(-110%);
+                        padding-left: 100%;
                         -webkit-animation: marquee 10s infinite linear;
                         animation: marquee 20s infinite linear;
         
@@ -546,14 +545,14 @@
                         }
                         
                          
-                        // @-webkit-keyframes siteLine {
-                        // 0%{-webkit-transform: translate(0, 0);}
-                        // 100%{-webkit-transform: translate(-100%, 0);}
-                        // }
-                        // @keyframes siteLine{
-                        // 0%{transform: translate(0, 0);}
-                        // 100%{transform: translate(-100%, 0)}
-                        // }
+                        @-webkit-keyframes siteLine {
+                        0%{-webkit-transform: translate(0, 0);}
+                        100%{-webkit-transform: translate(-100%, 0);}
+                        }
+                        @keyframes siteLine{
+                        0%{transform: translate(0, 0);}
+                        100%{transform: translate(-100%, 0)}
+                        }
                 }
             }
 
@@ -1319,7 +1318,7 @@
             text-transform: uppercase;
             color: #FFFFFF;
 
-            span {
+            .ctaBlackText {
                 color: #3A3A3B;
             }
         }
