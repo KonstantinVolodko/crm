@@ -235,7 +235,7 @@ tl11.from('.img3', {y: -750, x: 500}),
 tl11.from('.img4', {y: -700, x: 200}),
 tl11.from('.img5', {y: -650}),
 tl11.from('.img6', {y: -650, x: -200}),
-tl3.from('.cta2Subtitle', {opacity: 0, y: 100})
+tl3.from('.cta2Subtitle', {opacity: 0, y: 100}),
 tl11.from('.img7', {y: -600}),
 tl11.from('.img8', {y: -600, x: -200}),
 tl11.from('.img9', {y: -500, x: 200}),
