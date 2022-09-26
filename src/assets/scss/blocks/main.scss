@@ -1552,7 +1552,7 @@
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #3A3A3B;
+            color: #DADADB;
             padding-left: 18rem;
         }
 
@@ -1569,7 +1569,7 @@
                 font-weight: 700;
                 font-size: 2.4rem;
                 line-height: 3.3rem;
-                color: #124BF6;
+                color: #DADADB;
                 width: 34.5rem;
             }
 
@@ -1652,9 +1652,11 @@
         }
     }
 
-    .more {
-        background: url(../images/more/arrowBg.png) no-repeat bottom right, url(../images/footer/footerBg.png), #3A3A3B ;
+    .more2 {
+        background: url(../images/footer/footerBg.png), #3A3A3B ;
         padding-bottom: 15rem;
+        position: relative;
+        overflow: hidden;
 
         .moreTitle {
             font-family: 'Mulish';
@@ -1663,7 +1665,7 @@
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #616161;
             text-align: left;
             padding-left: 18rem;
             @include breakpoint($mm-bp) {
@@ -1731,6 +1733,13 @@
                 margin-top: 3rem;
 
                 .leftContainer {
+
+                    .starContainer {
+                        position: relative;
+                        img {
+                            position: absolute;
+                        }
+                    }
 
                     .teachLeftTitle {
                         font-family: 'Nunito Sans';
@@ -1829,7 +1838,11 @@
 
                 .starsContainer {
                     display: flex;
-                    gap: 2.4rem;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                    }
                 }
 
                 .updateLeftTitle {
@@ -1897,9 +1910,14 @@
 
             .rightContainer {
                 
+                
                 .starsContainer {
                     display: flex;
-                    gap: 2.4rem;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                    }
                 }
 
                 .updateRightTitle {
@@ -1923,6 +1941,14 @@
                     width: 46.2rem;
                     margin-top: 3rem;
                 }
+
+                .helpAnimateArrowBg {
+                    stroke: #F9F9F9;
+                    position: absolute;
+                    bottom: 0;
+                    width: 58rem;
+                    height: 52rem;
+                }
             }
         }
     }
@@ -1938,7 +1964,7 @@
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #3A3A3B;
+            color: #DADADB;
             width: 66.8rem;
         }
 
@@ -1948,7 +1974,7 @@
             font-weight: 800;
             font-size: 2.4rem;
             line-height: 3.3rem;
-            color: #124BF6;
+            color: #DADADB;
             margin-top: 5rem;
         }
 
@@ -2264,53 +2290,129 @@
     }
 
     .cta2 {
-        background: url(../images/cta2/days.png) no-repeat 90% bottom, url(../images/cta2/cta2Bg.png);
-        padding-top: 11.5rem;
+        background: url(../images/cta2/cta2Bg.png) no-repeat right, #3a3a3b;
+        
         padding-left: 18rem;
-        padding-bottom: 13.2rem;
 
-        .cta2Title {
-            font-family: 'Mulish';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 4.8rem;
-            line-height: 6rem;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            width: 69.2rem;
-            margin-bottom: 3rem;
+        padding-right: 18rem;
+        display: flex;
+        justify-content: space-between;
 
-            span {
-                color: #9FF612;
+        .ctaLeft {
+            padding-bottom: 13.2rem;
+            padding-top: 11.5rem;
+
+            .cta2Title {
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 4.8rem;
+                line-height: 6rem;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                width: 69.2rem;
+                margin-bottom: 3rem;
+    
+                // span {
+                //     color: #9FF612;
+                // }
+            }
+    
+            .cta2Subtitle {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 2.4rem;
+                line-height: 3.3rem;
+                color: #FFFFFF;
+                margin-bottom: 4rem;
+            }
+    
+            button {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 2.4rem;
+                line-height: 3.4rem;
+                text-align: center;
+                color: #FFFFFF;
+                padding: 1rem 2rem;
+                background: #F86247;
+                border-top: 0.1rem solid #9FF612;
+                border-left: 0.1rem solid #9FF612;
+                border-right: 0.3rem solid #9FF612;
+                border-bottom: 0.3rem solid #9FF612;
+                border-radius: 0.6rem;
             }
         }
 
-        .cta2Subtitle {
-            font-family: 'Nunito Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 2.4rem;
-            line-height: 3.3rem;
-            color: #FFFFFF;
-            margin-bottom: 4rem;
+        .ctaRight {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+            }
+
+            .img1 {
+                bottom: 0;
+                right: 40%;
+            }
+
+            .img2 {
+                bottom: 12%;
+                left: 26%;
+            }
+
+            .img3 {
+                bottom: 0%;
+                right: 18%;
+            }
+
+            .img4 {
+                bottom: 15%;
+                right: 21%;
+            }
+
+            .img5 {
+                bottom: 24.4%;
+                right: 31%;
+            }
+
+            .img6 {
+                left: 27%;
+                bottom: 23.3%;
+            }
+
+            .img7 {
+                bottom: 37%;
+                right: 19%;
+            }
+
+            .img8 {
+                bottom: 43.4%;
+                left: 31.5%;
+            }
+
+            .img9 {
+                top: 33.5%;
+                left: 44%;
+            }
+
+            .img10 {
+                top: 20%;
+                left: 39%;
+            }
+
+            .img11 {
+                top: 8%;
+                left: 45%;
+            }
+
         }
 
-        button {
-            font-family: 'Nunito Sans';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 2.4rem;
-            line-height: 3.4rem;
-            text-align: center;
-            color: #FFFFFF;
-            padding: 1rem 2rem;
-            background: #F86247;
-            border-top: 0.1rem solid #9FF612;
-            border-left: 0.1rem solid #9FF612;
-            border-right: 0.3rem solid #9FF612;
-            border-bottom: 0.3rem solid #9FF612;
-            border-radius: 0.6rem;
-        }
+        
     }
 
     .gift {
