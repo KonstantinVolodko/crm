@@ -285,12 +285,15 @@
             font-style: normal;
             font-weight: 400;
             font-size: 1.6rem;
-            line-height: 2.2rem;
+            line-height: 2rem;
             color: #3A3A3B;
-            width: 42.7rem;
+            width: 22.6%;
             margin-left: auto;
-            margin-right: auto;
-            margin-top: 3rem;
+            margin-right: 27.5%;
+            margin-top: 5rem;
+            p {
+                padding-top: 2rem;
+            }
         }
 
         .algoritmContainer {
@@ -357,11 +360,15 @@
                 }
 
             .requestContainer {
-                margin-top: 5.6rem;
-                display: flex;
-                gap: 11.6rem;
-                justify-content: center;
 
+                margin-top: 7rem;
+                display: flex;
+                gap: 11rem;
+                justify-content: center;
+                margin-right: 11rem;
+                @include breakpoint($mm-bp) {
+                    margin-top: 5.6rem;
+                }
                 .smartRequest {
                     font-family: 'Nunito Sans';
                     font-style: normal;
@@ -369,7 +376,7 @@
                     font-size: 2.4rem;
                     line-height: 3.3rem;
                     color: #3A3A3B;
-                    width: 43.6rem;
+                    // width: 43.6rem;
                 }
 
                 .smartAlgoritm {
@@ -377,20 +384,32 @@
                     font-style: normal;
                     font-weight: 700;
                     font-size: 1.8rem;
-                    line-height: 2.5rem;
+                    line-height: 2.2rem;
                     color: #3A3A3B;
                     width: 43.6rem;
-                    padding-top: 3.8rem;
+                    padding-top: 1rem;
+                    @include breakpoint($mm-bp) {
+                        line-height: 2.5rem;
+                        padding-top: 3.8rem;
+                    }
                 }
             }
 
             .listContainer {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                column-gap: 7.6rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 4rem;
+                padding-left: 44rem;
+                padding-right: 37rem;
                 row-gap: 3rem;
-                margin-top: 5rem;
+                @include breakpoint($mm-bp) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    column-gap: 7.6rem;
+                    row-gap: 3rem;
+                    margin-top: 5rem;
+                }
 
                 li {
                     position: relative;
@@ -398,11 +417,13 @@
                     font-style: normal;
                     font-weight: 400;
                     font-size: 1.6rem;
-                    line-height: 2.2rem;
+                    line-height: 2rem;
                     color: #3A3A3B;
                     width: 43.6rem;
+                    &:last-child::before {
+                        content: url(../images/svg/arrowRed.svg);
+                    }
                 }
-
                 li:before {
                     content: url(../images/listContainer/greenTriangle.svg);
                     position: absolute;
@@ -412,11 +433,44 @@
                     left: -3rem;
                 }
 
+                .listContainer__row {
+                    display: grid;
+                    grid-template-columns: 17rem 3rem 19rem;
+                    column-gap: 2rem;
+                    span:nth-last-child(1) {
+                        line-height: 2.2rem;
+                    }
+                }
+                .listContainer__arrow {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 3rem;
+                }
+                .listContainer__arrow svg{
+                    width: 3rem;
+                    height: 3rem;
+                }
+                .listContainer {
+                    position: relative;
+                }
+                .listContainer__warningIcon svg{
+                    position: absolute;
+                    top: 0;
+                    right: -5.3rem;
+                    fill: transparent;
+                    width: 5.2rem;
+                    height: 5.2rem;
+                }
+
             }
         }
 
         .siteContainer {
-            margin-top: 4.3rem;
+            margin-top: 15.6rem;
+            @include breakpoint($mm-bp) {
+                margin-top: 4.3rem;
+            }
             
             .siteLine {
                 background-image: url(../images/footer/footerBg.png);
@@ -459,10 +513,14 @@
             }
 
             .requestContainer {
-                margin-top: 4.3rem;
+                margin-top: 5rem;
                 display: flex;
-                gap: 11.6rem;
+                gap: 11rem;
                 justify-content: center;
+                margin-right: 11rem;
+                @include breakpoint($mm-bp) {
+                    margin-top: 5.6rem;
+                }
 
                 .smartRequest {
                     font-family: 'Nunito Sans';
@@ -479,7 +537,7 @@
                     font-style: normal;
                     font-weight: 700;
                     font-size: 1.8rem;
-                    line-height: 2.5rem;
+                    line-height: 2.2rem;
                     color: #3A3A3B;
                     width: 43.6rem;
                     padding-top: 3.8rem;
@@ -487,12 +545,20 @@
             }
 
             .listContainer {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                column-gap: 7.6rem;
-                row-gap: 3rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
                 margin-top: 5rem;
+                padding-left: 44rem;
+                padding-right: 37rem;
+                row-gap: 2.5rem;
+                @include breakpoint($mm-bp) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    column-gap: 7.6rem;
+                    row-gap: 3rem;
+                    margin-top: 5rem;
+                }
 
                 li {
                     position: relative;
@@ -518,7 +584,7 @@
         }
 
         .businessContainer {
-            margin-top: 4.3rem;
+            margin-top: 6.3rem;
             .businessLine {
                 background-image: url(../images/footer/footerBg.png);
                 background-color: #124BF6;
@@ -557,10 +623,14 @@
             }
 
             .requestContainer {
-                margin-top: 4.4rem;
-                display: flex;
-                gap: 11.6rem;
-                justify-content: center;
+                    margin-top: 8rem;
+                    display: flex;
+                    gap: 11rem;
+                    justify-content: center;
+                    margin-right: 11rem;
+                    @include breakpoint($mm-bp) {
+                        margin-top: 5.6rem;
+                    }
 
                 .smartRequest {
                     font-family: 'Nunito Sans';
@@ -577,28 +647,35 @@
                     font-style: normal;
                     font-weight: 700;
                     font-size: 1.8rem;
-                    line-height: 2.5rem;
+                    line-height: 2.2rem;
                     color: #3A3A3B;
                     width: 43.6rem;
-                    padding-top: 3.8rem;
+                    padding-top: 2rem;
                 }
             }
 
             .listContainer {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                column-gap: 7.6rem;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 4rem;
+                padding-left: 44rem;
+                padding-right: 37rem;
                 row-gap: 3rem;
-                margin-top: 5rem;
-
+                @include breakpoint($mm-bp) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    column-gap: 7.6rem;
+                    row-gap: 3rem;
+                    margin-top: 5rem;
+                }
                 li {
                     position: relative;
                     font-family: 'Nunito Sans';
                     font-style: normal;
                     font-weight: 400;
                     font-size: 1.6rem;
-                    line-height: 2.2rem;
+                    line-height: 2rem;
                     color: #3A3A3B;
                     width: 43.6rem;
                 }
@@ -617,7 +694,9 @@
     }
 
     .capabilitiesContainer {
-
+        & > :last-child {
+            margin-bottom: 15rem;
+        }
         .capabilitiesTitle {
             font-family: 'Mulish';
             font-style: normal;
@@ -627,8 +706,13 @@
             text-transform: uppercase;
             color: #3A3A3B;
             margin-top: 15rem;
-            text-align: center;
+            text-align: left;
+            margin-left: 17rem;
             margin-bottom: 7rem;
+            @include breakpoint($mm-bp) {
+                text-align: center;
+                margin-left: 0;
+            }
         }
 
         .imgContainer {
@@ -682,7 +766,7 @@
             }
 
             .rightContainer {
-
+                
                 .rightTitle {
                     font-family: 'Nunito Sans';
                     font-style: normal;
@@ -693,12 +777,13 @@
                     margin-bottom: 5rem;
                     margin-top: 10rem;
                 }
-
+                .rightContainer__list {
+                    margin-left: 4rem;
+                }
                 ul {
                     display: flex;
                     flex-direction: column;
                     gap: 3rem;
-
                     li {
                         font-family: 'Nunito Sans';
                         font-style: normal;
@@ -709,7 +794,25 @@
                         width: 43.6rem;
                         position: relative;
                     }
-
+                    .list-row {
+                            display: grid;
+                            grid-template-columns: min-content 4rem 13.8rem;
+                            column-gap: 2rem;
+                            .list-row__arrow {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                margin-bottom: 7rem;
+                            }
+                            .list-row__arrow svg{
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                            .list-row__item {
+                                margin-top: 3rem;
+                                padding-left: 1rem;
+                            }
+                    }
                     li:before {
                         content: url(../images/capabilities/orangeTriangle.svg);
                         position: absolute;
@@ -718,10 +821,31 @@
                         top: 0;
                         left: -3rem;
                     }
+                    .secondList {
+                        width: 18.3rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0;
+                        li {
+                            margin-left: 2rem;
+                        }
+                        li:not(:last-child) {
+                            margin-bottom: 1.7rem;
+                        }
+                        li:before {
+                            content: '';
+                            left: -2rem;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            border: 2px solid #124BF6;
+                            border-radius: 50%;
+                        }
+                    }
                 }
             }
         }
-
 
         .dropLineContainer {
             margin-top: 7rem;
@@ -731,6 +855,10 @@
             img {
                 width: 100%;
             }
+        }
+
+        .mt15 {
+            margin-top: 15rem;
         }
 
         .addContainer {
@@ -755,7 +883,6 @@
                     margin-top: 8rem;
                     margin-bottom: 5rem;
                 }
-
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -787,9 +914,18 @@
 
                 .rightAddImgContainer {
                     margin-bottom: 5rem;
+                    width: 44.6rem;
+                    height: 21rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
                 }
 
-
+                .rightContainer__list {
+                    margin-left: 4rem;
+                }
                 ul {
                     display: flex;
                     flex-direction: column;
@@ -820,13 +956,20 @@
 
         .objectContainer {
             display: flex;
-            gap: 2.5rem;
+            gap: 10rem;
             justify-content: center;
 
             .leftContainer {
 
                 .objectImgLeftContainer {
                     margin-bottom: 5rem;
+                    width: 35.7rem;
+                    height: 25.4rem;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
                 }
 
                 ul {
@@ -858,7 +1001,7 @@
                         display: flex;
                         flex-direction: column;
                         gap: 1.6rem;
-                        margin-left: 2rem;
+                        margin-left: 5rem;
                         
     
                         li {
@@ -889,7 +1032,10 @@
                     line-height: 2.5rem;
                     color: #124BF6;
                     width: 43.6rem;
-                    margin-top: 8rem;
+                    margin-top: 15rem;
+                    @include breakpoint($mm-bp) {
+                        margin-top: 8rem;
+                    }
                 }
 
                 .objectImgRightContainer {
@@ -900,7 +1046,6 @@
                     display: flex;
                     flex-direction: column;
                     gap: 3rem;
-    
                     li {
                         font-family: 'Nunito Sans';
                         font-style: normal;
@@ -911,7 +1056,6 @@
                         position: relative;
                         width: 43.6rem;
                     }
-    
                     li:before {
                         content: url(../images/capabilities/orangeTriangle.svg);
                         position: absolute;
@@ -919,6 +1063,11 @@
                         height: 2rem;
                         top: 0;
                         left: -3rem;
+                    }
+                    .green {
+                        &::before {
+                            content: url(../images/listContainer/greenTriangle.svg);
+                        }
                     }
                 }
             }
@@ -989,6 +1138,13 @@
 
                     .rightBaseImgContainer {
                         margin-bottom: 5rem;
+                        width: 47.5rem;
+                        height: 23.3rem;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
                     }
     
                     ul {
@@ -1032,6 +1188,15 @@
                 display: flex;
                 flex-direction: column;
                 gap: 5rem;
+                .controllImgContainer {
+                    width: 52.8rem;
+                    height: 27.2rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
             }
 
             .rightContainer {
@@ -1047,6 +1212,20 @@
                     margin-bottom: 5rem;
                 }
 
+                span {
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    line-height: 2.2rem;
+                    /* identical to box height, or 122% */
+                    
+                    
+                    color: #3A3A3B;
+                    padding-bottom: 1.8rem;
+                    display: block;
+                }
+
                 button {
                     padding: 1rem 2.2rem 1.2rem 2rem;
                     font-family: 'Nunito Sans';
@@ -1056,7 +1235,7 @@
                     line-height: 2rem;
                     text-align: center;
                     color: #FFFFFF;
-                    background: #124BF6;
+                    background: #3A3A3B;
                     border-radius: 0.6rem;
                     border-top: 0.1rem solid #F86247;
                     border-left: 0.1rem solid #F86247;
@@ -1167,6 +1346,15 @@
                 .analiticCallbrImgContainer {
                     margin-top: 5rem;
                     margin-bottom: 4.3rem;
+                }
+                .analiticImgContainer {
+                    width: 55.9rem;
+                    height: 22.7rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
                 }
 
                 ul {
@@ -1372,7 +1560,8 @@
             display: flex;
             gap: 2.3rem;
             margin-top: 5rem;
-            padding-left: 18rem;
+            padding-left: 40rem;
+            margin-bottom: 10rem;
 
             .integrationContainerTitle {
                 font-family: 'Nunito Sans';
@@ -1392,6 +1581,7 @@
                 line-height: 2.2rem;
                 color: #3A3A3B;
                 width: 46rem;
+                padding-top: 4rem;
             }
         }
 
@@ -1405,7 +1595,7 @@
             margin-top: 5rem;
             
             div {
-                background: #F86247;
+                background: #124BF6;
                 border-radius: 1.2rem;
                 border: 0.1rem solid #9FF612;
                 padding: 3.5rem;
@@ -1443,7 +1633,7 @@
             
             
             div {
-                background: #124BF6;
+                background: #3A3A3B;
                 border-radius: 1.2rem;
                 border: 0.1rem dashed #FFFFFF;
                 padding: 3.5rem;
@@ -1476,7 +1666,12 @@
             line-height: 9rem;
             text-transform: uppercase;
             color: #616161;
-            text-align: center;
+            text-align: left;
+            padding-left: 18rem;
+            @include breakpoint($mm-bp) {
+                padding-left: 0;
+                text-align: center;
+            }
         }
 
         .interfaceContainer {
@@ -1635,9 +1830,10 @@
             display: flex;
             justify-content: center;
             gap: 5rem;
-            margin-top: 7rem;
-
-
+            margin-top: 11rem;
+            @include breakpoint($mm-bp) {
+                margin-top: 7rem;
+            }
             .leftContainer {
 
                 .starsContainer {
@@ -3289,7 +3485,6 @@
                 }
 
             }
-
             .window {
                 padding: 4rem;
                 background: #F9F9F9;
@@ -3346,5 +3541,26 @@
         }
 
     }
-
+    .leftContainer__list {
+        li {
+            margin-left: 3.8rem;
+        }
+    }
+    .ml5 {
+        margin-left: 5rem!important;
+    }
+    .ml4 {
+        margin-left: 4rem;
+    }
+    .warning-icon {
+        position: relative;
+        svg {
+            position: absolute;
+            top: 0;
+            fill: transparent;
+            right: -5.3rem;
+            width: 5.2rem;
+            height: 5.2rem;
+        }
+    }
 }
