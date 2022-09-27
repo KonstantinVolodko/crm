@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 'auto',
     spaceBetween: 30,
+    grabCursor: true,
     setWrapperSize: false,
     navigation: {
         nextEl: ".arrowRight",
@@ -251,7 +252,15 @@ ScrollTrigger.create({
   pin: '.cta2',
 })
 
-  
+  const buttons = document.querySelectorAll('.custom-button')
+  buttons.forEach(el => {
+    el.addEventListener('pointerdown', function clickHandler() {
+      this.style.setProperty('border-width', '0.1rem');
+    })
+    el.addEventListener('pointerup', function pointerUp() {
+      this.style.removeProperty('border-width')
+    })
+  })
 })
 
 
