@@ -2128,11 +2128,15 @@
             }
 
             .slide4 {
-                background: url(../images/steps/letterL.png) no-repeat left top, #3A3A3B;
+                background: url(../images/steps/letterL.png) no-repeat 16rem top, #3A3A3B;
                 border-radius: 2.4rem;
                 padding: 5rem;
-                // display: flex;
-                width: max-content;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                column-gap: 8rem;
+                width: 100%;
+
 
                 .slideNumber {
                     font-family: 'Mulish';
@@ -2194,6 +2198,27 @@
                         left: -2rem;
                         margin-right: 1rem;
                     }
+                }
+                &::after {
+                    content: 'внимание!';
+                    position: absolute;
+                    top: -2rem;
+                    left: 17rem;
+                    width: 20rem;
+                    height: 4.9rem;
+                    padding: 0.8rem 2.7rem;
+                    background-color: #9FF612;
+                    border-radius: 1.2rem;
+                    color: #3A3A3B;
+                    font-family: 'Nunito Sans';
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 2.4rem;
+                    line-height: 3.3rem;
+                    /* identical to box height */
+                    
+                    text-transform: uppercase;
+                    transform: rotate(-10.62deg);
                 }
             }
 
@@ -3359,6 +3384,353 @@
             border-right: 0.3rem solid #9FF612;
         }
     }
+    .reviews {
+        padding-top: 15rem;
+        padding-bottom: 20rem;
+        background-image: url(../images/review/arrow-bh.png);
+        background-repeat: no-repeat;
+        background-size: 71rem 68rem;
+        background-position: right -7rem top 3rem;
+    }
+    .reviews__title {
+        padding-bottom: 5.5rem;
+    }
+    .reviews-block {
+        width: 108rem;
+        height: 49.5rem;
+        background: #3E3E3F;
+        border-radius: 2.4rem;
+        display: grid;
+        grid-template-columns: 47.5rem 1fr;
+        position: relative;
+    }
+    .sticker-block {
+        position: absolute;
+        z-index: 5;
+        top: -2.5rem;
+        left: -1.7rem;
+        padding: 0.8rem 2.7rem;
+        background: #F86247;
+        border-radius: 0.4rem;
+        transform: rotate(8.28deg);
+
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 49px;
+        text-transform: uppercase;
+        
+        color: #FFFFFF;
+        width: min-content;
+    }
+    .rev-main {
+        padding: 0 1.6rem 2.2rem 2rem;
+        width: 100%;
+        height: 100%;
+        column-gap: 1rem;
+        border-radius: 2.4rem;
+        position: relative;
+        .rev-main__tab {
+            position: absolute;
+            top: 3rem;
+            right: -2rem;
+            display: none;
+            font-family: 'Ubuntu';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 2rem;
+            /* or 143% */
+            
+            letter-spacing: 0.2px;
+            
+            /* white */
+            
+            color: #FFFFFF;
+            background: #68687C;
+            border-radius: 1rem;
+            padding: 0.8rem 1.2rem 1.2rem 1.2rem;
+            width: 32.8rem;
+        }
+        .rev-main__icon {
+            width: 100%;
+            height: 100%;
+            fill: #F86247;
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 1.6rem;
+            cursor: pointer;
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        .rev-main__icon:hover .rev-main__tab {
+            display: block;
+        }
+        .rev-main__commets-wrapper {
+            margin-top: 2.8rem;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: calc(100% - 0.4rem);
+                height: 3.5rem;
+                background-color: #3E3E3F;
+                z-index: 3;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: calc(100% - 0.4rem);
+                height: 5rem;
+                background-color: #3E3E3F;
+                z-index: 3;
+            }
+            .rev-main__icon {
+                position:absolute;
+                top: 0;
+                right: 1.3rem;
+                z-index: 4;
+                width: min-content;
+                height: min-content;
+                fill: #F86247;
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 0;
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+        .rev-main__commets {
+            position:relative;
+            grid-column: 2 span;
+            padding-right: 3rem;
+            padding-bottom: 5rem;
+            width: 100%;
+            height: 38.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 0.4rem;
+                position: absolute;
+                left: 10rem;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #BFC4DF;
+                border-radius: 0.2rem;
+            }
+            &::-webkit-scrollbar-track {
+                background: #FFFFFF;
+                border-radius: 0.2rem;
+            }
+            .comment:nth-child(1) {
+                margin-top: 3.5rem;
+            }
+        }
+        .rev-main__input {
+            position: absolute;
+            bottom: -6rem;
+            height: 9.5rem;
+            background: #FFFFFF;
+            border: 0.1rem solid #DADADB;
+            border-radius: 0.6rem;
+            grid-column: 2 span;
+            z-index: 5;
+            width: calc(100% - 1.3rem);
+            padding: 0.7rem 1.2rem 1.2rem 1.2rem;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -98%;
+                left: -1rem;
+                transform: translateY(100%);
+                background: linear-gradient(0deg, #3E3E3F 0%, rgba(62, 62, 63, 0) 100%);
+                width: 100%;
+                height: 4.5rem;
+                z-index: 1;
+            }
+            .input-name {
+                border: 0.1rem solid #DADADB;
+                border-radius: 0.6rem;
+                width: 20rem;
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 22px;
+                /* identical to box height */
+                
+                
+                color: #3A3A3B;
+                opacity: 0.5;
+                padding: 0.9rem 1.2rem;
+            }
+            .input-container {
+                display: grid;
+                grid-template-columns: 1fr min-content min-content;
+                column-gap: 1rem;
+                align-items: center;
+            }
+            .input-comment {
+                border: 0;
+                border-radius: 0.6rem;
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                /* identical to box height */
+                width: 100%;
+                
+                
+                color: #3A3A3B;
+                opacity: 0.5;
+                padding: 0.9rem 1.2rem;
+            }
+            .input-button {
+                height: 2rem;
+                width: 2.5rem;
+                border: 0;
+                background-color: transparent;
+                margin-right: 0.4rem;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .button-smile {
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 0;
+                background-color: transparent;
+                svg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .rev-main__input--auth {
+            padding-right: 1.5rem;
+            .comment__wrapper {
+                padding-left: 1.2rem;
+                padding-bottom: 1.1rem;
+            }
+        }
+        .sticker-block-right {
+            position: absolute;
+            top: 1rem;
+            left: 3rem;
+            z-index: 5;
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 3.6rem;
+            line-height: 4.9rem;
+            
+            color: #3E3E3F;
+        }
+        .rev-main__commets-wrapper--green {
+            &::before {
+                background-color: #9FF612;
+            }
+            &::after {
+                background-color: #9FF612;
+            }
+            .rev-main__input {
+                &::before {
+                    background: linear-gradient(0deg, #9FF612 0%, rgba(62, 62, 63, 0) 100%);
+                }
+            }
+            .rev-main__icon {
+                fill: #124BF6;
+            }
+        }
+        .rev-main__commets-wrapper--height {
+            &::before {
+                height: 4rem;
+            }
+            &::after {
+                height: 11rem;
+            }
+            .rev-main__commets {
+                height: 43rem;
+                padding-bottom: 11rem;
+                .comment:nth-child(1) {
+                    margin-top: 4rem;
+                }
+            }
+            .rev-main__input {
+                padding-top: 1rem;
+                bottom: -1.2rem
+            }
+        }
+    }
+    .rev-main--green {
+        background-color: #9FF612;
+    }
+    .comment__name {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        /* identical to box height, or 133% */
+        
+        color: #124BF6;
+    }
+    .comment__info {
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.4rem;
+        /* identical to box height */
+        
+        
+        color: #9E9E9E;
+    }
+
+    .comment-defauld {
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
+        grid-template-rows: min-content min-content;
+        row-gap: 0.6rem;
+    }
+    .comment-auth {
+        display: grid;
+        grid-template-columns: min-content max-content 1fr min-content;
+        grid-template-rows: min-content min-content;
+        row-gap: 0.6rem;
+        column-gap: 0.8rem;
+    }
+    .note {
+        padding-top: 1.7rem;
+        padding-left: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        .note__text {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            /* or 114% */
+            
+            color: #68687C;
+            width: 26rem;
+        }
+    }
+
+    
 
     .contactsMainContainer {
         background-image: url(../images/contactsMainContainer/footerBg.png);
@@ -3683,6 +4055,119 @@
             right: -5.3rem;
             width: 5.2rem;
             height: 5.2rem;
+        }
+    }
+    .mySwiper {
+        padding-bottom: 15rem;
+        .swiper-wrapper {
+            padding-top: 4rem;
+            .swiper-slide {
+                width: 45rem;
+                // height: 49rem;
+                & > div {
+                    height: 49rem;
+                }
+            }
+            .swiper-slide:nth-child(4) {
+                width: 127rem;
+            }
+        }
+    }
+    .mulish72 {
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 7.2rem;
+        line-height: 9rem;
+        text-transform: uppercase;
+        
+        color: #3A3A3B;
+    }
+    .comment {
+        width: 100%;
+        border-radius: 0.6rem;
+        background: #FFFFFF;
+        padding: 0.6rem 1.6rem 1.3rem 1.6rem;
+        border: 1px solid #DADADB;
+        margin-top: 0.7rem;
+        .comment__name {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            /* identical to box height, or 133% */
+            
+            color: #124BF6;
+        }
+        .comment__info {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            /* identical to box height */
+            
+            
+            color: #9E9E9E;
+        }
+        .comment__data {
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 16px;
+            /* identical to box height, or 160% */
+            
+            
+            color: #BFC4DF;
+        }
+        .comment__avatar {
+            width: 4.7rem;
+            height: 4.7rem;
+            border-radius: 50%;
+            overflow: hidden;
+            grid-row: 2 span;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .comment__content {
+            grid-column: 3 span;
+
+            font-family: 'Nunito Sans';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            /* or 114% */
+            
+            
+            color: #3A3A3B;
+        }
+    }
+    .comment + .comment--forward {
+        margin-top: 0rem;
+    }
+    .comment--forward {
+        max-width: 25.4rem;
+        .comment__name {
+            color: #F86247;
+            display: flex;
+            gap: 0.3rem;
+            &::before {
+                content: url(../images/svg/forward.svg);
+            }
+        }
+    }
+    .title-wrapper {
+        padding-left: 18rem;
+    }
+    .page-wrapper {
+        margin-left: 42rem;
+        @include breakpoint($mm-bp) {
+            margin-left: 18rem;
         }
     }
 }
