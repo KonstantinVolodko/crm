@@ -59,6 +59,13 @@ let swiper3 = new Swiper(".helpSwiper", {
     nextEl: ".helpArrowRight",
     prevEl: ".helpArrowLeft",
   },
+  breakpoints: {
+    // when window width is >= 320px
+    1441: {
+      slidesPerView: 1.9,
+      spaceBetween: 30,
+    },
+  }
 });
 
 let swiper4 = new Swiper(".keysesSwiper", {
@@ -69,6 +76,20 @@ let swiper4 = new Swiper(".keysesSwiper", {
     prevEl: ".keysesArrowRight",
   },
 });
+
+let ourComandSwiper = new Swiper('.our-comand__swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  watchSlidesProgress: true,
+  pagination: {
+    el: '.orange-line',
+    type: 'progressbar',
+  },
+  navigation: {
+    nextEl: ".ourComadArrowLeft",
+    prevEl: ".ourComadArrowRight",
+  },
+})
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -1081,6 +1102,18 @@ ScrollTrigger.create({
   scrub: true,
 })
   
+
+  const bar = document.querySelectorAll('.bar')
+  bar.forEach(el => {
+    for(let emoji of el.children) {
+        emoji.addEventListener('click', function addInInput() {
+        const p = this.innerHTML
+        const input = this.parentNode.parentNode.querySelector('.input-comment')
+        input.value +=p
+      })
+    }
+  })
+
 })
 
 
