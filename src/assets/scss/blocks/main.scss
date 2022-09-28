@@ -1,12 +1,119 @@
 .main {
     .nearHeaderContainer {
-        background: url(../images/nearHeaderContainer/bgArrows.png);
-        background-repeat: no-repeat;
-        background-size: 100%;
         background-color: #144CF6;
         padding-top: 16.4rem;
         padding-left: 17.8rem;
         padding-bottom: 15rem;
+        position: relative;
+        overflow: hidden;
+
+        .arrowsBgContainer {
+            img {
+                position: absolute;
+                z-index: 1;
+            }
+
+            .nearArrow1 {
+                top: 4%;
+                left: -8%;
+            }
+
+            .nearArrow2 {
+                top: -14%;
+                left: 13%;
+            }
+
+            .nearArrow3 {
+                top: 6%;
+                left: 36%;
+            }
+
+            .nearArrow4 {
+                top: -14%;
+                right: -7%;
+            }
+
+            .nearArrow5 {
+                left: 1%;
+                top: 39%;
+            }
+
+            .nearArrow6 {
+                left: 22%;
+                top: 47%;
+            }
+
+            .nearArrow7 {
+                right: 14%;
+                top: 27%;
+            }
+
+            .nearArrow8 {
+                bottom: -2%;
+                left: -6%;
+            }
+
+            .nearArrow9 {
+                bottom: 1%;
+                left: 39%;            
+            }
+
+            .nearArrow10 {
+                bottom: -6%;
+                right: 20%;
+            }
+
+            .nearArrow11 {
+                bottom: 14%;
+                right: -3%;
+            }
+
+            .nearArrow12 {
+                left: -18%;
+                bottom: -35%;
+            }
+
+            .nearArrow13 {
+                bottom: -53%;
+                left: 34%;
+            }
+
+            .nearArrow14 {
+                left: 6%;
+                bottom: -74%;
+            }
+
+            .nearArrow15 {
+                left: 52%;
+                bottom: -175%;
+            }
+
+            .nearArrow16 {
+                left: -23%;
+                bottom: -74%;
+            }
+
+            .nearArrow17 {
+
+            }
+
+            .nearArrow18 {
+                bottom: -165%;
+                right: 56%;
+            }
+
+
+            .nearArrow19 {
+                left: 59%;
+                bottom: -100%;
+            }
+
+            .nearArrow20 {
+                bottom: -100%;
+                left: 27%;
+            }
+        }
+
         .mainTitle {
             font-family: 'Mulish';
             font-style: normal;
@@ -15,6 +122,8 @@
             line-height: 12rem;
             text-transform: uppercase;
             color: #FFFFFF;
+            position: inherit;
+            z-index: 2;
 
             span {
                 color: #9FF612;
@@ -28,12 +137,14 @@
             align-items: flex-start;
             margin-top: 4rem;
             overflow: hidden;
+            position: inherit;
+            z-index: 2;
 
             .hiddenText {
 
             }
 
-            .more {
+            .moreTriggeredBtn {
                 background: #F86247;
                 border: 1px solid #9FF612;
                 border-radius: 0.6rem;
@@ -80,6 +191,8 @@
         }
 
         .formContainer {
+            position: inherit;
+            z-index: 2;
             .vertText {
                 display: flex;
                 flex-direction: column;
@@ -1494,10 +1607,67 @@
     }
 
     .cta1 {
-        background: url(../images/cta1/ctaArrows.png) no-repeat right, url(../images/cta1/ctaBg.png);
+        background: url(../images/cta1/ctaBg.png);
+        background-size: 100%;
         padding-left: 18rem;
         padding-bottom: 11rem;
         padding-top: 11.5rem;
+        overflow: hidden;
+        position: relative;
+
+        .cta1ArrowsContainer {
+            img {
+                position: absolute;
+                z-index: 1;
+            }
+
+            .cta1Arrow1 {
+                right: 25%;
+                bottom: -100%;
+            }
+
+            .cta1Arrow2 {
+                right: 2%;
+                bottom: -100%;
+            }
+
+            .cta1Arrow3 {
+                right: 12%;
+                bottom: -100%;
+            }
+
+            .cta1Arrow4 {
+                bottom: -100%;
+                right: 10%;
+            }
+
+            .cta1Arrow5 {
+                bottom: -100%;
+                right: 28%;
+            }
+
+            .cta1Arrow6 {
+                right: 4%;
+                bottom: -100%;
+            }
+
+            .cta1Arrow7 {
+                bottom: -100%;
+            }
+
+            .cta1Arrow8 {
+                bottom: -100%;
+            }
+
+            .cta1Arrow9 {
+                bottom: -100%;
+            }
+
+            .cta1Arrow10 {
+                bottom: -100%;
+            }
+
+        }
 
         .ctaTitle {
             font-family: 'Mulish';
@@ -1507,6 +1677,8 @@
             line-height: 6rem;
             text-transform: uppercase;
             color: #FFFFFF;
+            position: inherit;
+            z-index: 2;
 
             .ctaBlackText {
                 color: #3A3A3B;
@@ -1521,6 +1693,8 @@
             line-height: 3.3rem;
             color: #FFFFFF;
             margin-top: 3rem;
+            position: inherit;
+            z-index: 2;
         }
 
         button {
@@ -1539,6 +1713,8 @@
             border-right: 0.3rem solid #9FF612;
             border-bottom: 0.3rem solid #9FF612;
             margin-top: 4rem;
+            position: inherit;
+            z-index: 2;
         }
     }
 
@@ -2325,6 +2501,7 @@
         padding-right: 18rem;
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
 
         .ctaLeft {
             padding-bottom: 13.2rem;
@@ -3018,12 +3195,55 @@
     }
 
     .cta3 {
-        background: #124BF6;
+        background:  #124BF6;
         padding-top: 12rem;
         padding-left: 18rem;
         padding-bottom: 11.7rem;
+        position: relative;
+        overflow: hidden;
 
-        .ctaTitle {
+        .cta3ImgArrowsContainer {
+
+            img {
+                position: absolute;
+            }
+
+            .cta3ImgArrow1 {
+                bottom: -100%;
+                right: 42%;
+            }
+
+            .cta3ImgArrow2 {
+                right: 20%;
+                bottom: -100%;
+            }
+
+            .cta3ImgArrow3 {
+                right: 30%;
+                bottom: -100%;
+            }
+
+            .cta3ImgArrow4 {
+                bottom: -100%;
+                right: 26%;
+            }
+
+            .cta3ImgArrow5 {
+                bottom: -100%;
+                right: 42%;
+            }
+
+            .cta3ImgArrow6 {
+                right: 12%;
+                bottom: -100%;
+            }
+
+            .cta3ImgArrow7 {
+
+            }
+        }
+
+        .cta3Title {
             font-family: 'Mulish';
             font-style: normal;
             font-weight: 900;
@@ -3032,9 +3252,13 @@
             text-transform: uppercase;
             color: #FFFFFF;
             margin-bottom: 3rem;
+
+            span {
+                color: #9FF612;
+            }
         }
 
-        .ctaSubtitle {
+        .cta3Subtitle {
             font-family: 'Nunito Sans';
             font-style: normal;
             font-weight: 700;
@@ -3061,6 +3285,8 @@
             padding: 1rem 2rem 1rem 2rem;
         }
     }
+
+    
 
     .help {
         background-image: url(../images/footer/footerBg.png);
@@ -3157,11 +3383,20 @@
     }
 
     .keyses {
+        position: relative;
         background-image: url(../images/footer/footerBg.png);
         background-color: #3A3A3B;
         padding-top: 15rem;
         padding-right: 18rem;
         padding-bottom: 15rem;
+
+        .cta3Help {
+            padding-bottom: 25rem;
+            width: 100%;
+            background-color: #3A3A3B;
+            position: absolute;
+            top: -24rem;
+        }
 
         .keysesTitle {
             font-family: 'Mulish';
@@ -3170,7 +3405,7 @@
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #616161;
             padding-left: 18rem;
         }
 
@@ -3186,7 +3421,7 @@
                 font-weight: 800;
                 font-size: 2.4rem;
                 line-height: 3rem;
-                color: #FFFFFF;
+                color: #616161;
                 width: 27.5rem;
             }
 
@@ -3294,9 +3529,17 @@
         display: flex;
         gap: 11.5rem;
         padding-top: 15rem;
+        padding-bottom: 10rem;
+        background-color: #3a3a3b;
 
         .leftContainer {
+            position: relative;
             
+            .founderHelpContainer {
+                position: sticky;
+                top: 1rem;
+            }
+
             .name {
                 font-family: 'Nunito Sans';
                 font-style: normal;
@@ -3320,18 +3563,16 @@
 
         .rightContainer {
 
-            .title {
+            .founderRightTitleContainer {
                 font-family: 'Mulish';
                 font-style: normal;
                 font-weight: 900;
                 font-size: 7.2rem;
                 line-height: 9rem;
                 text-transform: uppercase;
-                color: #3A3A3B;
+                color: #DADADB;
                 margin-bottom: 5rem;
-                span {
-                    color: #F86247;
-                }
+
             }
 
             .text {
@@ -3349,10 +3590,80 @@
     }
 
     .cta4 {
-        background: url(../images/cta4/items.png) 85% top no-repeat, url(../images/cta4/bg.png);
+        background: url(../images/cta4/bg.png);
+        background-size: 100%;
         padding-left: 18rem;
-        padding-bottom: 12rem;
+        padding-bottom: 12.9rem;
         padding-top: 12.3rem;
+        padding-right: 12rem;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+
+        .cta4ImgContainer {
+            width: 30%;
+            position: relative;
+
+            img {
+                position: absolute;
+            }
+
+            .cta4Img1 {
+                top: -37%;
+                left: -19%;
+            }
+
+            .cta4Img2 {
+                top: -14%;
+                left: -28%;
+            }
+
+            .cta4Img3 {
+                top: -15%;
+                right: 1%;
+            }
+
+            .cta4Img4 {
+                top: -15%;
+               left: 5%;
+            }
+
+            .cta4Img5 {
+                left: -18%;
+                top: 3%;
+            }
+
+            .cta4Img6 { 
+                top: 15%;
+                left: -18%;
+            }
+
+            .cta4Img7 {
+                left: 34%;
+                top: 28%;
+            }
+
+            .cta4Img8 {
+                top: 44%;
+                left: 7%;
+            }
+
+            .cta4Img9 {
+                top: 77%;
+            }
+
+            .cta4Img10 {
+                top: 71%;
+                left: 43%;
+            }
+
+            .cta4Img11 {
+                top: 102%;
+                left: 11%;
+            }
+
+
+        }
 
         .cta4Title {
             font-family: 'Mulish';
@@ -3786,20 +4097,16 @@
         padding-left: 18rem;
         padding-right: 18rem;
     
-        .title {
+        .contactsMainTitle {
             font-family: 'Mulish';
             font-style: normal;
             font-weight: 900;
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #616161;
             width: 80.4rem;
             margin-bottom: 7rem;
-    
-            span {
-                color: #9FF612;
-            }
         }
     
         .cartContainer {
@@ -3940,7 +4247,7 @@
             font-size: 7.2rem;
             line-height: 9rem;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #616161;
             margin-bottom: 5rem;
         }
 
