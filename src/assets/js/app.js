@@ -168,14 +168,14 @@ ScrollTrigger.create({
 
 const tl3 = gsap.timeline();
 
-tl3.from('.ctaTitle', {x: '-50%'})
+tl3.from('.ctaTitle', {y: '-200%'})
 tl3.from('.ctaSubtitle', {opacity: 0, y: 100})
-tl3.from('.btnCta1', {x: '-200%'})
+tl3.from('.btnCta1', {y: '300%'})
 
 ScrollTrigger.create({
   animation: tl3,
   trigger: '.cta1',
-  start: "top 50%",
+  start: "top 70%",
     end: "top 0%",
   scrub: true,
 })
@@ -277,7 +277,7 @@ ScrollTrigger.create({
 
 const tl11 = gsap.timeline();
 
-tl11.from('.cta2Title', {x: '-130%'})
+tl11.from('.cta2Title', {y: '-200%'})
 tl11.from('.img1', {y: -1000}),
 tl11.from('.img2', {y: -800}),
 tl11.to('.cta2TitleSpan', {color: '#9FF612'})
@@ -581,6 +581,528 @@ ScrollTrigger.create({
     })
   })
 
+
+const tl30 = gsap.timeline();
+tl30.to('.keysesTitleFirst', {color: '#FFFFFF',})
+tl30.to('.keysesTitleSecond', {color: '#FFFFFF',})
+tl30.to('.keysesSubtitle', {color: '#FFFFFF',})
+
+
+ScrollTrigger.create({
+  animation: tl30,
+  trigger: '.keysesTitle',
+  start: "top 50%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+const tl31 = gsap.timeline();
+tl31.to('.founder', {background: '#f9f9f9'})
+tl31.to('.founderRightTitle', {color: '#3A3A3B',})
+tl31.to('.founderRightTitleSec', {color: '#3A3A3B',})
+tl31.to('.founderRightTitleThird', {color: '#3A3A3B',})
+tl31.to('.founderRightTitleOrange', {color: '#F86247',})
+
+
+ScrollTrigger.create({
+  animation: tl31,
+  trigger: '.founderRightTitleContainer',
+  start: "top 50%",
+  end: 'top 20%',
+  scrub: 0.5,
+})
+
+const tl32 = gsap.timeline();
+tl32.to('.founder', {background: '#f9f9f9'})
+tl32.to('.founderRightTitle', {color: '#3A3A3B',})
+
+
+
+ScrollTrigger.create({
+  animation: tl32,
+  trigger: '.founderRightTitleContainer',
+  start: "top 50%",
+  end: 'top 20%',
+  scrub: 0.5,
+})
+
+
+const tl33 = gsap.timeline();
+
+tl33.from('.cta4Title', {y: -300})
+tl33.from('.cta4Btn', {x: -300})
+tl33.from('.cta4Img1', {y: 500})
+tl33.from('.cta4Img2', {y: 500})
+tl33.from('.cta4Img3', {y: 500, x: -200})
+tl33.from('.cta4Img4', {y: 450, x: 200})
+tl33.from('.cta4Img5', {y: 450})
+tl33.from('.cta4Img6', {y: 400, x: -200})
+tl33.from('.cta4Img7', {y: 400})
+tl33.from('.cta4Img8', {y: 400, x: 100})
+tl33.from('.cta4Img9', {y: 350, x: -100})
+tl33.from('.cta4Img10', {y: 350, x: 300})
+tl33.from('.cta4Img11', {y: 350})
+
+
+
+ScrollTrigger.create({
+  animation: tl33,
+  trigger: '.cta4',
+  start: "top 20%",
+  end: '3000',
+  scrub: true,
+  pin: '.cta4',
+})
+
+const tl34 = gsap.timeline();
+
+tl34.to('.developmentTitle', {color: '#FFFFFF'})
+
+
+ScrollTrigger.create({
+  animation: tl34,
+  trigger: '.developmentSubtitle',
+  start: "top 50%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+
+const tl35 = gsap.timeline();
+
+tl35.to('.contactsMainFirst', {color: '#FFFFFF'})
+tl35.to('.contactsMainSecond', {color: '#A0F615'})
+
+
+ScrollTrigger.create({
+  animation: tl35,
+  trigger: '.contactsMainTitle',
+  start: "top 50%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+const tl36 = gsap.timeline();
+
+tl36.to('.help', {y: -200})
+
+
+ScrollTrigger.create({
+  animation: tl36,
+  trigger: '.help',
+  start: "top 70%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+const tl37 = gsap.timeline();
+
+tl37.to('.nearArrow7', {y: -700, x: 300})
+
+ScrollTrigger.create({
+  animation: tl37,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+
+const tl38 = gsap.timeline();
+
+tl38.to('.nearArrow1', {y: -300, x: 300})
+
+ScrollTrigger.create({
+  animation: tl38,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 40%',
+  scrub: true,
+})
+
+const tl39 = gsap.timeline();
+
+tl39.to('.nearArrow2', {y: -300, x: 300})
+
+ScrollTrigger.create({
+  animation: tl39,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 35%',
+  scrub: true,
+})
+
+const tl40 = gsap.timeline();
+
+tl40.to('.nearArrow3', {y: -200, x: 300})
+
+ScrollTrigger.create({
+  animation: tl40,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+
+const tl41 = gsap.timeline();
+
+tl41.to('.nearArrow4', {y: -100, x: 300})
+
+ScrollTrigger.create({
+  animation: tl41,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 40%',
+  scrub: true,
+})
+
+
+const tl42 = gsap.timeline();
+
+tl42.to('.nearArrow5', {y: -400, x: 300})
+
+ScrollTrigger.create({
+  animation: tl42,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 30%',
+  scrub: true,
+})
+
+
+const tl43 = gsap.timeline();
+
+tl43.to('.nearArrow6', {y: -500, x: 300})
+
+ScrollTrigger.create({
+  animation: tl43,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+
+const tl44 = gsap.timeline();
+
+tl44.to('.nearArrow8', {y: -700, x: 300})
+
+ScrollTrigger.create({
+  animation: tl44,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 30%',
+  scrub: true,
+})
+
+
+const tl45 = gsap.timeline();
+
+tl45.to('.nearArrow9', {y: -700, x: 300})
+
+ScrollTrigger.create({
+  animation: tl45,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 25%',
+  scrub: true,
+})
+
+
+const tl46 = gsap.timeline();
+
+tl46.to('.nearArrow10', {y: -650, x: 450})
+
+ScrollTrigger.create({
+  animation: tl46,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 25%',
+  scrub: true,
+})
+
+
+const tl47 = gsap.timeline();
+
+tl47.to('.nearArrow11', {y: -300, x: 450})
+
+ScrollTrigger.create({
+  animation: tl47,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 25%',
+  scrub: true,
+})
+
+
+const tl48 = gsap.timeline();
+
+tl48.to('.nearArrow12', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl48,
+  trigger: '.moreTriggeredBtn',
+  start: "top 60%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+const tl49 = gsap.timeline();
+
+tl49.to('.nearArrow13', {y: -1100, x: 450})
+
+ScrollTrigger.create({
+  animation: tl49,
+  trigger: '.verticalContainer',
+  start: "top 90%",
+  end: 'top 60%',
+  scrub: true,
+})
+
+const tl50 = gsap.timeline();
+
+tl50.to('.nearArrow14', {y: -1300, x: 450})
+
+ScrollTrigger.create({
+  animation: tl50,
+  trigger: '.verticalContainer',
+  start: "top 70%",
+  end: 'top 10%',
+  scrub: true,
+})
+
+const tl51 = gsap.timeline();
+
+tl51.to('.nearArrow18', {y: -2300, x: 450})
+
+ScrollTrigger.create({
+  animation: tl51,
+  trigger: '.verticalContainer',
+  start: "top 90%",
+  end: 'top 60%',
+  scrub: true,
+})
+
+const tl52 = gsap.timeline();
+
+tl52.to('.nearArrow15', {y: -2500, x: 600})
+
+ScrollTrigger.create({
+  animation: tl52,
+  trigger: '.verticalContainer',
+  start: "top 90%",
+  end: 'top 50%',
+  scrub: true,
+})
+
+const tl53 = gsap.timeline();
+
+tl53.to('.nearArrow16', {y: -1400, x: 450})
+
+ScrollTrigger.create({
+  animation: tl53,
+  trigger: '.verticalContainer',
+  start: "top 70%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+
+const tl54 = gsap.timeline();
+
+tl54.to('.nearArrow20', {y: -1600, x: 450})
+
+ScrollTrigger.create({
+  animation: tl54,
+  trigger: '.verticalContainer',
+  start: "top 70%",
+  end: 'top 10%',
+  scrub: true,
+})
+
+
+const tl55 = gsap.timeline();
+
+tl55.to('.nearArrow19', {y: -1300, x: 450})
+
+ScrollTrigger.create({
+  animation: tl55,
+  trigger: '.verticalContainer',
+  start: "top 70%",
+  end: 'top 10%',
+  scrub: true,
+})
+
+const tl56 = gsap.timeline();
+
+tl56.to('.cta1Arrow1', {y: -850})
+
+ScrollTrigger.create({
+  animation: tl56,
+  trigger: '.cta1',
+  start: "top 60%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl57 = gsap.timeline();
+
+tl57.to('.cta1Arrow2', {y: -850})
+
+ScrollTrigger.create({
+  animation: tl57,
+  trigger: '.cta1',
+  start: "top 65%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl58 = gsap.timeline();
+
+tl58.to('.cta1Arrow3', {y: -1250})
+
+ScrollTrigger.create({
+  animation: tl58,
+  trigger: '.ctaBlackText',
+  start: "top 70%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl59 = gsap.timeline();
+
+tl59.to('.cta1Arrow4', {y: -700})
+
+ScrollTrigger.create({
+  animation: tl59,
+  trigger: '.ctaSubtitle',
+  start: "top 60%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+const tl60 = gsap.timeline();
+
+tl60.to('.cta1Arrow5', {y: -600})
+
+ScrollTrigger.create({
+  animation: tl60,
+  trigger: '.ctaSubtitle',
+  start: "top 50%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl61 = gsap.timeline();
+
+tl61.to('.cta1Arrow6', {y: -600})
+
+ScrollTrigger.create({
+  animation: tl61,
+  trigger: '.btnCta1',
+  start: "top 60%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl62 = gsap.timeline();
+
+tl62.from('.cta3Title', {y: -300})
+tl62.from('.cta3Subtitle', {y: -500})
+tl62.from('.cta3Btn', {y: -400})
+
+ScrollTrigger.create({
+  animation: tl62,
+  trigger: '.cta3',
+  start: "top 60%",
+  end: 'top 20%',
+  scrub: true,
+})
+
+
+const tl63 = gsap.timeline();
+
+tl63.to('.cta3ImgArrow1', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl63,
+  trigger: '.cta3',
+  start: "top 60%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl64 = gsap.timeline();
+
+tl64.to('.cta3ImgArrow2', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl64,
+  trigger: '.cta3',
+  start: "top 50%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl65 = gsap.timeline();
+
+tl65.to('.cta3ImgArrow3', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl65,
+  trigger: '.cta3Title',
+  start: "top 50%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+const tl66 = gsap.timeline();
+
+tl66.to('.cta3ImgArrow4', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl66,
+  trigger: '.cta3',
+  start: "top 20%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl67 = gsap.timeline();
+
+tl67.to('.cta3ImgArrow5', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl67,
+  trigger: '.help',
+  start: "top 80%",
+  end: 'top 0%',
+  scrub: true,
+})
+
+
+const tl68 = gsap.timeline();
+
+tl68.to('.cta3ImgArrow6', {y: -900, x: 450})
+
+ScrollTrigger.create({
+  animation: tl68,
+  trigger: '.help',
+  start: "top 75%",
+  end: 'top 0%',
+  scrub: true,
+})
+  
+
   const bar = document.querySelectorAll('.bar')
   bar.forEach(el => {
     for(let emoji of el.children) {
@@ -591,6 +1113,7 @@ ScrollTrigger.create({
       })
     }
   })
+
 })
 
 
