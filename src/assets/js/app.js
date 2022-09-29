@@ -81,15 +81,25 @@ let ourComandSwiper = new Swiper('.our-comand__swiper', {
   slidesPerView: 'auto',
   spaceBetween: 30,
   watchSlidesProgress: true,
-  pagination: {
-    el: '.orange-line',
-    type: 'progressbar',
-  },
+  // pagination: {
+  //   el: '.orange-line',
+  //   type: 'progressbar',
+  // },
   navigation: {
     nextEl: ".ourComadArrowLeft",
     prevEl: ".ourComadArrowRight",
   },
 })
+const progressBar = document.querySelector('.orange-line')
+const allBar = document.querySelector('.progress-bar__wrapper')
+if (progressBar && allBar) {
+  ourComandSwiper.on('transitionStart', function (e) {
+    const procent = Math.abs(ourComandSwiper.progress) * 100
+    const width = allBar.getBoundingClientRect().width
+    const newWidth = (width * procent) / 100
+    progressBar.style.setProperty('width', `${newWidth}px`)
+  });
+}
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -1113,6 +1123,20 @@ ScrollTrigger.create({
       })
     }
   })
+
+  const switchButton = document.querySelector('.switch-button-checkbox')
+  const rewiewsBlock = document.querySelectorAll('.comment-right, .comment-left')
+  if (switchButton && rewiewsBlock.length > 1) {
+    switchButton.addEventListener('click', function clickCheck() {
+      if (this.checked) {
+        rewiewsBlock[1].style.setProperty('display', 'block')
+        rewiewsBlock[0].style.setProperty('display', 'none')
+      } else {
+        rewiewsBlock[1].style.setProperty('display', 'none')
+        rewiewsBlock[0].style.setProperty('display', 'block')
+      }
+    })
+  }
 
 })
 
