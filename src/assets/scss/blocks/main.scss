@@ -14,18 +14,48 @@
             }
 
             .nearArrow1 {
-                top: 4%;
-                left: -8%;
+            animation: animate-arrow1 linear 6s infinite;      
+            }
+
+            @keyframes animate-arrow1 {
+                from {
+                    top: 4%;
+                    left: -17%;   
+                }
+                to {
+                    top: -31%;
+                    left: -1%;
+                }
             }
 
             .nearArrow2 {
-                top: -14%;
-                left: 13%;
+                animation: animate-arrow2 linear 10s infinite;      
+            }
+
+            @keyframes animate-arrow2 {
+                from {
+                    top: 22%;
+                    left: -18%; 
+                }
+                to {
+                    top: -30%;
+                    left: 19%;
+                }
             }
 
             .nearArrow3 {
-                top: 6%;
-                left: 36%;
+            animation: animate-arrow3 linear 15s infinite;    
+            }
+
+            @keyframes animate-arrow3 {
+                from {
+                    top: 56%;
+                    left: -14%;
+                }
+                to {
+                    top: -27%;
+                    left: 47%;
+                }
             }
 
             .nearArrow4 {
@@ -34,84 +64,152 @@
             }
 
             .nearArrow5 {
-                left: 1%;
-                top: 39%;
+                animation: animate-arrow5 linear 8s infinite;
+            }
+
+            @keyframes animate-arrow5 {
+                from {
+                    left: -14%;
+                    top: 48%; 
+                }
+                to {
+                    left: 32%;
+                    top: -22%;
+                }
             }
 
             .nearArrow6 {
-                left: 22%;
-                top: 47%;
+                animation: animate-arrow6 linear 10s infinite;
+            }
+
+            @keyframes animate-arrow6 {
+                from {
+                    left: 9%;
+                    top: 96%;    
+                }
+                to {
+                    left: 48%;
+                    top: -43%;
+                }
             }
 
             .nearArrow7 {
-                right: 14%;
-                top: 27%;
+                animation: animate-arrow7 linear 7s infinite;   
+            }
+
+            @keyframes animate-arrow7 {
+                from {
+                    right: 34%;
+                    top: 94%;
+                }
+                to {
+                    right: -8%;
+                    top: -66%;
+                }
             }
 
             .nearArrow8 {
                 bottom: -2%;
                 left: -6%;
+
+                bottom: -28%;
+                left: -15%;
+
+                bottom: 98%;
+                left: 50%;
             }
 
             .nearArrow9 {
-                bottom: 1%;
-                left: 39%;            
+                animation: animate-arrow9 linear 9s infinite;   
+            }
+
+
+            @keyframes animate-arrow9 {
+                from {
+                    bottom: -21%;
+                    left: 30%;
+                }
+                to {
+                    bottom: 98%;
+                    left: 70%;
+                }
             }
 
             .nearArrow10 {
-                bottom: -6%;
-                right: 20%;
+                animation: animate-arrow10 linear 10s infinite;   
             }
+
+            @keyframes animate-arrow10 {
+                from {
+                    bottom: -21%;
+                    right: 24%;
+                }
+                to {
+                    bottom: 75%;
+                    right: -13%;
+                }
+            }
+
 
             .nearArrow11 {
-                bottom: 14%;
-                right: -3%;
+                animation: animate-arrow11 linear 10s infinite;   
             }
 
-            .nearArrow12 {
-                left: -18%;
-                bottom: -35%;
+            @keyframes animate-arrow11 {
+                from {
+                    bottom: -29%;
+                    right: 6%;
+                }
+                to {
+                    bottom: 22%;
+                    right: -17%;
+                }
             }
 
-            .nearArrow13 {
-                bottom: -53%;
-                left: 34%;
-            }
+            // .nearArrow12 {
+            //     left: -18%;
+            //     bottom: -35%;
+            // }
 
-            .nearArrow14 {
-                left: 6%;
-                bottom: -74%;
-            }
+            // .nearArrow13 {
+            //     bottom: -53%;
+            //     left: 34%;
+            // }
 
-            .nearArrow15 {
-                left: 52%;
-                bottom: -175%;
-            }
+            // .nearArrow14 {
+            //     left: 6%;
+            //     bottom: -74%;
+            // }
 
-            .nearArrow16 {
-                left: -23%;
-                bottom: -74%;
-            }
+            // .nearArrow15 {
+            //     left: 52%;
+            //     bottom: -175%;
+            // }
 
-            .nearArrow17 {
+            // .nearArrow16 {
+            //     left: -23%;
+            //     bottom: -74%;
+            // }
 
-            }
+            // .nearArrow17 {
 
-            .nearArrow18 {
-                bottom: -165%;
-                right: 56%;
-            }
+            // }
+
+            // .nearArrow18 {
+            //     bottom: -165%;
+            //     right: 56%;
+            // }
 
 
-            .nearArrow19 {
-                left: 59%;
-                bottom: -100%;
-            }
+            // .nearArrow19 {
+            //     left: 59%;
+            //     bottom: -100%;
+            // }
 
-            .nearArrow20 {
-                bottom: -100%;
-                left: 27%;
-            }
+            // .nearArrow20 {
+            //     bottom: -100%;
+            //     left: 27%;
+            // }
         }
 
         .mainTitle {
@@ -3891,10 +3989,15 @@
         display: flex;
         gap: 11.5rem;
         padding-top: 15rem;
+        background: #3a3a3b;
         
 
-        .leftContainer {
-
+        .leftContainer {          
+            .leftRelativeContainer {
+                position: sticky;
+                top: 0%;
+            }
+            
             .imgContainer {
                 position: relative;
                 .arrow-img {
@@ -3927,18 +4030,15 @@
 
         .rightContainer {
 
-            .title {
+            .founderRightTitleContainer {
                 font-family: 'Mulish';
                 font-style: normal;
                 font-weight: 900;
                 font-size: 7.2rem;
                 line-height: 9rem;
                 text-transform: uppercase;
-                color: #3A3A3B;
+                color: #DADADB;
                 margin-bottom: 5rem;
-                span {
-                    color: #F86247;
-                }
             }
 
             .text {

@@ -608,18 +608,19 @@ ScrollTrigger.create({
 
 const tl31 = gsap.timeline();
 tl31.to('.founder', {background: '#f9f9f9'})
-tl31.to('.founderRightTitle', {color: '#3A3A3B',})
-tl31.to('.founderRightTitleSec', {color: '#3A3A3B',})
-tl31.to('.founderRightTitleThird', {color: '#3A3A3B',})
-tl31.to('.founderRightTitleOrange', {color: '#F86247',})
+tl31.to('.founderRightTitle1', {color: '#3A3A3B',})
+tl31.from('.arrow-img', {x: -320})
+tl31.to('.founderRightTitle2', {color: '#3A3A3B',})
+tl31.to('.founderRightTitle3', {color: '#3A3A3B',})
+tl31.to('.founderRightTitle4', {color: '#F86247',})
 
 
 ScrollTrigger.create({
   animation: tl31,
   trigger: '.founderRightTitleContainer',
   start: "top 50%",
-  end: 'top 20%',
-  scrub: 0.5,
+  end: 'top 0%',
+  scrub: true,
 })
 
 const tl32 = gsap.timeline();
@@ -705,244 +706,244 @@ ScrollTrigger.create({
   scrub: true,
 })
 
-const tl37 = gsap.timeline();
+// const tl37 = gsap.timeline();
 
-tl37.to('.nearArrow7', {y: -700, x: 300})
+// tl37.to('.nearArrow7', {y: -700, x: 300})
 
-ScrollTrigger.create({
-  animation: tl37,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 20%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl37,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 20%',
+//   scrub: true,
+// })
 
 
-const tl38 = gsap.timeline();
+// const tl38 = gsap.timeline();
 
-tl38.to('.nearArrow1', {y: -300, x: 300})
+// tl38.to('.nearArrow1', {y: -300, x: 300})
 
-ScrollTrigger.create({
-  animation: tl38,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 40%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl38,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 40%',
+//   scrub: true,
+// })
 
-const tl39 = gsap.timeline();
+// const tl39 = gsap.timeline();
 
-tl39.to('.nearArrow2', {y: -300, x: 300})
+// tl39.to('.nearArrow2', {y: -300, x: 300})
 
-ScrollTrigger.create({
-  animation: tl39,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 35%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl39,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 35%',
+//   scrub: true,
+// })
 
-const tl40 = gsap.timeline();
+// const tl40 = gsap.timeline();
 
-tl40.to('.nearArrow3', {y: -200, x: 300})
+// tl40.to('.nearArrow3', {y: -200, x: 300})
 
-ScrollTrigger.create({
-  animation: tl40,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 20%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl40,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 20%',
+//   scrub: true,
+// })
 
 
-const tl41 = gsap.timeline();
+// const tl41 = gsap.timeline();
 
-tl41.to('.nearArrow4', {y: -100, x: 300})
+// tl41.to('.nearArrow4', {y: -100, x: 300})
 
-ScrollTrigger.create({
-  animation: tl41,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 40%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl41,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 40%',
+//   scrub: true,
+// })
 
 
-const tl42 = gsap.timeline();
+// const tl42 = gsap.timeline();
 
-tl42.to('.nearArrow5', {y: -400, x: 300})
+// tl42.to('.nearArrow5', {y: -400, x: 300})
 
-ScrollTrigger.create({
-  animation: tl42,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 30%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl42,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 30%',
+//   scrub: true,
+// })
 
 
-const tl43 = gsap.timeline();
+// const tl43 = gsap.timeline();
 
-tl43.to('.nearArrow6', {y: -500, x: 300})
+// tl43.to('.nearArrow6', {y: -500, x: 300})
 
-ScrollTrigger.create({
-  animation: tl43,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 20%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl43,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 20%',
+//   scrub: true,
+// })
 
 
-const tl44 = gsap.timeline();
+// const tl44 = gsap.timeline();
 
-tl44.to('.nearArrow8', {y: -700, x: 300})
+// tl44.to('.nearArrow8', {y: -700, x: 300})
 
-ScrollTrigger.create({
-  animation: tl44,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 30%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl44,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 30%',
+//   scrub: true,
+// })
 
 
-const tl45 = gsap.timeline();
+// const tl45 = gsap.timeline();
 
-tl45.to('.nearArrow9', {y: -700, x: 300})
+// tl45.to('.nearArrow9', {y: -700, x: 300})
 
-ScrollTrigger.create({
-  animation: tl45,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 25%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl45,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 25%',
+//   scrub: true,
+// })
 
 
-const tl46 = gsap.timeline();
+// const tl46 = gsap.timeline();
 
-tl46.to('.nearArrow10', {y: -650, x: 450})
+// tl46.to('.nearArrow10', {y: -650, x: 450})
 
-ScrollTrigger.create({
-  animation: tl46,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 25%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl46,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 25%',
+//   scrub: true,
+// })
 
 
-const tl47 = gsap.timeline();
+// const tl47 = gsap.timeline();
 
-tl47.to('.nearArrow11', {y: -300, x: 450})
+// tl47.to('.nearArrow11', {y: -300, x: 450})
 
-ScrollTrigger.create({
-  animation: tl47,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 25%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl47,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 25%',
+//   scrub: true,
+// })
 
 
-const tl48 = gsap.timeline();
+// const tl48 = gsap.timeline();
 
-tl48.to('.nearArrow12', {y: -900, x: 450})
+// tl48.to('.nearArrow12', {y: -900, x: 450})
 
-ScrollTrigger.create({
-  animation: tl48,
-  trigger: '.moreTriggeredBtn',
-  start: "top 60%",
-  end: 'top 20%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl48,
+//   trigger: '.moreTriggeredBtn',
+//   start: "top 60%",
+//   end: 'top 20%',
+//   scrub: true,
+// })
 
-const tl49 = gsap.timeline();
+// const tl49 = gsap.timeline();
 
-tl49.to('.nearArrow13', {y: -1100, x: 450})
+// tl49.to('.nearArrow13', {y: -1100, x: 450})
 
-ScrollTrigger.create({
-  animation: tl49,
-  trigger: '.verticalContainer',
-  start: "top 90%",
-  end: 'top 60%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl49,
+//   trigger: '.verticalContainer',
+//   start: "top 90%",
+//   end: 'top 60%',
+//   scrub: true,
+// })
 
-const tl50 = gsap.timeline();
+// const tl50 = gsap.timeline();
 
-tl50.to('.nearArrow14', {y: -1300, x: 450})
+// tl50.to('.nearArrow14', {y: -1300, x: 450})
 
-ScrollTrigger.create({
-  animation: tl50,
-  trigger: '.verticalContainer',
-  start: "top 70%",
-  end: 'top 10%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl50,
+//   trigger: '.verticalContainer',
+//   start: "top 70%",
+//   end: 'top 10%',
+//   scrub: true,
+// })
 
-const tl51 = gsap.timeline();
+// const tl51 = gsap.timeline();
 
-tl51.to('.nearArrow18', {y: -2300, x: 450})
+// tl51.to('.nearArrow18', {y: -2300, x: 450})
 
-ScrollTrigger.create({
-  animation: tl51,
-  trigger: '.verticalContainer',
-  start: "top 90%",
-  end: 'top 60%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl51,
+//   trigger: '.verticalContainer',
+//   start: "top 90%",
+//   end: 'top 60%',
+//   scrub: true,
+// })
 
-const tl52 = gsap.timeline();
+// const tl52 = gsap.timeline();
 
-tl52.to('.nearArrow15', {y: -2500, x: 600})
+// tl52.to('.nearArrow15', {y: -2500, x: 600})
 
-ScrollTrigger.create({
-  animation: tl52,
-  trigger: '.verticalContainer',
-  start: "top 90%",
-  end: 'top 50%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl52,
+//   trigger: '.verticalContainer',
+//   start: "top 90%",
+//   end: 'top 50%',
+//   scrub: true,
+// })
 
-const tl53 = gsap.timeline();
+// const tl53 = gsap.timeline();
 
-tl53.to('.nearArrow16', {y: -1400, x: 450})
+// tl53.to('.nearArrow16', {y: -1400, x: 450})
 
-ScrollTrigger.create({
-  animation: tl53,
-  trigger: '.verticalContainer',
-  start: "top 70%",
-  end: 'top 20%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl53,
+//   trigger: '.verticalContainer',
+//   start: "top 70%",
+//   end: 'top 20%',
+//   scrub: true,
+// })
 
 
-const tl54 = gsap.timeline();
+// const tl54 = gsap.timeline();
 
-tl54.to('.nearArrow20', {y: -1600, x: 450})
+// tl54.to('.nearArrow20', {y: -1600, x: 450})
 
-ScrollTrigger.create({
-  animation: tl54,
-  trigger: '.verticalContainer',
-  start: "top 70%",
-  end: 'top 10%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl54,
+//   trigger: '.verticalContainer',
+//   start: "top 70%",
+//   end: 'top 10%',
+//   scrub: true,
+// })
 
 
-const tl55 = gsap.timeline();
+// const tl55 = gsap.timeline();
 
-tl55.to('.nearArrow19', {y: -1300, x: 450})
+// tl55.to('.nearArrow19', {y: -1300, x: 450})
 
-ScrollTrigger.create({
-  animation: tl55,
-  trigger: '.verticalContainer',
-  start: "top 70%",
-  end: 'top 10%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl55,
+//   trigger: '.verticalContainer',
+//   start: "top 70%",
+//   end: 'top 10%',
+//   scrub: true,
+// })
 
 const tl56 = gsap.timeline();
 
