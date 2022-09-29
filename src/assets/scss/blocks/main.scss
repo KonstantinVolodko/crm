@@ -3555,13 +3555,6 @@
         display: flex;
         gap: 11.5rem;
         padding-top: 15rem;
-
-        padding-bottom: 10rem;
-        background-color: #3a3a3b;
-
-        .leftContainer {
-            position: relative;
-
         
 
         .leftContainer {
@@ -3574,13 +3567,7 @@
                     left: -12rem;
                 }
             }
-
             
-            .founderHelpContainer {
-                position: sticky;
-                top: 1rem;
-            }
-
             .name {
                 font-family: 'Nunito Sans';
                 font-style: normal;
@@ -3604,16 +3591,18 @@
 
         .rightContainer {
 
-            .founderRightTitleContainer {
+            .title {
                 font-family: 'Mulish';
                 font-style: normal;
                 font-weight: 900;
                 font-size: 7.2rem;
                 line-height: 9rem;
                 text-transform: uppercase;
-                color: #DADADB;
+                color: #3A3A3B;
                 margin-bottom: 5rem;
-
+                span {
+                    color: #F86247;
+                }
             }
 
             .text {
@@ -3629,7 +3618,7 @@
 
         }
     }
-
+    
     div.our-comand {
         padding-top: 20rem;
         padding-bottom: 15rem;
