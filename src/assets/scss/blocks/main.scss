@@ -1036,9 +1036,11 @@
             justify-content: center;
             margin-bottom: 5rem;
 
-            // img {
-            //     width: 100%;
-            // }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
             @include breakpoint($xl-bp) {
                 padding-left: 3.2rem;
                 padding-right: 3.2rem;
@@ -1830,6 +1832,15 @@
             display: flex;
             justify-content: center;
             gap: 5.1rem;
+            @include breakpoint($xl-bp) {
+                display: grid;
+                grid-template-columns: 43.5rem 1fr;
+                gap: 0;
+                padding: 0 3.2rem;
+                justify-content: flex-start;
+                align-items: flex-start;
+                column-gap: 2.5rem;
+            }
 
             .leftContainer {
 
@@ -1859,6 +1870,9 @@
                         color: #3A3A3B;
                         position: relative;
                         width: 43.6rem;
+                        @include breakpoint($xl-bp) {
+                            width: auto;
+                        }
                     }
     
                     li:before {
@@ -1868,6 +1882,9 @@
                         height: 2rem;
                         top: 0;
                         left: -3rem;
+                        @include breakpoint($xl-bp) {
+                            left: -3.5rem
+                        }
                     }
     
                     ul {
@@ -1890,6 +1907,9 @@
                             left: -3rem;
                             border: 0.2rem solid #124BF6;
                             border-radius: 50%;
+                            @include breakpoint($xl-bp) {
+                                left: -3.5rem
+                            }
                         }
                     }
                 }
@@ -1900,6 +1920,15 @@
                 .analiticCallbrImgContainer {
                     margin-top: 5rem;
                     margin-bottom: 4.3rem;
+                    @include breakpoint($xl-bp) {
+                        height: auto;
+                        width: auto;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
                 }
                 .analiticImgContainer {
                     width: 55.9rem;
@@ -1908,6 +1937,10 @@
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
+                    }
+                    @include breakpoint($xl-bp) {
+                        height: auto;
+                        width: auto;
                     }
                 }
 
@@ -1925,6 +1958,9 @@
                         color: #3A3A3B;
                         position: relative;
                         width: 43.6rem;
+                        @include breakpoint($xl-bp) {
+                            width: auto;
+                        }
                     }
     
                     li:before {
@@ -1934,6 +1970,9 @@
                         height: 2rem;
                         top: 0;
                         left: -3rem;
+                        @include breakpoint($xl-bp) {
+                            left: -3.5rem
+                        }
                     }
     
                     ul {
@@ -1956,6 +1995,9 @@
                             left: -3rem;
                             border: 0.2rem solid #124BF6;
                             border-radius: 50%;
+                            @include breakpoint($xl-bp) {
+                                left: -3.5rem
+                            }
                         }
                     }
                 }
@@ -2171,6 +2213,9 @@
             text-transform: uppercase;
             color: #DADADB;
             padding-left: 18rem;
+            @include breakpoint($xl-bp) {
+                padding-left: 3.2rem;
+            }
         }
 
         .integrationContainer {
@@ -2179,6 +2224,9 @@
             margin-top: 5rem;
             padding-left: 40rem;
             margin-bottom: 10rem;
+            @include breakpoint($xl-bp) {
+                padding-left: 3.2rem;
+            }
 
             .integrationContainerTitle {
                 font-family: 'Nunito Sans';
@@ -2275,6 +2323,10 @@
         padding-bottom: 15rem;
         position: relative;
         overflow: hidden;
+        @include breakpoint($xl-bp) {
+            padding-left: 3.2rem;
+            padding-right: 3.2rem;
+        }
 
         .moreTitle {
             font-family: 'Mulish';
@@ -2289,6 +2341,9 @@
             @include breakpoint($mm-bp) {
                 padding-left: 0;
                 text-align: center;
+            }
+            @include breakpoint($xl-bp) {
+                text-align: left;
             }
         }
 
@@ -5233,6 +5288,9 @@
     }
     .ml5 {
         margin-left: 5rem!important;
+        @include breakpoint($xl-bp) {
+            margin-left: 8rem!important;
+        }
     }
     .ml4 {
         margin-left: 4rem;
