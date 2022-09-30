@@ -11,14 +11,27 @@
     position: absolute;
     z-index: 11111;
     width: 100%;
+    @include breakpoint($xl-bp) {
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
 
+    }
+    .logoContainer {
+        position: relative;
+        z-index: 3;
+    }
     .menuItemsContainer {
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 3;
 
         .menuItemsHelper {
             display: flex;
             gap: 2.4rem;
+            @include breakpoint($sm-bp) {
+                display: none;
+            }
         }
 
         .menuItem {
@@ -43,6 +56,9 @@
             padding: 1rem 2rem;
             margin-left: 2rem;
             margin-right: 0.5rem;
+            @include breakpoint($sm-bp) {
+                display: none;
+            }
         }
 
         .btnInit {
@@ -68,13 +84,173 @@
             border-bottom: 0.3rem solid #9FF612;
             border-right: 0.3rem solid #9FF612;
             border-radius: 0.6rem;
-            padding: 0.8rem 1.4rem;
+            // padding: 0.8rem 1.4rem;
+            height: 4rem;
+            width: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            div.burger-button-close {
+                #first-line-burger,
+                #second-line-burger,
+                #third-line-burger {
+                    width: 2.4rem;
+                    height: 0.2rem;
+                    background-color: #FFFFFF;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transform-origin: center center;
+                }
 
-            svg {
-                width: 2.4rem;
-                height: 2rem;
-            }
+                div#first-line-burger {
+                    top: calc(50% + 0.5rem)
+                }
+                div#third-line-burger {
+                    top: calc(50% - 0.5rem)
+                }
+              }
         }
         
+    }
+    .page-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            opacity: 0.5;
+            position: fixed;
+            z-index: 1;
+        }
+        .menu-main {
+            position: relative;
+            z-index: 2;
+            margin: 0 18rem;
+            margin-top: 7.7rem;
+            max-width: 106rem;
+            margin-left: auto;
+            @include breakpoint($xl-bp) {
+                margin: 0 3.2rem;
+                margin-top: 7.7rem;
+            }
+            @include breakpoint($sm-bp) {
+                margin: 0 2.2rem;
+                margin-top: 7.7rem;
+            }
+            .menu-wrapper {
+                padding-left: 6rem;
+                .close-block {
+                    position: absolute;
+                    left: 0;
+                    background: #9FF612;
+                    border-radius: 2.4rem;
+                    height: 100%;
+                    width: 16rem;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: transform 0.5s ease;
+                    &:hover {
+                        transform: translateX(1rem);
+                    }
+                    span {
+                        writing-mode: vertical-rl;
+                        transform-origin: center;
+                        transform: rotate(-180deg); 
+                        font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 1.6rem;
+                        line-height: 2.2rem;
+                        /* identical to box height */
+                        
+                        
+                        color: #3A3A3B;
+
+                        padding-right: 2.2rem;
+                    }
+                    div {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: #3A3A3B;
+                        margin-left: 2rem;
+                        margin-top: 1rem;
+                        border-radius: 50%;
+                        position: relative;
+                    }
+                    div::before, div::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(45deg);
+                        height: 0.1rem;
+                        width: 1.4rem;
+                        background-color: #FFFFFF;
+                    }
+                    div::after {
+                        transform: translate(-50%, -50%) rotate(-45deg);
+                    }
+                }
+                .nav-block {
+                    background: #FFFFFF;
+                    border-radius: 2.4rem;
+                    z-index: 3;
+                    position: relative;
+                    padding: 4rem;
+                    background-image: url(../images/header/menu-BG.png);
+                    background-position: right 7rem bottom;
+                    background-repeat: no-repeat;
+                    @include breakpoint($sm-bp) {
+                        padding: 3rem;
+                        padding-bottom: 2rem;
+                        background-size: 30%;
+                        background-position: right 4rem bottom -1.5rem;
+                    }
+                    ul {
+                        display: grid;
+                        grid-template-columns: repeat(3, min-content);
+                        grid-template-rows: repeat(4, min-content);
+                        grid-auto-flow: column;
+                        row-gap: 1.6rem;
+                        column-gap: 7rem;
+                        @include breakpoint($sm-bp) {
+                            grid-template-columns: repeat(2, min-content);
+                            grid-template-rows: repeat(6, min-content);
+                            column-gap: 3rem;
+                            row-gap: 1rem;
+                        }
+                        li {
+                            a {
+                                font-family: 'Nunito Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 1.8rem;
+                                line-height: 2.5rem;
+                                /* identical to box height */
+                                
+                                
+                                color: #3A3A3B;
+                                white-space: nowrap;
+                                @include breakpoint($sm-bp) {
+                                    font-size: 1.4rem;
+                                    line-height: 1.9rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

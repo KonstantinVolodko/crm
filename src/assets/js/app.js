@@ -44,26 +44,47 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 let swiper2 = new Swiper(".tarifSwiper", {
-  slidesPerView: 3.3,
+  slidesPerView: 2.6,
   spaceBetween: 30,
   navigation: {
     nextEl: ".tarifArrowRight",
     prevEl: ".tarifArrowLeft",
   },
+  breakpoints: {
+    // when window width is >= 960px
+    961: {
+      slidesPerView: 3.3,
+    },
+  }
 });
 
 let swiper3 = new Swiper(".helpSwiper", {
-  slidesPerView: 1.2,
   spaceBetween: 30,
   navigation: {
     nextEl: ".helpArrowRight",
     prevEl: ".helpArrowLeft",
   },
   breakpoints: {
-    // when window width is >= 320px
-    1441: {
+    // when window width is >= 1441px
+    1920: {
       slidesPerView: 1.9,
       spaceBetween: 30,
+    },
+    1440: {
+      slidesPerView: 1.3,
+      spaceBetween: 30,
+    },
+    960: {
+      slidesPerView: 0.95,
+    },
+    640: {
+      slidesPerView: 0.6,
+    },
+    480: {
+      slidesPerView: 0.9,
+    },
+    375: {
+      slidesPerView: 0.7,
     },
   }
 });
@@ -1138,7 +1159,48 @@ ScrollTrigger.create({
       }
     })
   }
+  const burgerBtn = document.querySelector('.burgerBtn')
+  const overlay = document.querySelector('#menu-overlayZ')
+  const closeButton = document.querySelector('.close-block')
 
+  const tlNew = gsap.timeline({ paused: true, reversed: true });
+ 
+  tlNew.from('#menu-wrapperZ', {x:'-50%', opacity: 0, duration: .3, pointerEvents: 'none'}, 0)
+  tlNew.from('#menu-overlayZ', {opacity: 0, duration: .3, pointerEvents: 'none'}, 0)
+  tlNew.to('#third-line-burger', {top:"50%", rotation: 45, duration: .3}, 0)
+  tlNew.to('#second-line-burger', {opacity: 0, duration: .3}, 0)
+  tlNew.to('#first-line-burger', {top:"50%", rotation: -45, duration: .3}, 0)
+  tlNew.to(burgerBtn, {background: '#124BF6'}, 0)
+  if (burgerBtn && overlay && closeButton) {
+    const arr = []
+    arr.push(burgerBtn, overlay, closeButton)
+    arr.forEach(el => {
+      el.addEventListener('click', () => {
+        if (tlNew.reversed()) {
+          tlNew.play();
+          disableScroll()
+      } else {
+          tlNew.reverse();
+          enableScroll()
+      }
+      })
+    })
+  }
+
+  function disableScroll() {
+    // Get the current page scroll position
+    const scrollTop = window.pageYOffset  || document.documentElement.scrollTop;
+    const scrollLeft = window.pageXOffset  || document.documentElement.scrollLeft;
+  
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+  }
+  function enableScroll() {
+    window.onscroll = function() {};
+    }
+  
 })
 
 

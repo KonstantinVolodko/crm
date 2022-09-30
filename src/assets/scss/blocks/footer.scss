@@ -7,13 +7,26 @@ footer {
     background-color: #3A3A3B;
     display: flex;
     justify-content: space-between;
+    @include breakpoint($xl-bp) {
+        padding-left: 3.2rem;
+        padding-right: 3.2rem;
+        justify-content: flex-start;
+    }
 
     .container {
         display: flex;
         flex-direction: column;
+        @include breakpoint($xl-bp) {
+            &:not(:first-child) {
+                padding-top: 2rem;
+            }
+        }
 
         .imgContainer {
             margin-top: 2rem;
+        }
+        .imgContainer + .littleText {
+            margin-top: 2.5rem;
         }
 
         .bigText {
@@ -25,6 +38,12 @@ footer {
             color: #FFFFFF;
             margin-top: 2rem;
             width: 20rem;
+            @include breakpoint($xl-bp) {
+                margin-top: 0;
+            }
+        }
+        .bigText + .bigText {
+            padding-top: 2rem;
         }
 
         .littleText {
@@ -36,6 +55,9 @@ footer {
             color: #FFFFFF;
             margin-top: 1rem;
             width: 20rem;
+            @include breakpoint($xl-bp) {
+                width: 17rem;
+            }
         }
     }
 
