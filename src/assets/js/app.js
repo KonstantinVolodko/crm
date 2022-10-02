@@ -249,6 +249,7 @@ ScrollTrigger.create({
   scrub: true,
 })
 
+
 const tl7 = gsap.timeline();
 
 tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '899.455rem', height: '889.485rem', left: '-182.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
