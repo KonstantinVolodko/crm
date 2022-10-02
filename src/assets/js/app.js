@@ -32,6 +32,7 @@ SmoothScroll({
 })
 
 
+
 let swiper = new Swiper(".mySwiper", {
     slidesPerView: 'auto',
     spaceBetween: 30,
@@ -165,6 +166,9 @@ if (progressBar && allBar) {
 // })
 
 
+
+
+
 const tl = gsap.timeline();
 
 tl.from('.mainTitle', {x: '-200%'})
@@ -252,7 +256,21 @@ ScrollTrigger.create({
 
 const tl7 = gsap.timeline();
 
-tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '899.455rem', height: '889.485rem', left: '-182.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
+if (window.matchMedia("(max-width: 1440px)").matches) {
+  tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-300.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
+  
+}
+
+
+if (window.matchMedia("(min-width: 1440px)").matches) {
+  tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-200.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
+  
+}
+
+
+
+
+
 
 ScrollTrigger.create({
   animation: tl7,
@@ -1200,7 +1218,36 @@ ScrollTrigger.create({
   }
   function enableScroll() {
     window.onscroll = function() {};
-    }
+  }
+
+
+
+
+  let arrowContainer = document.querySelectorAll('.arrowContainer')
+  let windowBlock = document.querySelectorAll('.windowBlock')
+
+  if (arrowContainer.length > 0) {
+
+    arrowContainer.forEach((e, id) => {
+      console.log(e)
+      console.log(id)
+      e.addEventListener('click', elem => {
+        windowBlock[id].classList.add('activeBlock')
+        e.classList.add('act')
+        let activeBlock = document.querySelectorAll('.activeBlock')
+        let act = document.querySelectorAll('.act')
+        if( activeBlock.length > 1 && act.length > 1) {
+          activeBlock[0].classList.remove('activeBlock')
+          act[0].classList.remove('act')
+        }
+      })
+    })
+  }
+
+
+
+
+
   
 })
 
