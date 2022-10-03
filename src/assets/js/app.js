@@ -57,8 +57,16 @@ let swiper2 = new Swiper(".tarifSwiper", {
       slidesPerView: 3.3,
     },
 
-    200: {
+    639: {
       slidesPerView: 1.7,
+    },
+
+    479: {
+      slidesPerView: 1.2,
+    },
+
+    375: {
+      slidesPerView: 1.1,
     }
   }
 });
@@ -83,7 +91,7 @@ let swiper3 = new Swiper(".helpSwiper", {
       slidesPerView: 0.95,
     },
     640: {
-      slidesPerView: 0.6,
+      slidesPerView: 0.8,
     },
     480: {
       slidesPerView: 0.9,
