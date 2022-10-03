@@ -32,6 +32,9 @@ html {
     font-size: calc(100vw / 640 * 10);
   }
 
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 480 * 10);
+  }
   
 }
 

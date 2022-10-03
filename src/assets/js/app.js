@@ -679,36 +679,43 @@ ScrollTrigger.create({
   scrub: true,
 })
 
+
+
 const tl31 = gsap.timeline();
-tl31.to('.founder', {background: '#f9f9f9'})
-tl31.to('.founderRightTitle1', {color: '#3A3A3B',})
-tl31.from('.arrow-img', {x: -320})
-tl31.to('.founderRightTitle2', {color: '#3A3A3B',})
-tl31.to('.founderRightTitle3', {color: '#3A3A3B',})
-tl31.to('.founderRightTitle4', {color: '#F86247',})
+
+if (window.matchMedia("(min-width: 640px)").matches) {
+  tl31.to('.founder', {background: '#f9f9f9'})
+  tl31.to('.founderRightTitle1', {color: '#3A3A3B',})
+  tl31.from('.arrow-img', {x: -320})
+  tl31.to('.founderRightTitle2', {color: '#3A3A3B',})
+  tl31.to('.founderRightTitle3', {color: '#3A3A3B',})
+  tl31.to('.founderRightTitle4', {color: '#F86247',})
+  
+  
+  ScrollTrigger.create({
+    animation: tl31,
+    trigger: '.founderRightTitleContainer',
+    start: "top 50%",
+    end: 'top 0%',
+    scrub: true,
+  })
+}
+  
 
 
-ScrollTrigger.create({
-  animation: tl31,
-  trigger: '.founderRightTitleContainer',
-  start: "top 50%",
-  end: 'top 0%',
-  scrub: true,
-})
-
-const tl32 = gsap.timeline();
-tl32.to('.founder', {background: '#f9f9f9'})
-tl32.to('.founderRightTitle', {color: '#3A3A3B',})
+// const tl32 = gsap.timeline();
+// tl32.to('.founder', {background: '#f9f9f9'})
+// tl32.to('.founderRightTitle', {color: '#3A3A3B',})
 
 
 
-ScrollTrigger.create({
-  animation: tl32,
-  trigger: '.founderRightTitleContainer',
-  start: "top 50%",
-  end: 'top 20%',
-  scrub: 0.5,
-})
+// ScrollTrigger.create({
+//   animation: tl32,
+//   trigger: '.founderRightTitleContainer',
+//   start: "top 50%",
+//   end: 'top 20%',
+//   scrub: 0.5,
+// })
 
 if (window.matchMedia("(min-width: 960px)").matches) {
 
