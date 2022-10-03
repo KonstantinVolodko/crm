@@ -56,6 +56,10 @@ let swiper2 = new Swiper(".tarifSwiper", {
     961: {
       slidesPerView: 3.3,
     },
+
+    200: {
+      slidesPerView: 1.7,
+    }
   }
 });
 
@@ -91,12 +95,21 @@ let swiper3 = new Swiper(".helpSwiper", {
 });
 
 let swiper4 = new Swiper(".keysesSwiper", {
-  slidesPerView: 2.2,
+  slidesPerView: 1.2,
   spaceBetween: 30,
   navigation: {
     nextEl: ".keysesArrowLeft",
     prevEl: ".keysesArrowRight",
   },
+
+  breakpoints: {
+    // when window width is >= 960px
+    960: {
+      slidesPerView: 2.2,
+    },
+  },
+
+
 });
 
 let ourComandSwiper = new Swiper('.our-comand__swiper', {
@@ -111,6 +124,8 @@ let ourComandSwiper = new Swiper('.our-comand__swiper', {
     nextEl: ".ourComadArrowLeft",
     prevEl: ".ourComadArrowRight",
   },
+
+  
 })
 const progressBar = document.querySelector('.orange-line')
 const allBar = document.querySelector('.progress-bar__wrapper')
@@ -255,6 +270,7 @@ ScrollTrigger.create({
 
 
 const tl7 = gsap.timeline();
+if (window.matchMedia("(min-width: 960px)").matches) {
 
 if (window.matchMedia("(max-width: 1440px)").matches) {
   tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-300.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
@@ -271,15 +287,18 @@ if (window.matchMedia("(min-width: 1440px)").matches) {
 
 
 
+  ScrollTrigger.create({
+    animation: tl7,
+    trigger: '.triggerArrow',
+    start: "top 80%",
+    end: "top 0",
+    scrub: true,
+    pin: '.more2'
+  })
+}
 
-ScrollTrigger.create({
-  animation: tl7,
-  trigger: '.triggerArrow',
-  start: "top 80%",
-  end: "top 0",
-  scrub: true,
-  pin: '.more2'
-})
+
+
 
 
 const tl8 = gsap.timeline();
@@ -325,31 +344,35 @@ ScrollTrigger.create({
   scrub: true,
 })
 
-const tl11 = gsap.timeline();
+if (window.matchMedia("(min-width: 960px)").matches) {
+  const tl11 = gsap.timeline();
 
-tl11.from('.cta2Title', {y: '-200%'})
-tl11.from('.img1', {y: -1000}),
-tl11.from('.img2', {y: -800}),
-tl11.to('.cta2TitleSpan', {color: '#9FF612'})
-tl11.from('.img3', {y: -750, x: 500}),
-tl11.from('.img4', {y: -700, x: 200}),
-tl11.from('.img5', {y: -650}),
-tl11.from('.img6', {y: -650, x: -200}),
-tl3.from('.cta2Subtitle', {opacity: 0, y: 100}),
-tl11.from('.img7', {y: -600}),
-tl11.from('.img8', {y: -600, x: -200}),
-tl11.from('.img9', {y: -500, x: 200}),
-tl11.from('.img10', {y: -450, x: 150}),
-tl11.from('.img11', {y: -400, x: 150}),
+  tl11.from('.cta2Title', {y: '-200%'})
+  tl11.from('.img1', {y: -1000}),
+  tl11.from('.img2', {y: -800}),
+  tl11.to('.cta2TitleSpan', {color: '#9FF612'})
+  tl11.from('.img3', {y: -750, x: 500}),
+  tl11.from('.img4', {y: -700, x: 200}),
+  tl11.from('.img5', {y: -650}),
+  tl11.from('.img6', {y: -650, x: -200}),
+  tl3.from('.cta2Subtitle', {opacity: 0, y: 100}),
+  tl11.from('.img7', {y: -600}),
+  tl11.from('.img8', {y: -600, x: -200}),
+  tl11.from('.img9', {y: -500, x: 200}),
+  tl11.from('.img10', {y: -450, x: 150}),
+  tl11.from('.img11', {y: -400, x: 150}),
+  
+  ScrollTrigger.create({
+    animation: tl11,
+    trigger: '.cta2',
+    start: "top 30%",
+    end: "1000",
+    scrub: true,
+    pin: '.cta2',
+  })
+}
 
-ScrollTrigger.create({
-  animation: tl11,
-  trigger: '.cta2',
-  start: "top 30%",
-  end: "1000",
-  scrub: true,
-  pin: '.cta2',
-})
+
 
 
 
@@ -380,7 +403,11 @@ const tl13 = gsap.timeline();
 tl13.to('.giftTitleFirst', {color: '#3A3A3B'})
 tl13.to('.giftTitleSecond', {color: '#3A3A3B'})
 tl13.to('.giftTitleThird', {color: '#F86247'})
-tl13.fromTo('.giftSubtitle', {opacity: 0, y: 100}, {opacity: 1, y: 0, fontSize: '1.6rem', lineHeight: '2rem'})
+
+
+if (window.matchMedia("(min-width: 960px)").matches) {
+  tl13.fromTo('.giftSubtitle', {opacity: 0, y: 100}, {opacity: 1, y: 0, fontSize: '1.6rem', lineHeight: '2rem'})
+}
 
 
 ScrollTrigger.create({
@@ -392,17 +419,22 @@ ScrollTrigger.create({
 })
 
 
-const tl14 = gsap.timeline();
-tl14.to('.giftTitle', {display: 'flex', fontSize: '5rem', gap: '1rem', justifyContent: 'center'})
+
+if (window.matchMedia("(min-width: 960px)").matches) {
+  const tl14 = gsap.timeline();
+  tl14.to('.giftTitle', {display: 'flex', fontSize: '5rem', gap: '1rem', justifyContent: 'center'})
+  
+  
+  ScrollTrigger.create({
+    animation: tl14,
+    trigger: '.giftSubtitle',
+    start: "top 50%",
+    end: "top 0",
+    scrub: true,
+  })
+}
 
 
-ScrollTrigger.create({
-  animation: tl14,
-  trigger: '.giftSubtitle',
-  start: "top 50%",
-  end: "top 0",
-  scrub: true,
-})
 
 
 const tl15 = gsap.timeline();
@@ -434,6 +466,7 @@ tl16.to('.number3', {color: '#F86247'})
 tl16.to('.number4', {color: '#3A3A3B'})
 tl16.to('.number4', {color: '#F86247'})
 tl16.to('.number5', {color: '#3A3A3B'})
+
 
 
 ScrollTrigger.create({
@@ -677,8 +710,9 @@ ScrollTrigger.create({
   scrub: 0.5,
 })
 
+if (window.matchMedia("(min-width: 960px)").matches) {
 
-const tl33 = gsap.timeline();
+  const tl33 = gsap.timeline();
 
 tl33.from('.cta4Title', {y: -300})
 tl33.from('.cta4Btn', {x: -300})
@@ -704,6 +738,11 @@ ScrollTrigger.create({
   scrub: true,
   pin: '.cta4',
 })
+
+}
+
+
+
 
 const tl34 = gsap.timeline();
 
@@ -1152,6 +1191,38 @@ ScrollTrigger.create({
   end: 'top 0%',
   scrub: true,
 })
+
+const tl69 = gsap.timeline();
+
+tl69.to('.mobileNumber1', {color: '#F86247'})
+tl69.to('.mobileNumber2', {color: '#3A3A3B'})
+tl69.to('.mobileNumber2', {color: '#F86247'})
+tl69.to('.mobileNumber3', {color: '#3A3A3B'})
+tl69.to('.mobileNumber3', {color: '#F86247'})
+tl69.to('.mobileNumber4', {color: '#3A3A3B'})
+tl69.to('.mobileNumber4', {color: '#F86247'})
+tl69.to('.mobileNumber5', {color: '#3A3A3B'})
+
+ScrollTrigger.create({
+  animation: tl69,
+  trigger: '.sector',
+  start: "top 60%",
+  end: '3000',
+  scrub: true,
+})
+
+const tl70 = gsap.timeline();
+tl70.fromTo('.mobileProgressBar', {background: 'linear-gradient(90deg, #124BF6 -40%, transparent 0%), #D9D9D9'}, {background: 'linear-gradient(180deg, #124BF6 100%, transparent 0%), #D9D9D9'})
+
+
+ScrollTrigger.create({
+  animation: tl70,
+  trigger: '.sector',
+  start: "top 60%",
+  end: '3000',
+  scrub: true,
+})
+
   
 
   const bar = document.querySelectorAll('.bar')
