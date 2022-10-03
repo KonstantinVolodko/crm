@@ -32,6 +32,11 @@
             @include breakpoint($sm-bp) {
                 display: none;
             }
+
+            @include breakpoint($lb-bp) {
+                display: none;
+            }
+            
         }
 
         .menuItem {
@@ -230,6 +235,11 @@
                             column-gap: 3rem;
                             row-gap: 1rem;
                         }
+
+                        @include breakpoint($lb-bp) {
+                            grid-template-rows: repeat(5, min-content);
+                        }
+                        
                         li {
                             a {
                                 font-family: 'Nunito Sans';
