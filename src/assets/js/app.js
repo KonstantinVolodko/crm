@@ -1224,27 +1224,74 @@ ScrollTrigger.create({
 
 
   let arrowContainer = document.querySelectorAll('.arrowContainer')
-  let windowBlock = document.querySelectorAll('.windowBlock')
+  let containerCat = document.querySelector('.right-block')
 
-  if (arrowContainer.length > 0) {
+  const mm = window.matchMedia('(min-width: 960px)');
 
-    arrowContainer.forEach((e, id) => {
-      console.log(e)
-      console.log(id)
-      e.addEventListener('click', elem => {
-        windowBlock[id].classList.add('activeBlock')
-        e.classList.add('act')
-        let activeBlock = document.querySelectorAll('.activeBlock')
-        let act = document.querySelectorAll('.act')
-        if( activeBlock.length > 1 && act.length > 1) {
-          activeBlock[0].classList.remove('activeBlock')
-          act[0].classList.remove('act')
-        }
+  mm.addListener(() => {
+    if (mm.matches) {
+      arrowContainer.forEach(el => {
+        el.addEventListener('click', clickAcc)
+        el.removeEventListener('click', defaultAccord)
       })
+    } else {
+      arrowContainer.forEach(el => {
+        el.removeEventListener('click', clickAcc)
+        el.addEventListener('click', defaultAccord)
+      })
+    }
+  })
+
+  if (mm.matches) {
+    arrowContainer.forEach(el => {
+      el.addEventListener('click', clickAcc)
+      el.removeEventListener('click', defaultAccord)
+    })
+  } else {
+    arrowContainer.forEach(el => {
+      el.removeEventListener('click', clickAcc)
+      el.addEventListener('click', defaultAccord)
     })
   }
 
+  function clickAcc() {
+    const block = this.parentElement.nextElementSibling
+    const clone = block.cloneNode(true)
+    if (containerCat.innerHTML && this.classList.contains('act')) {
+      const firstChild = containerCat.firstChild
+      firstChild.style.setProperty('max-height', '0px')
+      firstChild.style.setProperty('opacity', '0')
+      this.classList.remove('act')
+      return
+    }
+    arrowContainer.forEach(el => {
+      el.classList.remove('act')
+    })
+    this.classList.add('act')
+    containerCat.innerHTML=''
+    containerCat.appendChild(clone)
+    clone.style.setProperty('display', 'block')
+    if (clone.style.maxHeight) {
+      clone.style.maxHeight = null;
+    } else {
+      clone.style.maxHeight = clone.scrollHeight + "px";
+    }
+  }
 
+  function defaultAccord() {
+    let panel = this.parentElement.nextElementSibling;
+    arrowContainer.forEach(el => {
+      el.classList.remove('act')
+    })
+    this.classList.add('act')
+    panel.style.setProperty('display', 'block')
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+      this.classList.remove('act')
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  }
 
 
 
