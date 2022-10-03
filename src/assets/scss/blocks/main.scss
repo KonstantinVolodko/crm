@@ -11,7 +11,12 @@
             padding-left: 3.2rem;
             padding-top: 19.7rem;
         }
+        @include breakpoint($lb-bp) {
+            padding-top: 13rem;
+        }
+
         @include breakpoint($sm-bp) {
+            padding-left: 2.2rem;
         }
         .arrowsBgContainer {
             img {
@@ -239,11 +244,16 @@
                 line-height: 6rem;
             }
 
-
             @include breakpoint($sm-bp) {
                 font-size: 4rem;
                 line-height: 5rem;
             }
+
+
+            // @include breakpoint($sm-bp) {
+            //     font-size: 4rem;
+            //     line-height: 5rem;
+            // }
 
             span {
                 color: #9FF612;
@@ -274,25 +284,30 @@
             }
 
 
-            @include breakpoint($sm-bp) {
-                display: grid;
-                grid-template-columns: repeat(2, min-content);
-                row-gap: 4rem;
-                justify-items: flex-start;
-            }
+            // @include breakpoint($sm-bp) {
+            //     display: grid;
+            //     grid-template-columns: repeat(2, min-content);
+            //     row-gap: 4rem;
+            //     justify-items: flex-start;
+            // }
 
             .hiddenText {
                 @include breakpoint($xl-bp) {
                     line-height: 3rem;
                 }
-                @include breakpoint($sm-bp) {
-                    grid-column: 2 span;
-                    grid-row: 1 / 2;
-                }
+                // @include breakpoint($sm-bp) {
+                //     grid-column: 2 span;
+                //     grid-row: 1 / 2;
+                // }
 
                 @include breakpoint($lb-bp) {
                     margin-left: 0rem;
                     margin-bottom: 4rem;
+                }
+
+                @include breakpoint($sm-bp) {
+                    font-size: 1.8rem;
+                    line-height: 2rem;
                 }
 
             }
@@ -312,9 +327,9 @@
                 color: #FFFFFF;
                 padding: 1rem 2rem;
 
-                @include breakpoint($sm-bp) {
-                    width: 100%;
-                }
+                // @include breakpoint($sm-bp) {
+                    
+                // }
 
             }
 
@@ -341,9 +356,9 @@
                 color: #FFFFFF;
                 width: 31.9rem;
                 margin-left: 8.4rem;
-                @include breakpoint($sm-bp) {
-                    margin-left: 0;
-                }
+                // @include breakpoint($sm-bp) {
+                //     margin-left: 0;
+                // }
                 span {
                     font-weight: 700;
                 }
@@ -364,6 +379,13 @@
                 padding-right: 6rem;
                 position: absolute;
                 align-items: end;
+
+                
+                @include breakpoint($sm-bp) {
+                    padding-bottom: 3.8rem;
+                }
+
+
                 p {
                     font-family: 'Nunito Sans';
                     font-style: normal;
@@ -431,6 +453,12 @@
                         line-height: 3.9rem;
                     }
 
+                    @include breakpoint($sm-bp) {
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        width: 82%;
+                    }
+
                 }
 
                 .vertSubtitle {
@@ -443,6 +471,11 @@
                     width: 31rem;
                     @include breakpoint($xl-bp) {
                         line-height: 2rem;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        font-size: 1.4rem;
+                        line-height: 1.6rem;
                     }
                 }
             }
@@ -467,6 +500,10 @@
                     @include breakpoint($lb-bp) {
                         flex-direction: inherit;
                         justify-content: space-between;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        flex-direction: column;
                     }
                     .nameContainer {
 
@@ -556,6 +593,11 @@
                     @include breakpoint($lb-bp) {
                         flex-direction: inherit;
                     }
+
+                    @include breakpoint($sm-bp) {
+                        flex-direction: column;
+                    }
+
                     button {
                         font-family: 'Nunito Sans';
                         font-style: normal;
@@ -587,6 +629,10 @@
                         @include breakpoint($lb-bp) {
                             width: 45%;
                         }
+
+                        @include breakpoint($sm-bp) {
+                            width: 100%;
+                        }
         
 
                         a {
@@ -615,7 +661,15 @@
             @include breakpoint($lb-bp) {
                 font-size: 4.8rem;
                 line-height: 6rem;
+                margin-top: 5rem;
             }
+
+            @include breakpoint($sm-bp) {
+                font-size: 4.4rem;
+                line-height: 5.5rem;
+                padding-left: 2.2rem !important;
+            }
+
 
             .orangeSpan {
 
@@ -652,6 +706,11 @@
                 margin-left: 3rem;
                 width: 100%;
             }
+
+            @include breakpoint($sm-bp) {
+                margin-left: 2.2rem;
+                width: 90%;
+            }
         }
 
         .algoritmContainer {
@@ -685,18 +744,24 @@
 
             .marquee{
                 background-image: url(../images/footer/footerBg.png);
-                    background-color: #3A3A3B;
-                    font-family: 'Mulish';
-                    font-style: normal;
-                    font-weight: 900;
-                    font-size: 7.2rem;
-                    line-height: 9rem;
-                    text-transform: uppercase;
-                    color: #FFFFFF;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    transform: rotate(-1deg);
-                    margin-right: 0.1rem;
+                background-color: #3A3A3B;
+                font-family: 'Mulish';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 7.2rem;
+                line-height: 9rem;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                white-space: nowrap;
+                overflow: hidden;
+                transform: rotate(-1deg);
+                margin-right: 0.1rem;
+                }
+
+                .marquee {
+                    @include breakpoint($sm-bp) {
+                        display: none;
+                    }
                 }
                  
                 .marquee .marqSpan {
@@ -736,6 +801,10 @@
                     flex-direction: column;
                     padding-left: 3rem;
                 }
+
+                @include breakpoint($sm-bp) {
+                    padding-left: 0rem;
+                }
                 .smartRequest {
                     font-family: 'Nunito Sans';
                     font-style: normal;
@@ -744,8 +813,37 @@
                     line-height: 3.3rem;
                     color: #3A3A3B;
                     // width: 43.6rem;
+
+                    img {
+                        display: none;
+                    }
                     @include breakpoint($xl-bp) {
                         margin-top: 1rem;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        transform: matrix(1, -0.02, 0.02, 1, 0, 0);
+                        padding-top: 2.6rem;
+                        padding-left: 5.6rem;
+                        padding-bottom: 2.9rem;
+                        font-size: 2.4rem;
+                        line-height: 3rem;
+                        text-transform: uppercase;
+                        background: #3A3A3B;
+                        color: #F9F9F9;
+                        display: flex;
+
+                        img {
+                            display: block;
+                        }
+
+                        div {
+                            width: 70%;
+                        }
+
+                        span {
+                            color: #9FF612;
+                        }
                     }
                 }
 
@@ -768,6 +866,10 @@
 
                     @include breakpoint($lb-bp) {
                         width: 100%;
+                    }
+
+                    @include breakpoint($sm-bp) {
+                        padding-left: 2.2rem;
                     }
                 }
             }
@@ -802,6 +904,10 @@
 
                 @include breakpoint($lb-bp) {
                     grid-template-columns: repeat(1, 1fr);
+                }
+
+                @include breakpoint($sm-bp) {
+                    padding-left: 6.2rem;
                 }
 
                 li {
@@ -904,6 +1010,10 @@
                 overflow: hidden;
                 transform: rotate(2deg);
                 margin-right: 0.1rem;
+
+                @include breakpoint($sm-bp) {
+                    display: none;
+                }
 
 
                 .siteLineSpan {
@@ -3176,6 +3286,10 @@
         @include breakpoint($xl-bp) {
             padding-left: 3.2rem;
         }
+
+        @include breakpoint($lb-bp) {
+            margin-top: 5rem;
+        }
         .stepsTitle {
             font-family: 'Mulish';
             font-style: normal;
@@ -3607,7 +3721,7 @@
                 }
 
                 @include breakpoint($lb-bp) {
-                    width: 100%;
+                    width: 193%;
                 }
     
                 // span {
@@ -3625,7 +3739,7 @@
                 margin-bottom: 4rem;
 
                 @include breakpoint($lb-bp) {
-                    width: 100%;
+                    width: 152%;
                 }
             }
     
@@ -4928,6 +5042,8 @@
 
         @include breakpoint($lb-bp) {
             flex-direction: column;
+
+            background: #f9f9f9;
         }
 
         .mobileTitle {
@@ -6254,6 +6370,10 @@
             padding-right: 3.2rem;
         }
 
+        @include breakpoint($lb-bp) {
+            padding-top: 10rem;
+        }
+
         .developmentTitle {
             font-family: 'Mulish';
             font-style: normal;
@@ -6263,6 +6383,11 @@
             text-transform: uppercase;
             color: #616161;
             margin-bottom: 5rem;
+
+            @include breakpoint($lb-bp) {
+                font-size: 4.8rem;
+                line-height: 6rem;
+            }
         }
 
         .developmentSubtitle {
@@ -6278,6 +6403,10 @@
                 padding-left: 0;
                 width: 72.2rem;
             }
+
+            @include breakpoint($lb-bp) {
+                width: 100%;
+            }
         }
 
         .categoriesContainer {
@@ -6291,6 +6420,12 @@
                 padding-left: 0;
                 padding-right: 0;
             }
+
+            @media (max-width: 959px) {
+                display: flex;
+                flex-direction: column;
+            }
+
             .windowBlock {
                 // position: absolute;
                 max-height: 0;
@@ -6373,6 +6508,10 @@
                     justify-content: space-between;
                     width: 100%;
 
+                    @media (max-width: 959px) {
+                        flex-direction: row-reverse;
+                    }
+
                     .arrowContainer {
                         background: #124BF6;
                         border-top: 0.1rem solid #9FF612;
@@ -6385,6 +6524,8 @@
                         padding-right: 1.2rem;
                         transition: all 0.3s linear;
 
+                        
+
                         .arrowOpen {
                             width: 1.5rem;
                             height: 1.5rem;
@@ -6392,6 +6533,10 @@
                             border-right: 0.2rem solid #FFFFFF;
                             transform: rotate(45deg);
                             cursor: pointer;
+
+                            @media (max-width: 959px) {
+                                transform: rotate(130deg);
+                            }
                         }
 
                         
@@ -6418,6 +6563,10 @@
                             border-top: 0.2rem solid #FFFFFF;
                             border-right: 0.2rem solid #FFFFFF;
                             transform: rotate(-135deg);
+
+                            @media (max-width: 959px) {
+                                transform: rotate(313deg);
+                            }
                         }
                     }
         
