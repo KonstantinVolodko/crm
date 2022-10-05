@@ -66,6 +66,15 @@
             }
         }
 
+        .btnCall:hover {
+            transition: all linear 0.1s;
+            margin-bottom: 0.2rem;
+            // transform: translate(-0.2rem, -0.1rem);
+            border-bottom: 0.1rem solid #3A3A3B;
+            border-right: 0.1rem solid #3A3A3B;
+            margin-right: 0.7rem;
+        }
+
         .btnInit {
             font-weight: 600;
             font-size: 1.6rem;
@@ -80,6 +89,14 @@
             border-right: 0.3rem solid #F86247;
             border-radius: 0.6rem;
             margin-right: 0.5rem;
+        }
+
+        .btnInit:hover {
+            transition: all linear 0.1s;
+            border-bottom: 0.1rem solid #F86247;
+            border-right: 0.1rem solid #F86247;
+            margin-bottom: 0.2rem;
+            margin-right: 0.7rem;
         }
 
         .burgerBtn {
@@ -117,6 +134,12 @@
                     top: calc(50% - 0.5rem)
                 }
               }
+        }
+
+        .burgerBtn:hover {
+            transition: all linear 0.2s;
+            border-bottom: 0.1rem solid #9FF612;
+            border-right: 0.1rem solid #9FF612;
         }
         
     }

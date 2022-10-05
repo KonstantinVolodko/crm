@@ -314,7 +314,6 @@
 
             .moreTriggeredBtn {
                 background: #F86247;
-                border: 1px solid #9FF612;
                 border-radius: 0.6rem;
                 border-top: 0.1rem solid #9FF612;
                 border-left: 0.1rem solid #9FF612;
@@ -333,6 +332,14 @@
 
             }
 
+            .moreTriggeredBtn:hover {
+                transition: all linear 0.2s;
+                border-bottom: 0.1rem solid #9FF612;
+                border-right: 0.1rem solid #9FF612;
+                margin-bottom: 0.2rem;
+                margin-right: 0.2rem;
+            }
+
             .demo {
                 background: #FFFFFF;
                 border-radius: 0.6rem;
@@ -347,6 +354,14 @@
                 color: #3A3A3B;
                 margin-left: 1rem;
                 padding: 1rem 2rem;
+            }
+
+            .demo:hover {
+                // transition: all linear 0.1s;
+                border-bottom: 0.1rem solid #3A3A3B;
+                border-right: 0.1rem solid #3A3A3B;
+                margin-bottom: 0.2rem;
+                margin-right: 0.2rem;
             }
 
             div {
@@ -613,6 +628,14 @@
                         border-bottom: 0.3rem solid #F86247;
                         border-right: 0.3rem solid #F86247;
                         border-radius: 0.6rem;
+                    }
+
+                    button:hover {
+                        transition: all 0.2s linear;
+                        border-bottom: 0.1rem solid #F86247;
+                        border-right: 0.1rem solid #F86247;
+                        margin-bottom: 0.2rem;
+                        margin-right: 0.2rem;
                     }
 
                     .licence {
@@ -1268,6 +1291,10 @@
                     color: #3A3A3B;
                     width: 43.6rem;
 
+                    img {
+                        display: none;
+                    }
+
                     @include breakpoint($sm-bp) {
                         transform: matrix(1, -0.04, 0.03, 1, 0, 0);
                         background: #124BF6;
@@ -1282,6 +1309,10 @@
                         width: 100%;
                         gap: 1.7rem;
                         align-items: center;
+
+                        img {
+                            display: block;
+                        }
 
                         span {
                             color: #9FF612;
@@ -2519,7 +2550,9 @@
     }
 
     .cta1 {
-        background: url(../images/cta1/ctaBg.png);
+        // background: url(../images/cta1/ctaBg.png);
+        background: url(../images/cta1/letterBg.png) no-repeat right, #F86247;
+        background-position-x: 1%;
         background-size: 100%;
         padding-left: 18rem;
         padding-bottom: 11rem;
@@ -2645,6 +2678,14 @@
             margin-top: 4rem;
             position: inherit;
             z-index: 2;
+        }
+
+        button:hover {
+            transition: all linear 0.2s;
+            border-right: 0.1rem solid #9FF612;
+            border-bottom: 0.1rem solid #9FF612;
+            margin-bottom: 0.2rem;
+            margin-right: 0.2rem;
         }
     }
 
@@ -2774,15 +2815,17 @@
                 z-index: 3;
                 width: 200%;
                 animation: scroll 10s infinite linear;
+                display: flex;
 
                 li {
                     background: #124BF6;
                     border-radius: 1.2rem;
                     border: 0.1rem solid #9FF612;
                     padding: 3.5rem;
+                    width: 100%;
                     display: flex;
                     align-items: center;
-                    width: 100%;
+                    justify-content: center;
                   }
             }
           }
@@ -2822,13 +2865,6 @@
 
 
         .greenTicketLine {
-            // display: flex;
-            // transform: rotate(-2deg);
-            // overflow: hidden;
-            // position: relative;
-            // z-index: 2;
-            // width: 100%;
-
             width: 100%;
             overflow: hidden;
             transform: rotate(-2deg);
@@ -2838,11 +2874,6 @@
 
 
             ul {
-                // display: flex;
-                // position: relative;
-                // z-index: 3;
-                // width: 200%;
-                // animation: scroll2 10s infinite linear;
                 display: flex;
                 position: relative;
                 z-index: 4;
@@ -2851,21 +2882,15 @@
 
 
                 li {
-                    // background: #9FF612;
-                    // border-radius: 1.2rem;
-                    // border: 0.1rem solid #3A3A3B;
-                    // padding: 3.5rem;
-                    // display: flex;
-                    // align-items: center;
-                    // width: 100%;
 
                     background: #9FF612;
                     border-radius: 1.2rem;
                     border: 0.1rem solid #3A3A3B;
                     padding: 3.5rem;
+                    width: 100%;
                     display: flex;
                     align-items: center;
-                    width: 100%;
+                    justify-content: center;
                 }
             }
             
@@ -2873,14 +2898,6 @@
         }
 
         .blueTicketLine {
-            // display: flex;
-            // transform: rotate(2deg);
-            // overflow: hidden;
-            // margin-right: 0.2rem;
-            // position: relative;
-            // z-index: 1;
-            // width: 100%;
-            
             width: 100%;
             overflow: hidden;
             transform: rotate(2deg);
@@ -2896,22 +2913,14 @@
                 animation: scroll3 10s infinite linear;
 
                 li {
-
-                    // border-radius: 1.2rem;
-
-                    // padding: 3.5rem;
-                    // display: flex;
-                    // align-items: center;
-                    // width: 100%;
-
-
                     background: #3A3A3B;
                     border-radius: 1.2rem;
                     border: 0.1rem dashed #FFFFFF;
                     padding: 3.5rem;
+                    width: 100%;
                     display: flex;
                     align-items: center;
-                    width: 100%;
+                    justify-content: center;
                 }
             }
         }
@@ -3067,7 +3076,7 @@
                 font-size: 3rem;
                 line-height: 4.1rem;
                 color: #FFFFFF;
-                margin-top: 3rem;
+                margin-top: 5rem;
             }
 
             .teachContainer {
@@ -3245,7 +3254,7 @@
                     line-height: 4.1rem;
                     color: #FFFFFF;
                     width: 32.2rem;
-                    margin-top: 3rem;
+                    margin-top: 5rem;
                     @include breakpoint($xl-bp) {
                         width: auto;
                     }
@@ -3357,7 +3366,7 @@
                     line-height: 4.1rem;
                     color: #FFFFFF;
                     width: 32.8rem;
-                    margin-top: 3rem;
+                    margin-top: 5rem;
                 }
 
                 .updateRightText {
@@ -3383,6 +3392,10 @@
                     height: 52rem;
 
                     @include breakpoint($lb-bp) {
+                        fill: transparent;
+                    }
+
+                    @include breakpoint($xl-bp) {
                         fill: transparent;
                     }
                 }
@@ -3437,6 +3450,7 @@
             margin-top: 3rem;
             align-items: center;
 
+
             @include breakpoint($lb-bp) {
                 flex-direction: column;
                 align-items: unset;
@@ -3461,6 +3475,10 @@
                 display: flex;
                 gap: 2rem;
                 margin-right: 3rem;
+
+                .swiper-button-disabled {
+                    opacity: 0.3;
+                }
 
                 button {
                     background: none;
@@ -3524,6 +3542,12 @@
                     border-left: 0.1rem solid #9FF612;
                     border-bottom: 0.3rem solid #9FF612;
                     border-right: 0.3rem solid #9FF612;
+                }
+
+                button:hover {
+                    transition: all 0.2s linear;
+                    border-bottom: 0.1rem solid #9FF612;
+                    border-right: 0.1rem solid #9FF612;
                 }
             }
 
@@ -3773,6 +3797,12 @@
                     border-right: 0.3rem solid #9FF612;
                     border-bottom: 0.3rem solid #9FF612;
                 }
+
+                button:hover {
+                    transition: all 0.2s linear;
+                    border-bottom: 0.1rem solid #9FF612;
+                    border-right: 0.1rem solid #9FF612;
+                }
             }
         }
     }
@@ -3886,6 +3916,12 @@
                 border-right: 0.3rem solid #9FF612;
                 border-bottom: 0.3rem solid #9FF612;
                 border-radius: 0.6rem;
+            }
+
+            button:hover {
+                transition: all 0.2s linear;
+                border-right: 0.1rem solid #9FF612;
+                border-bottom: 0.1rem solid #9FF612;
             }
         }
 
@@ -4076,6 +4112,10 @@
             color: #DADADB;
             height: 18rem;
 
+            @include breakpoint($xl-bp) {
+                height: unset;
+            }
+
             @include breakpoint($lb-bp) {
                 font-size: 4.8rem;
                 line-height: 6rem;
@@ -4233,6 +4273,15 @@
                         border-right: 0.3rem solid #124BF6;
                         border-bottom: 0.3rem solid #124BF6;
                         border-radius: 0.6rem;
+                    }
+
+                    button:hover {
+                        transition: all 0.2s linear;
+                        border-right: 0.1rem solid #124BF6;
+                        border-bottom: 0.1rem solid #124BF6;
+
+                        margin-bottom: 0.2rem;
+                        margin-right: 0.2rem;
                     }
                 }
 
@@ -4397,6 +4446,15 @@
                         border-right: 0.3rem solid #124BF6;
                         border-bottom: 0.3rem solid #124BF6;
                         border-radius: 0.6rem;
+                    }
+
+                    button:hover {
+                        transition: all 0.2s linear;
+                        border-right: 0.1rem solid #124BF6;
+                        border-bottom: 0.1rem solid #124BF6;
+
+                        margin-bottom: 0.2rem;
+                        margin-right: 0.2rem;
                     }
                 }
 
@@ -4571,6 +4629,10 @@
                     align-items: center;
                     gap: 2rem;
 
+                    .swiper-button-disabled {
+                        opacity: 0.3;
+                    }
+
                     button {
                         background: none;
                         border: none;
@@ -4644,6 +4706,16 @@
                     border-bottom: 0.3rem solid #9FF612;
                     border-right: 0.3rem solid #9FF612;
                     width: 100%;
+                }
+
+                button:hover {
+                    transition: all 0.2s linear;
+
+                    border-bottom: 0.1rem solid #9FF612;
+                    border-right: 0.1rem solid #9FF612;
+
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.2rem;
                 }
             }
 
@@ -4722,6 +4794,16 @@
                         border-right: 0.3rem solid #124BF6;
                         border-bottom: 0.3rem solid #124BF6;
                     }
+
+                    button:hover {
+                        transition: all 0.2s linear;
+
+                        border-right: 0.1rem solid #124BF6;
+                        border-bottom: 0.1rem solid #124BF6;
+
+                        margin-bottom: 0.2rem;
+                        margin-right: 0.2rem;
+                    }
                 }
 
                 
@@ -4767,10 +4849,23 @@
                     text-align: center;
                     color: #FFFFFF;
                     background: #124BF6;
-                    border: 0.1rem solid #9FF612;
+                    border-top: 0.1rem solid #9FF612;
+                    border-left: 0.1rem solid #9FF612;
+                    border-right: 0.3rem solid #9FF612;
+                    border-bottom: 0.3rem solid #9FF612;
                     border-radius: 0.6rem;
                     padding: 1rem 0;
                     width: 100%;
+                }
+
+                button:hover {
+                    transition: all 0.2s linear;
+
+                    border-right: 0.1rem solid #9FF612;
+                    border-bottom: 0.1rem solid #9FF612;
+
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.2rem;
                 }
 
             }
@@ -4822,6 +4917,16 @@
                     border-right: 0.3rem solid #9FF612;
                     border-bottom: 0.3rem solid #9FF612;
                     padding: 1rem 0;
+                }
+
+                button:hover {
+                    transition: all 0.2s linear;
+
+                    border-right: 0.1rem solid #9FF612;
+                    border-bottom: 0.1rem solid #9FF612;
+
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.2rem;
                 }
             }
         }
@@ -4932,6 +5037,15 @@
             border-right: 0.3rem solid #9FF612;
             border-bottom: 0.3rem solid #9FF612;
             padding: 1rem 2rem 1rem 2rem;
+        }
+
+        button:hover {
+            transition: all 0.2s linear;
+            border-right: 0.1rem solid #9FF612;
+            border-bottom: 0.1rem solid #9FF612;
+
+            margin-bottom: 0.2rem;
+            margin-right: 0.2rem;
         }
     }
 
@@ -5188,6 +5302,15 @@
                 border-right: 0.3rem solid #F86247;
                 border-bottom: 0.3rem solid #F86247;
             }
+
+            button:hover {
+                transition: all 0.2s linear;
+                border-right: 0.1rem solid #F86247;
+                border-bottom: 0.1rem solid #F86247;
+
+                margin-bottom: 0.2rem;
+                margin-right: 0.2rem;
+            }
         }
 
         .leysesArrowContainer {
@@ -5209,6 +5332,10 @@
             .keysesImgContainer {
                 display: flex;
                 gap: 2rem;
+
+                .swiper-button-disabled {
+                    opacity: 0.3;
+                }
 
                 button {
                     border: none;
@@ -5283,6 +5410,15 @@
                     @include breakpoint($sm-bp) {
                         margin-top: 5rem;
                     }
+                }
+
+                button:hover {
+                    transition: all 0.2s linear;
+                    border-right: 0.1rem solid #124BF6;
+                    border-bottom: 0.1rem solid #124BF6;
+
+                    margin-bottom: 0.2rem;
+                    margin-right: 0.2rem;
                 }
             }
         }
@@ -5660,7 +5796,7 @@
             padding-top: 5rem;
             div.progress-bar__wrapper {
                 display: grid;
-                grid-template-columns: minmax(0.6rem, min-content) minmax(0.6rem, 1fr);
+                grid-template-columns: minmax(0.6rem, min-content) 1fr;
                 height: 0.6rem;
                 width: 107.6rem;
                 position:relative;
@@ -5942,6 +6078,12 @@
             border-bottom: 0.3rem solid #9FF612;
             border-right: 0.3rem solid #9FF612;
         }
+
+        button:hover {
+            transition: all 0.2s linear;
+            border-bottom: 0.1rem solid #9FF612;
+            border-right: 0.1rem solid #9FF612;
+        }
     }
     .reviews {
         padding-top: 15rem;
@@ -5974,9 +6116,17 @@
                 margin-top: 2.9rem;
             }
         }
+
+        @include breakpoint($sm-bp) {
+            flex-direction: column;
+        }
     }
     .reviews__title {
         padding-bottom: 5.5rem;
+
+        @include breakpoint($sm-bp) {
+            padding-bottom: 0rem;
+        }
     }
     .reviews-block {
         width: 108rem;
@@ -6514,13 +6664,14 @@
                         display: flex;
                         justify-content: flex-start;
                     }
-                    p {
+                    a {
                         font-family: 'Nunito Sans';
                         font-style: normal;
                         font-weight: 800;
                         font-size: 2.4rem;
                         line-height: 3.3rem;
                         color: #FFFFFF;
+                        text-decoration: none;
                         @include breakpoint($xl-bp) {
                             &:nth-child(3) {
                                 grid-column: 2 / 3;
@@ -6565,6 +6716,12 @@
                         padding-left: 1rem;
                         padding-right: 1rem;
                     }
+                }
+
+                button:hover {
+                    transition: all 0.2s linear;
+                    border-bottom: 0.1rem solid #F86247;
+                    border-right: 0.1rem solid #F86247;
                 }
             }
         }
@@ -6627,6 +6784,15 @@
                         }
                     }
                 }
+
+                button:hover {
+                    transition: all 0.2s linear;
+                    border-right: 0.1rem solid #9FF612;
+                    border-bottom: 0.1rem solid #9FF612;
+
+                    margin-bottom: 0.3rem;
+                    margin-right: 0.3rem;
+                }
             }
     
             .socialTitle {
@@ -6667,6 +6833,7 @@
         padding-top: 15rem;
         padding-left: 18rem;
         padding-right: 11.2rem;
+        // padding-bottom: 20rem;
         @include breakpoint($xl-bp) {
             padding-left: 3.2rem;
             padding-right: 3.2rem;
@@ -6725,6 +6892,12 @@
             padding-right: 22.5rem;
             column-gap: 9rem;
             position: relative;
+            padding-bottom: 5rem;
+
+            @include breakpoint($xl-bp) {
+                padding-bottom: 0rem;
+            }
+
             @include breakpoint($mm-bp) {
                 padding-left: 0;
                 padding-right: 0;
@@ -6747,8 +6920,21 @@
                 display: none;
                 transition: max-height 0.4s ease-out, opacity 0.5s ease-out;
                 // animation: slim linear 0.4s; 
+                position: relative;
+                height: 148%;
+
+                @include breakpoint($xl-bp) {
+                    position: unset;
+                    height: unset;
+                }
+
                 .windowblock-container {
+                    position: absolute;
                     padding: 4rem;
+
+                    @include breakpoint($xl-bp) {
+                        position: unset;
+                    }
                 }
                 .windowTitle {
                     font-family: 'Nunito Sans';
@@ -6832,6 +7018,7 @@
                         display: flex;
                         padding-right: 1.2rem;
                         transition: all 0.3s linear;
+                        cursor: pointer;
 
                         
 
@@ -6850,6 +7037,14 @@
 
                         
 
+                    }
+
+                    .arrowContainer:hover {
+                        border-right: 0.1rem solid #9FF612;
+                        border-bottom: 0.1rem solid #9FF612;
+
+                        margin-right: 0.2rem;
+                        margin-bottom: 0.2rem;
                     }
 
                     .act {
@@ -7089,6 +7284,11 @@
             gap: 2rem;
             margin-right: 2.8rem;
             padding-left: 16rem;
+
+            .swiper-button-disabled {
+                opacity: 0.3;
+            }
+            
             button {
                 background: none;
                 border: none;
@@ -7148,18 +7348,24 @@
         background: #124BF6;
         border-radius: 10rem;
         overflow: hidden;
-        width: 40.5rem;
+        width: 40%;
         height: 4.4rem;
         text-align: center;
         color: #155FFF;
         padding-right: 26rem;
         position: relative;
+
+        @include breakpoint($sm-bp) {
+            margin-bottom: 4rem;
+        }
+
+
         .switch-button__span {
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
-            width: 28.2rem;
+            width: 60%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -7193,8 +7399,17 @@
             font-weight: 900;
         }
           &:checked ~ .switch-button-label:before {
-            transform: translateX(14.5rem);
-            width: 26.2rem;
+            transform: translateX(50%);
+            width: 220%;
+
+            @include breakpoint($lb-bp) {
+                width: 20rem;
+            }
+
+            @include breakpoint($sm-bp) {
+                width: 20rem;
+            }
+    
             transition: transform 300ms linear, width 300ms linear;
           }
           &:checked ~ .switch-button-label > span {
@@ -7238,6 +7453,10 @@
               
               color: #FFFFFF;
               transition: font-weight 300ms linear;
+
+              @include breakpoint($sm-bp) {
+                padding-left: 11rem;
+            }
             }
           }
         }
