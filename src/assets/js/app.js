@@ -359,7 +359,7 @@ if (window.matchMedia("(min-width: 960px)").matches) {
   tl11.from('.img1', {y: -1000}),
   tl11.from('.img2', {y: -800}),
   tl11.to('.cta2TitleSpan', {color: '#9FF612'})
-  tl11.from('.img3', {y: -750, x: 500}),
+  tl11.from('.img3', {y: -750, x: 230}),
   tl11.from('.img4', {y: -700, x: 200}),
   tl11.from('.img5', {y: -650}),
   tl11.from('.img6', {y: -650, x: -200}),
@@ -537,7 +537,9 @@ ScrollTrigger.create({
 const tl20 = gsap.timeline();
 
 tl20.to('.text3', {color: '#F86247'})
+tl20.to('.text3c', {color: '#124BF6'})
 tl20.to('.text3', {color: '#DADADB'})
+tl20.to('.text3c', {color: '#DADADB'})
 
 ScrollTrigger.create({
   animation: tl20,
@@ -576,7 +578,9 @@ ScrollTrigger.create({
 const tl23 = gsap.timeline();
 
 tl23.to('.text6', {color: '#3A3A3B'})
+tl23.to('.text6c', {color: '#F86247'})
 tl23.to('.text6', {color: '#DADADB'})
+tl23.to('.text6c', {color: '#DADADB'})
 
 ScrollTrigger.create({
   animation: tl23,
@@ -729,19 +733,19 @@ if (window.matchMedia("(min-width: 960px)").matches) {
 
   const tl33 = gsap.timeline();
 
-tl33.from('.cta4Title', {y: -300})
-tl33.from('.cta4Btn', {x: -300})
-tl33.from('.cta4Img1', {y: 500})
-tl33.from('.cta4Img2', {y: 500})
-tl33.from('.cta4Img3', {y: 500, x: -200})
-tl33.from('.cta4Img4', {y: 450, x: 200})
-tl33.from('.cta4Img5', {y: 450})
-tl33.from('.cta4Img6', {y: 400, x: -200})
-tl33.from('.cta4Img7', {y: 400})
-tl33.from('.cta4Img8', {y: 400, x: 100})
-tl33.from('.cta4Img9', {y: 350, x: -100})
-tl33.from('.cta4Img10', {y: 350, x: 300})
-tl33.from('.cta4Img11', {y: 350})
+tl33.from('.cta4Title', {y: -400})
+tl33.from('.cta4Btn', {x: -400})
+tl33.from('.cta4Img1', {y: 600})
+tl33.from('.cta4Img2', {y: 600})
+tl33.from('.cta4Img3', {y: 600, x: -200})
+tl33.from('.cta4Img4', {y: 550, x: 200})
+tl33.from('.cta4Img5', {y: 550})
+tl33.from('.cta4Img6', {y: 500, x: -200})
+tl33.from('.cta4Img7', {y: 500})
+tl33.from('.cta4Img8', {y: 500, x: 100})
+tl33.from('.cta4Img9', {y: 450, x: -100})
+tl33.from('.cta4Img10', {y: 450, x: 300})
+tl33.from('.cta4Img11', {y: 450})
 
 
 
@@ -1120,7 +1124,7 @@ const tl62 = gsap.timeline();
 
 tl62.from('.cta3Title', {y: -300})
 tl62.from('.cta3Subtitle', {y: -500})
-tl62.from('.cta3Btn', {y: -400})
+tl62.from('.cta3Btn', {y: -500})
 
 ScrollTrigger.create({
   animation: tl62,
@@ -1340,6 +1344,7 @@ ScrollTrigger.create({
     })
   }
 
+  arrowContainer[0].click();
   function clickAcc() {
     const block = this.parentElement.nextElementSibling
     const clone = block.cloneNode(true)
