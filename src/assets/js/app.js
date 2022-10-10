@@ -120,6 +120,26 @@ let swiper4 = new Swiper(".keysesSwiper", {
 
 });
 
+const swiper5 = new Swiper('.ticker__swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2000
+  }
+})
+
+const swiper6 = new Swiper('.contacts__swiper', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2000
+  }
+})
+
 let ourComandSwiper = new Swiper('.our-comand__swiper', {
   slidesPerView: 'auto',
   spaceBetween: 30,
@@ -145,6 +165,31 @@ if (progressBar && allBar) {
     progressBar.style.setProperty('width', `${newWidth}px`)
   });
 }
+
+
+const rev = document.querySelectorAll('.rev-main')
+
+if (rev.length > 0) {
+  rev.forEach(el => {
+    const elemnew = el.querySelector('.sticker-block-right')
+    const icon = el.querySelector('.rev-main__icon')
+
+    if (icon && elemnew) {
+      icon.addEventListener('mouseenter', function () {
+        if (elemnew) {
+          elemnew.classList.add('white')
+        }
+      })
+      icon.addEventListener('mouseleave', function () {
+        if (elemnew) {
+          elemnew.classList.remove('white')
+        }
+      })
+    }
+  })
+
+}
+
 
 // gsap.registerPlugin(ScrollTrigger);
 
