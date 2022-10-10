@@ -34,7 +34,7 @@ footer {
 
         .imgContainer {
             margin-top: 2rem;
-            grid-row: 1 / 2;
+            // grid-row: 1 / 2;
         }
         .imgContainer + .littleText {
             margin-top: 2.5rem;
@@ -78,8 +78,9 @@ footer {
     }
 
     .leftContainer {
-        display: grid;
-        grid-template-columns: 1fr;
+        // display: grid;
+        // grid-template-columns: 1fr;
+        justify-content: space-between;
         
     }
 
