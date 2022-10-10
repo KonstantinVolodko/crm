@@ -1531,7 +1531,10 @@
                     }
                 }
                 .tickerContainer {
-                    
+                    &:before {
+                        content: unset;
+                    }
+                    margin: 0;
                     .ticker__swiper {
                         max-width: 46rem;
                         background-color: #FFFFFF;
@@ -1651,12 +1654,15 @@
                         flex-direction: column;
                         gap: 0;
                         li {
+                            width: inherit;
+                        }
+                        li:not(:first-child) {
                             margin-left: 2rem;
                             @include breakpoint($xl-bp) {
                                 margin-left: 1.5rem;
                             }
                         }
-                        li:not(:last-child) {
+                        li:not(:first-child):not(:last-child) {
                             margin-bottom: 1.7rem;
                         }
                         li:before {
@@ -1671,6 +1677,9 @@
                             @include breakpoint($xl-bp) {
                                 left: -1.5rem;
                             }
+                        }
+                        li:first-child:before {
+                                content: unset;
                         }
                     }
                 }
@@ -1867,7 +1876,10 @@
                     }
                 }
                 .tickerContainer {
-                    
+                    &:before {
+                        content: unset;
+                        margin: 0;
+                    }
                     .ticker__swiper {
                         max-width: 46rem;
                         background-color: #FFFFFF;
@@ -1953,6 +1965,11 @@
                                 left: -3.5rem;
                             }
                         }
+                    }
+                }
+                .notli {
+                    &:before {
+                        content: unset;
                     }
                 }
             }
@@ -2424,6 +2441,11 @@
                             left: -3.5rem
                         }
                     }
+                    li.notli {
+                        &:before {
+                            content: unset;
+                        }
+                    }
     
                     ul {
                         display: flex;
@@ -2447,6 +2469,11 @@
                             border-radius: 50%;
                             @include breakpoint($xl-bp) {
                                 left: -3.5rem
+                            }
+                        }
+                        li.notli {
+                            &:before {
+                                content: unset;
                             }
                         }
                     }
@@ -2512,6 +2539,11 @@
                             left: -3.5rem
                         }
                     }
+                    li.notli {
+                        &:before {
+                            content: unset;
+                        }
+                    }
     
                     ul {
                         display: flex;
@@ -2537,10 +2569,14 @@
                                 left: -3.5rem
                             }
                         }
+                        li.notli {
+                            &:before {
+                                content: unset;
+                            }
+                        }
                     }
                 }
             }
-
         }
 
         .taskContainer {
@@ -2577,6 +2613,11 @@
                         height: 2rem;
                         top: 0;
                         left: -3rem;
+                    }
+                    li.notli {
+                        &:before {
+                            content: unset;
+                        }
                     }
                 }
 
@@ -2619,6 +2660,11 @@
                         height: 2rem;
                         top: 0;
                         left: -3rem;
+                    }
+                    li.notli {
+                        &:before {
+                            content: unset;
+                        }
                     }
                 }
             }
@@ -5807,6 +5853,14 @@
                     border-right-width: 0.4rem;
                     border-bottom-width: 0.4rem;
                     padding: 1rem 2rem;
+                    font-family: 'Nunito Sans';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        line-height: 2rem;
+                        /* identical to box height, or 125% */
+                        
+                        text-align: center;
                     a {
                         font-family: 'Nunito Sans';
                         font-style: normal;
@@ -5825,6 +5879,7 @@
                     position: absolute;
                     top: 15.5rem;
                     left: 15rem;
+                    color: #FFFFFF
                     a {
                         color: #FFFFFF;
                     }
@@ -5837,6 +5892,7 @@
                     top: 27rem;
                     left: 10rem;
                     z-index: 2;
+                    color: #3A3A3B
                     a {
                         color: #3A3A3B;
                     }
@@ -5848,6 +5904,7 @@
                     position: absolute;
                     top: 32.7rem;
                     left: 14.5rem;
+                    color: #FFFFFF
                     a {
                         color: #FFFFFF;
                     }

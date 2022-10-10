@@ -113,7 +113,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            div.burger-button-close {
+            .burger-button-close {
                 #first-line-burger,
                 #second-line-burger,
                 #third-line-burger {
@@ -127,10 +127,10 @@
                     transform-origin: center center;
                 }
 
-                div#first-line-burger {
+                #first-line-burger {
                     top: calc(50% + 0.5rem)
                 }
-                div#third-line-burger {
+                #third-line-burger {
                     top: calc(50% - 0.5rem)
                 }
               }
