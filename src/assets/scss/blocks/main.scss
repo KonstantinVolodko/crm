@@ -2704,28 +2704,78 @@
             }
 
             .cta1Arrow1 {
-                right: 25%;
-                bottom: -100%;
+                animation: cta1Arrow1Animate linear 6s infinite;      
+            }
+
+            @keyframes cta1Arrow1Animate {
+                from {
+                    right: 25%;
+                    bottom: -100%; 
+                }
+                to {
+                    right: 25%;
+                    bottom: 100%; 
+                }
             }
 
             .cta1Arrow2 {
-                right: 2%;
-                bottom: -100%;
+                animation: cta1Arrow2Animate linear 4s infinite;   
+            }
+
+            @keyframes cta1Arrow2Animate {
+                from {
+                    right: 2%;
+                    bottom: -100%;
+                }
+                to {
+                    right: 2%;
+                    bottom: 100%;
+                }
             }
 
             .cta1Arrow3 {
-                right: 12%;
-                bottom: -100%;
+                animation: cta1Arrow3Animate linear 5s infinite;   
+            }
+
+            @keyframes cta1Arrow3Animate {
+                from {
+                    right: 12%;
+                    bottom: -100%;
+                }
+                to {
+                    right: 12%;
+                    bottom: 100%;
+                }
             }
 
             .cta1Arrow4 {
-                bottom: -100%;
-                right: 10%;
+                animation: cta1Arrow4Animate linear 3s infinite; 
+            }
+
+            @keyframes cta1Arrow4Animate {
+                from {
+                    bottom: -100%;
+                    right: 7%;
+                }
+                to {
+                    bottom: 100%;
+                    right: 7%;
+                }
             }
 
             .cta1Arrow5 {
-                bottom: -100%;
-                right: 28%;
+                animation: cta1Arrow5Animate linear 5s infinite; 
+            }
+
+            @keyframes cta1Arrow5Animate {
+                from {
+                    bottom: -100%;
+                    right: 28%;
+                }
+                to {
+                    bottom: 100%;
+                    right: 28%;
+                }
             }
 
             .cta1Arrow6 {
@@ -5126,33 +5176,93 @@
             }
 
             .cta3ImgArrow1 {
-                bottom: -100%;
-                right: 42%;
+                animation: cta3ImgArrow1Animate linear 6s infinite;      
+            }
+
+            @keyframes cta3ImgArrow1Animate {
+                from {
+                    bottom: -100%;
+                    right: 42%; 
+                }
+                to {
+                    bottom: 100%;
+                    right: 28%; 
+                }
             }
 
             .cta3ImgArrow2 {
-                right: 20%;
-                bottom: -100%;
+                animation: cta3ImgArrow2Animate linear 4s infinite;    
+            }
+
+            @keyframes cta3ImgArrow2Animate {
+                from {
+                    right: 20%;
+                    bottom: -100%;
+                }
+                to {
+                    right: 5%;
+                    bottom: 100%;
+                }
             }
 
             .cta3ImgArrow3 {
-                right: 30%;
-                bottom: -100%;
+                animation: cta3ImgArrow3Animate linear 6s infinite;   
             }
 
-            .cta3ImgArrow4 {
-                bottom: -100%;
-                right: 26%;
+            @keyframes cta3ImgArrow3Animate {
+                from {
+                    right: 15%;
+                    bottom: -100%;
+                }
+                to {
+                    right: 0%;
+                    bottom: 100%;
+                }
             }
+
+            // .cta3ImgArrow4 {
+            //     animation: cta3ImgArrow4Animate linear 3s infinite; 
+            // }
+
+            // @keyframes cta3ImgArrow4Animate {
+            //     from {
+            //         bottom: -100%;
+            //         right: 26%;
+            //     }
+            //     to {
+            //         bottom: 100%;
+            //         right: 26%;
+            //     }
+            // }
 
             .cta3ImgArrow5 {
-                bottom: -100%;
-                right: 42%;
+                animation: cta3ImgArrow5Animate linear 4s infinite; 
+            }
+
+            @keyframes cta3ImgArrow5Animate {
+                from {
+                    bottom: -100%;
+                    right: 42%;
+                }
+                to {
+                    bottom: 100%;
+                    right: 20%;
+                }
             }
 
             .cta3ImgArrow6 {
-                right: 12%;
-                bottom: -100%;
+                animation: cta3ImgArrow6Animate linear 7s infinite; 
+            }
+
+            @keyframes cta3ImgArrow6Animate {
+                from {
+                    right: 0%;
+                    bottom: -100%;
+                }
+                to {
+                    right: -15%;
+                    bottom: 100%;
+                }
             }
 
             .cta3ImgArrow7 {
