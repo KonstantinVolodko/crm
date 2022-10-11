@@ -155,6 +155,18 @@ let ourComandSwiper = new Swiper('.our-comand__swiper', {
 
   
 })
+
+let loopSwiper = new Swiper('.loopSwiper', {
+  slidesPerView: 'auto',
+  speed:1000,
+	direction: 'horizontal',
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  loopedSlides: 5,
+  loop: true,
+})
 const progressBar = document.querySelector('.orange-line')
 const allBar = document.querySelector('.progress-bar__wrapper')
 if (progressBar && allBar) {

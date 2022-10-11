@@ -816,13 +816,18 @@
                 margin-right: 11rem;
                 @include breakpoint($mm-bp) {
                     margin-top: 5.6rem;
-                    gap: 2rem;
+                    gap: 8rem;
                     margin-right: 0;
+                    justify-content: flex-start;
+                    padding-left: 21rem;
                 }
 
                 @include breakpoint($lb-bp) {
+                    display: flex;
                     flex-direction: column;
                     padding-left: 3rem;
+                    justify-content: center;
+                    gap: 2rem;
                 }
 
                 @include breakpoint($sm-bp) {
@@ -2673,9 +2678,11 @@
 
     .cta1 {
         // background: url(../images/cta1/ctaBg.png);
-        background: url(../images/cta1/letterBg.png) no-repeat right, #F86247;
+        // background: url(../images/cta1/letterBg.png) no-repeat right, #F86247;
+        background: linear-gradient(to left, transparent, #F86247 40%), url(../images/cta1/bgtest.jpg) no-repeat right/cover, #F86247;
+
         background-position-x: 1%;
-        background-size: 100%;
+        // background-size: 100%;
         padding-left: 18rem;
         padding-bottom: 11rem;
         padding-top: 11.5rem;
@@ -2686,6 +2693,7 @@
         }
 
         @include breakpoint($sm-bp) {
+            background: linear-gradient(to top, transparent, #F86247 60%), url(../images/cta1/bgtest.jpg) no-repeat right/cover, #F86247;
             padding-left: 2.2rem;
         }
 
@@ -2861,6 +2869,7 @@
                 padding-left: 2.2rem;
             }
 
+
             .integrationContainerTitle {
                 font-family: 'Nunito Sans';
                 font-style: normal;
@@ -2930,7 +2939,21 @@
             transform: rotate(1deg);
             position: relative;
             z-index: 5;
-
+            .loopSwiper {
+                .swiper-slide {
+                    background-color: #124BF6;
+                    border: 0.1rem solid #9FF612;
+                    border-radius: 1.2rem;
+                    width: auto;
+                    height: auto;
+                    padding: 4rem 6rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
             ul {
                 display: flex;
                 position: relative;
@@ -3433,8 +3456,26 @@
                             width: 39rem;
                             line-height: 2rem;
                         }
+                        .notice-block {
+                            display: none;
+                            padding: 3rem;
+                            background: #FFFFFF;
+                            border-radius: 2.4rem;
+                            position: absolute;
+                            right: -2rem;
+                            bottom: 0;
 
-                        span {
+                            font-family: 'Nunito Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 1.6;
+                            line-height: 2.2rem;
+                            
+                            color: #3A3A3B;
+                            transform: translateX(100%);
+                            max-width: 43rem;
+                        }
+                        span.notice {
                             padding: 0.7rem 1.5rem;
                             border: #9FF612 solid 0.2rem;
                             border-radius: 50%;
@@ -3442,6 +3483,15 @@
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            transition: color .5s ease, background-color .5s ease;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: #9FF612;
+                                color: #272727;
+                            }
+                            &:hover + .notice-block{
+                                display: block;
+                            }
                         }
                     }
                     @include breakpoint($xl-bp) {
@@ -5178,6 +5228,16 @@
         background-color: #3A3A3B;
         padding-top: 15rem;
         padding-left: 18rem;
+
+        &:before {
+            content: '';
+            height: 202px;
+            width: 100%;
+            background-color: #3A3A3B;
+            position: absolute;
+            bottom: -201px;
+            left: 0;
+        }
         @include breakpoint($xl-bp) {
             padding-left: 3.2rem;
         }
@@ -5349,14 +5409,20 @@
         }
 
         .cta3Help {
-            padding-bottom: 25rem;
-            width: 100%;
-            background-color: #3A3A3B;
-            position: absolute;
-            top: -24rem;
-            @include breakpoint($xl-bp) {
-                top: -20rem;
-            }
+            // padding-bottom: 25rem;
+            // width: 100%;
+            // background-color: #3A3A3B;
+            // position: absolute;
+            // top: -20rem;
+            // @include breakpoint($mm-bp) {
+            //     top: -28rem;
+            //     height: 29rem;
+            // }
+            // @include breakpoint($xl-bp) {
+            //     top: -20rem;
+            //     height: auto;
+            // }
+            display: none;
         }
 
         .keysesTitle {
@@ -5678,6 +5744,23 @@
         }
 
         div.our-comand__wrapper {
+        
+            .our-comand__mobile-block {
+                display: none;
+                @include breakpoint($sm-bp) {
+                    display: block;
+                    padding-right: 2.2rem;
+                    padding-left: 2.2rem;
+                }
+
+                .our-comand__title {
+                    padding-bottom: 3rem;
+                }
+                .our-comand__desc {
+                    padding-bottom: 8.2rem;
+                    padding-right: 11rem;
+                }
+            }
           div.swiper.our-comand__swiper {
             overflow: visible;
             div.swiper-wrapper {
@@ -5687,6 +5770,9 @@
 
                 @include breakpoint($lb-bp) {
                     width: 39rem;
+                }
+                @include breakpoint($sm-bp) {
+                    display: none;
                 }
                 div.our-comand__title {
                     width: 55rem;
@@ -5777,6 +5863,11 @@
                 div.our-comand__name {
                     padding-top: 2.2rem;
                     padding-left: 2rem;
+                    @include breakpoint($sm-bp) {
+                        font-weight: 800;
+                        font-size: 2.4rem;
+                        line-height: 3.3rem;
+                    }
                 }
               
                 div.our-comand__prof {
@@ -5927,6 +6018,9 @@
         }
         div.our-comand__progress-bar {
             padding-top: 5rem;
+            @include breakpoint($sm-bp) {
+                padding-right: 2.2rem;
+            }
             div.progress-bar__wrapper {
                 display: grid;
                 grid-template-columns: minmax(0.6rem, min-content) 1fr;
@@ -5935,6 +6029,9 @@
                 position:relative;
                 @include breakpoint($xl-bp) {
                     width: 89.2rem;
+                }
+                @include breakpoint($sm-bp) {
+                    width: 100%;
                 }
                 &::before {
                     content: '';
@@ -5982,7 +6079,7 @@
 
     .cta4 {
         background: url(../images/cta4/bg.png);
-        background-size: 100%;
+        background-size: cover;
         padding-left: 18rem;
         padding-bottom: 12.9rem;
         padding-top: 12.3rem;
@@ -6248,6 +6345,10 @@
                 margin-left: 9.6rem;
                 margin-top: 2.9rem;
             }
+            @include breakpoint($sm-bp) {
+                margin-top: 2rem;
+                margin-left: 7rem;
+            }
         }
 
         @include breakpoint($sm-bp) {
@@ -6278,6 +6379,9 @@
         @include breakpoint($lb-bp) {
             width: 93%;
         }
+        @include breakpoint($sm-bp) {
+            width: 91%;
+        }
     }
     .sticker-block {
         position: absolute;
@@ -6292,12 +6396,16 @@
         font-family: 'Nunito Sans';
         font-style: normal;
         font-weight: 900;
-        font-size: 36px;
-        line-height: 49px;
+        font-size: 3.6rem;
+        line-height: 4.9rem;
         text-transform: uppercase;
         
         color: #FFFFFF;
         width: min-content;
+        @include breakpoint($sm-bp) {
+            transform: rotate(4.28deg);
+            left: -3.7rem;
+        }
     }
     .rev-main {
         padding: 0 1.6rem 2.2rem 2rem;
@@ -6571,6 +6679,9 @@
             
             color: #3E3E3F;
             transition: color 0.5s ease;
+            @include breakpoint($sm-bp) {
+                font-size: 3rem;
+            }
         }
         .white {
             color: #fff;
@@ -6865,6 +6976,15 @@
                     border-bottom: 0.1rem solid #F86247;
                     border-right: 0.1rem solid #F86247;
                 }
+            }
+        }
+
+        .adres__container {
+            padding-left: 24rem;
+            padding-right: 13rem;
+            @include breakpoint($mm-bp) {
+                padding-left: 0;
+                padding-right: 0;
             }
         }
     
@@ -7387,6 +7507,9 @@
         @include breakpoint($xl-bp) {
             padding-left: 3.2rem;
         }
+        @include breakpoint($sm-bp) {
+            padding-left: 2.2rem;
+        }
     }
     .page-wrapper {
         margin-left: 42rem;
@@ -7399,6 +7522,9 @@
 
         @include breakpoint($lb-bp) {
             margin-left: 3rem;
+        }
+        @include breakpoint($sm-bp) {
+            margin-left: 2.2rem;
         }
     }
 
@@ -7426,7 +7552,9 @@
             gap: 2rem;
             margin-right: 2.8rem;
             padding-left: 16rem;
-
+            @include breakpoint($sm-bp) {
+                padding-left: 0;
+            }
             .swiper-button-disabled {
                 opacity: 0.3;
             }
@@ -7499,6 +7627,8 @@
 
         @include breakpoint($sm-bp) {
             margin-bottom: 4rem;
+            width: 71%;
+            height: 3.3rem;
         }
 
 
@@ -7525,6 +7655,9 @@
             
             color: #FFFFFF;
             transition: font-weight 300ms linear;
+            @include breakpoint($sm-bp) {
+                width: 75%;
+            }
         }
       
         &-checkbox {
@@ -7547,10 +7680,14 @@
             @include breakpoint($lb-bp) {
                 width: 20rem;
             }
-
             @include breakpoint($sm-bp) {
-                width: 20rem;
+                width: 24rem;
+                transform: translate(43%);
             }
+
+            // @include breakpoint($sm-bp) {
+            //     width: 20rem;
+            // }
     
             transition: transform 300ms linear, width 300ms linear;
           }
@@ -7568,7 +7705,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-      
+            @include breakpoint($sm-bp) {
+                padding: 1rem 0;
+                padding-left: 3rem;
+            }
             &:before {
               content: "";
               background: #F86247;
@@ -7580,6 +7720,9 @@
               border-radius: 10rem;
               transform: translateX(0);
               transition: transform 300ms;
+              @include breakpoint($sm-bp) {
+                width: 140%;
+              }
             }
       
             .switch-button-label-span {
@@ -7596,9 +7739,9 @@
               color: #FFFFFF;
               transition: font-weight 300ms linear;
 
-              @include breakpoint($sm-bp) {
-                padding-left: 11rem;
-            }
+            //   @include breakpoint($sm-bp) {
+            //     padding-left: 11rem;
+            // }
             }
           }
         }
