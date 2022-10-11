@@ -316,7 +316,7 @@ ScrollTrigger.create({
   trigger: '.benefitsTitle',
     start: "top 80%",
     end: "top 30%",
-  scrub: true,
+  // scrub: true,
 })
 
 const tl3 = gsap.timeline();
@@ -330,7 +330,7 @@ ScrollTrigger.create({
   trigger: '.cta1',
   start: "top 70%",
     end: "top 0%",
-  scrub: true,
+  // scrub: true,
 })
 
 const tl4 = gsap.timeline();
@@ -348,7 +348,7 @@ ScrollTrigger.create({
 
 const tl5 = gsap.timeline();
 
-tl5.fromTo('.moveStar', {x: 0}, {x: 50})
+tl5.fromTo('.moveStar', {x: 0}, {x: 35})
 
 
 ScrollTrigger.create({
@@ -356,7 +356,7 @@ ScrollTrigger.create({
   trigger: '.teachContainer',
   start: "top 70%",
   end: "top 30%",
-  scrub: true,
+  // scrub: true,
 })
 
 const tl6 = gsap.timeline();
@@ -368,12 +368,12 @@ ScrollTrigger.create({
   trigger: '.moreTitle',
   start: "top 70%",
   end: "top 40%",
-  scrub: true,
+  // scrub: true,
 })
 
 
 const tl7 = gsap.timeline();
-if (window.matchMedia("(min-width: 960px)").matches) {
+if (window.matchMedia("(min-width: 961px)").matches) {
 
 if (window.matchMedia("(max-width: 1440px)").matches) {
   tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-300.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
@@ -406,7 +406,7 @@ if (window.matchMedia("(min-width: 1440px)").matches) {
 
 const tl8 = gsap.timeline();
 
-tl8.fromTo('.secStar', {x: 0}, {x: 50}),
+tl8.fromTo('.secStar', {x: 0}, {x: 35}),
 tl8.fromTo('.thirdStar', {x: 0}, {x: 100}),
 
 ScrollTrigger.create({
@@ -414,22 +414,22 @@ ScrollTrigger.create({
   trigger: '.updateLeftTitle',
   start: "top 80%",
   end: "top 30%",
-  scrub: true,
+  // scrub: true,
 })
 
 
 const tl9 = gsap.timeline();
 
-tl9.fromTo('.secStar2', {x: 0}, {x: 50}),
+tl9.fromTo('.secStar2', {x: 0}, {x: 35}),
 tl9.fromTo('.thirdStar2', {x: 0}, {x: 100}),
-tl9.fromTo('.fourStar2', {x: 0}, {x: 150}),
+tl9.fromTo('.fourStar2', {x: 0}, {x: 135}),
 
 ScrollTrigger.create({
   animation: tl9,
   trigger: '.updateLeftTitle',
   start: "top 80%",
   end: "top 30%",
-  scrub: true,
+  // scrub: true,
 })
 
 
@@ -444,34 +444,34 @@ ScrollTrigger.create({
   trigger: '.stepsTitleFirst',
   start: "top 80%",
   end: "top 0%",
-  scrub: true,
+  // scrub: true,
 })
 
 if (window.matchMedia("(min-width: 960px)").matches) {
   const tl11 = gsap.timeline();
 
   tl11.from('.cta2Title', {y: '-200%'})
-  tl11.from('.img1', {y: -1000}),
-  tl11.from('.img2', {y: -800}),
+  tl11.from('.img1', {y: -1000, duration: 0.3}),
+  tl11.from('.img2', {y: -800, duration: 0.3}),
   tl11.to('.cta2TitleSpan', {color: '#9FF612'})
-  tl11.from('.img3', {y: -750, x: 230}),
-  tl11.from('.img4', {y: -700, x: 200}),
-  tl11.from('.img5', {y: -650}),
-  tl11.from('.img6', {y: -650, x: -200}),
+  tl11.from('.img3', {y: -750, x: 230, duration: 0.3}),
+  tl11.from('.img4', {y: -700, x: 200, duration: 0.3}),
+  tl11.from('.img5', {y: -650, duration: 0.3}),
+  tl11.from('.img6', {y: -650, x: -200, duration: 0.3}),
   tl3.from('.cta2Subtitle', {opacity: 0, y: 100}),
-  tl11.from('.img7', {y: -600}),
-  tl11.from('.img8', {y: -600, x: -200}),
-  tl11.from('.img9', {y: -500, x: 200}),
-  tl11.from('.img10', {y: -450, x: 150}),
-  tl11.from('.img11', {y: -400, x: 150}),
+  tl11.from('.img7', {y: -600, duration: 0.3}),
+  tl11.from('.img8', {y: -600, x: -200, duration: 0.3}),
+  tl11.from('.img9', {y: -500, x: 200, duration: 0.3}),
+  tl11.from('.img10', {y: -450, x: 150, duration: 0.3}),
+  tl11.from('.img11', {y: -400, x: 150, duration: 0.3}),
   
   ScrollTrigger.create({
     animation: tl11,
     trigger: '.cta2',
-    start: "top 30%",
-    end: "1000",
-    scrub: true,
-    pin: '.cta2',
+    start: "top 50%",
+    end: "top 20%",
+    // scrub: true,
+    // pin: '.cta2',
   })
 }
 
@@ -732,7 +732,7 @@ ScrollTrigger.create({
   trigger: '.tarifTitle',
   start: "top 50%",
   end: 'top 20%',
-  scrub: true,
+  // scrub: true,
 })
 
 const tl28 = gsap.timeline();
@@ -743,7 +743,7 @@ ScrollTrigger.create({
   trigger: '.greenContainerAnimate',
   start: "top 70%",
   end: 'top 40%',
-  scrub: true,
+  // scrub: true,
 })
 
 const tl29 = gsap.timeline();
@@ -757,7 +757,7 @@ ScrollTrigger.create({
   trigger: '.helpTitle',
   start: "top 50%",
   end: 'top 20%',
-  scrub: true,
+  // scrub: true,
 })
 
   
@@ -783,7 +783,7 @@ ScrollTrigger.create({
   trigger: '.keysesTitle',
   start: "top 50%",
   end: 'top 20%',
-  scrub: true,
+  // scrub: true,
 })
 
 
@@ -804,7 +804,7 @@ if (window.matchMedia("(min-width: 640px)").matches) {
     trigger: '.founderRightTitleContainer',
     start: "top 50%",
     end: 'top 0%',
-    scrub: true,
+    // scrub: true,
   })
 }
   
@@ -830,27 +830,27 @@ if (window.matchMedia("(min-width: 960px)").matches) {
 
 tl33.from('.cta4Title', {y: -400})
 tl33.from('.cta4Btn', {x: -400})
-tl33.from('.cta4Img1', {y: 600})
-tl33.from('.cta4Img2', {y: 600})
-tl33.from('.cta4Img3', {y: 600, x: -200})
-tl33.from('.cta4Img4', {y: 550, x: 200})
-tl33.from('.cta4Img5', {y: 550})
-tl33.from('.cta4Img6', {y: 500, x: -200})
-tl33.from('.cta4Img7', {y: 500})
-tl33.from('.cta4Img8', {y: 500, x: 100})
-tl33.from('.cta4Img9', {y: 450, x: -100})
-tl33.from('.cta4Img10', {y: 450, x: 300})
-tl33.from('.cta4Img11', {y: 450})
+tl33.from('.cta4Img1', {y: 600, duration: 0.3})
+tl33.from('.cta4Img2', {y: 600, duration: 0.3})
+tl33.from('.cta4Img3', {y: 600, x: -200, duration: 0.3})
+tl33.from('.cta4Img4', {y: 550, x: 200, duration: 0.3})
+tl33.from('.cta4Img5', {y: 550, duration: 0.3})
+tl33.from('.cta4Img6', {y: 500, x: -200, duration: 0.3})
+tl33.from('.cta4Img7', {y: 500, duration: 0.3})
+tl33.from('.cta4Img8', {y: 500, x: 100, duration: 0.3})
+tl33.from('.cta4Img9', {y: 450, x: -100, duration: 0.3})
+tl33.from('.cta4Img10', {y: 450, x: 300, duration: 0.3})
+tl33.from('.cta4Img11', {y: 450, duration: 0.3})
 
 
 
 ScrollTrigger.create({
   animation: tl33,
   trigger: '.cta4',
-  start: "top 20%",
-  end: '3000',
-  scrub: true,
-  pin: '.cta4',
+  start: "top 50%",
+  end: 'top 20%',
+  // scrub: true,
+  // pin: '.cta4',
 })
 
 }
@@ -868,7 +868,7 @@ ScrollTrigger.create({
   trigger: '.developmentSubtitle',
   start: "top 50%",
   end: 'top 20%',
-  scrub: true,
+  // scrub: true,
 })
 
 
@@ -883,7 +883,7 @@ ScrollTrigger.create({
   trigger: '.contactsMainTitle',
   start: "top 50%",
   end: 'top 20%',
-  scrub: true,
+  // scrub: true,
 })
 
 const tl36 = gsap.timeline();
@@ -1138,81 +1138,81 @@ ScrollTrigger.create({
 //   scrub: true,
 // })
 
-const tl56 = gsap.timeline();
+// const tl56 = gsap.timeline();
 
-tl56.to('.cta1Arrow1', {y: -850})
+// tl56.to('.cta1Arrow1', {y: -850})
 
-ScrollTrigger.create({
-  animation: tl56,
-  trigger: '.cta1',
-  start: "top 60%",
-  end: 'top 0%',
-  scrub: true,
-})
-
-
-const tl57 = gsap.timeline();
-
-tl57.to('.cta1Arrow2', {y: -850})
-
-ScrollTrigger.create({
-  animation: tl57,
-  trigger: '.cta1',
-  start: "top 65%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl56,
+//   trigger: '.cta1',
+//   start: "top 60%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
-const tl58 = gsap.timeline();
+// const tl57 = gsap.timeline();
 
-tl58.to('.cta1Arrow3', {y: -1250})
+// tl57.to('.cta1Arrow2', {y: -850})
 
-ScrollTrigger.create({
-  animation: tl58,
-  trigger: '.ctaBlackText',
-  start: "top 70%",
-  end: 'top 0%',
-  scrub: true,
-})
-
-
-const tl59 = gsap.timeline();
-
-tl59.to('.cta1Arrow4', {y: -700})
-
-ScrollTrigger.create({
-  animation: tl59,
-  trigger: '.ctaSubtitle',
-  start: "top 60%",
-  end: 'top 0%',
-  scrub: true,
-})
-
-const tl60 = gsap.timeline();
-
-tl60.to('.cta1Arrow5', {y: -600})
-
-ScrollTrigger.create({
-  animation: tl60,
-  trigger: '.ctaSubtitle',
-  start: "top 50%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl57,
+//   trigger: '.cta1',
+//   start: "top 65%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
-const tl61 = gsap.timeline();
+// const tl58 = gsap.timeline();
 
-tl61.to('.cta1Arrow6', {y: -600})
+// tl58.to('.cta1Arrow3', {y: -1250})
 
-ScrollTrigger.create({
-  animation: tl61,
-  trigger: '.btnCta1',
-  start: "top 60%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl58,
+//   trigger: '.ctaBlackText',
+//   start: "top 70%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
+
+
+// const tl59 = gsap.timeline();
+
+// tl59.to('.cta1Arrow4', {y: -700})
+
+// ScrollTrigger.create({
+//   animation: tl59,
+//   trigger: '.ctaSubtitle',
+//   start: "top 60%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
+
+// const tl60 = gsap.timeline();
+
+// tl60.to('.cta1Arrow5', {y: -600})
+
+// ScrollTrigger.create({
+//   animation: tl60,
+//   trigger: '.ctaSubtitle',
+//   start: "top 50%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
+
+
+// const tl61 = gsap.timeline();
+
+// tl61.to('.cta1Arrow6', {y: -600})
+
+// ScrollTrigger.create({
+//   animation: tl61,
+//   trigger: '.btnCta1',
+//   start: "top 60%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
 const tl62 = gsap.timeline();
@@ -1226,85 +1226,85 @@ ScrollTrigger.create({
   trigger: '.cta3',
   start: "top 60%",
   end: 'top 20%',
-  scrub: true,
+  // scrub: true,
 })
 
 
-const tl63 = gsap.timeline();
+// const tl63 = gsap.timeline();
 
-tl63.to('.cta3ImgArrow1', {y: -900, x: 450})
+// tl63.to('.cta3ImgArrow1', {y: -900, x: 450})
 
-ScrollTrigger.create({
-  animation: tl63,
-  trigger: '.cta3',
-  start: "top 60%",
-  end: 'top 0%',
-  scrub: true,
-})
-
-
-const tl64 = gsap.timeline();
-
-tl64.to('.cta3ImgArrow2', {y: -900, x: 450})
-
-ScrollTrigger.create({
-  animation: tl64,
-  trigger: '.cta3',
-  start: "top 50%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl63,
+//   trigger: '.cta3',
+//   start: "top 60%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
-const tl65 = gsap.timeline();
+// const tl64 = gsap.timeline();
 
-tl65.to('.cta3ImgArrow3', {y: -900, x: 450})
+// tl64.to('.cta3ImgArrow2', {y: -900, x: 450})
 
-ScrollTrigger.create({
-  animation: tl65,
-  trigger: '.cta3Title',
-  start: "top 50%",
-  end: 'top 0%',
-  scrub: true,
-})
-
-const tl66 = gsap.timeline();
-
-tl66.to('.cta3ImgArrow4', {y: -900, x: 450})
-
-ScrollTrigger.create({
-  animation: tl66,
-  trigger: '.cta3',
-  start: "top 20%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl64,
+//   trigger: '.cta3',
+//   start: "top 50%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
-const tl67 = gsap.timeline();
+// const tl65 = gsap.timeline();
 
-tl67.to('.cta3ImgArrow5', {y: -900, x: 450})
+// tl65.to('.cta3ImgArrow3', {y: -900, x: 450})
 
-ScrollTrigger.create({
-  animation: tl67,
-  trigger: '.help',
-  start: "top 80%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl65,
+//   trigger: '.cta3Title',
+//   start: "top 50%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
+
+// const tl66 = gsap.timeline();
+
+// tl66.to('.cta3ImgArrow4', {y: -900, x: 450})
+
+// ScrollTrigger.create({
+//   animation: tl66,
+//   trigger: '.cta3',
+//   start: "top 20%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 
-const tl68 = gsap.timeline();
+// const tl67 = gsap.timeline();
 
-tl68.to('.cta3ImgArrow6', {y: -900, x: 450})
+// tl67.to('.cta3ImgArrow5', {y: -900, x: 450})
 
-ScrollTrigger.create({
-  animation: tl68,
-  trigger: '.help',
-  start: "top 75%",
-  end: 'top 0%',
-  scrub: true,
-})
+// ScrollTrigger.create({
+//   animation: tl67,
+//   trigger: '.help',
+//   start: "top 80%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
+
+
+// const tl68 = gsap.timeline();
+
+// tl68.to('.cta3ImgArrow6', {y: -900, x: 450})
+
+// ScrollTrigger.create({
+//   animation: tl68,
+//   trigger: '.help',
+//   start: "top 75%",
+//   end: 'top 0%',
+//   scrub: true,
+// })
 
 const tl69 = gsap.timeline();
 
