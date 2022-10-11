@@ -1,12 +1,15 @@
 footer {
     padding-top: 15rem;
     padding-bottom: 15rem;
-    padding-left: 18rem;
+    padding-left: 42rem;
     padding-right: 30rem;
     background: url(../images/footer/shum.png);
     background-color: #3A3A3B;
     display: flex;
     justify-content: space-between;
+    @include breakpoint($mm-bp) {
+        padding-left: 18rem;
+    }
     @include breakpoint($xl-bp) {
         padding-left: 3.2rem;
         padding-right: 3.2rem;
