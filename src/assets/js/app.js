@@ -156,17 +156,55 @@ let ourComandSwiper = new Swiper('.our-comand__swiper', {
   
 })
 
+const  mySwiper2_wrapper = document.querySelector(".loopSwiper .swiper-wrapper")
+
 let loopSwiper = new Swiper('.loopSwiper', {
   slidesPerView: 'auto',
-  speed:1000,
 	direction: 'horizontal',
   autoplay: {
-    delay: 0,
+    delay: 1,
     disableOnInteraction: false,
+    preventInteractionOnTransition: true
   },
-  loopedSlides: 5,
+  loopedSlides: mySwiper2_wrapper.childNodes.length,
   loop: true,
+  freeMode: true,
+  speed: 3000,
+  freeModeMomentum: false
 })
+
+const  mySwiper3_wrapper = document.querySelector(".loopSwiper2 .swiper-wrapper")
+let loopSwiper2 = new Swiper('.loopSwiper2', {
+  slidesPerView: 'auto',
+	direction: 'horizontal',
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: mySwiper2_wrapper.childNodes.length,
+  loop: true,
+  freeMode: true,
+  speed: 3000,
+  freeModeMomentum: false
+})
+
+const  mySwiper4_wrapper = document.querySelector(".loopSwiper3 .swiper-wrapper")
+let loopSwiper4 = new Swiper('.loopSwiper3', {
+  slidesPerView: 'auto',
+	direction: 'horizontal',
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: mySwiper2_wrapper.childNodes.length,
+  loop: true,
+  freeMode: true,
+  speed: 3000,
+  freeModeMomentum: false
+})
+
 const progressBar = document.querySelector('.orange-line')
 const allBar = document.querySelector('.progress-bar__wrapper')
 if (progressBar && allBar) {
