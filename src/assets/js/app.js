@@ -169,7 +169,7 @@ let loopSwiper = new Swiper('.loopSwiper', {
   loopedSlides: mySwiper2_wrapper.childNodes.length,
   loop: true,
   freeMode: true,
-  speed: 5000,
+  speed: 7000,
   freeModeMomentum: false
 })
 
@@ -576,7 +576,8 @@ ScrollTrigger.create({
 
 if (window.matchMedia("(min-width: 960px)").matches) {
   const tl14 = gsap.timeline();
-  tl14.to('.giftTitle', {display: 'flex', fontSize: '5rem', gap: '1rem', justifyContent: 'center'})
+  tl14.to('.giftTitle', {fontSize: '5rem'})
+  tl14.to('.giftTitle', {display: 'flex', fontSize: '5rem', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'})
   
   
   ScrollTrigger.create({
@@ -842,7 +843,7 @@ ScrollTrigger.create({
 const tl31 = gsap.timeline();
 
 if (window.matchMedia("(min-width: 640px)").matches) {
-  tl31.to('.founder', {background: '#f9f9f9'})
+  tl31.to('.founder', {background: '#f9f9f9', duration: 0.7})
   tl31.to('.founderRightTitle1', {color: '#3A3A3B',})
   tl31.from('.arrow-img', {x: -320})
   tl31.to('.founderRightTitle2', {color: '#3A3A3B',})
