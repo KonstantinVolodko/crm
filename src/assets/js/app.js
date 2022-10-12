@@ -162,14 +162,14 @@ let loopSwiper = new Swiper('.loopSwiper', {
   slidesPerView: 'auto',
 	direction: 'horizontal',
   autoplay: {
-    delay: 1,
+    delay: 0,
     disableOnInteraction: false,
     preventInteractionOnTransition: true
   },
   loopedSlides: mySwiper2_wrapper.childNodes.length,
   loop: true,
   freeMode: true,
-  speed: 3000,
+  speed: 5000,
   freeModeMomentum: false
 })
 
@@ -178,7 +178,7 @@ let loopSwiper2 = new Swiper('.loopSwiper2', {
   slidesPerView: 'auto',
 	direction: 'horizontal',
   autoplay: {
-    delay: 1,
+    delay: 0,
     disableOnInteraction: false,
     preventInteractionOnTransition: true
   },
@@ -194,7 +194,7 @@ let loopSwiper4 = new Swiper('.loopSwiper3', {
   slidesPerView: 'auto',
 	direction: 'horizontal',
   autoplay: {
-    delay: 1,
+    delay: 0,
     disableOnInteraction: false,
     preventInteractionOnTransition: true
   },
@@ -203,6 +203,57 @@ let loopSwiper4 = new Swiper('.loopSwiper3', {
   freeMode: true,
   speed: 3000,
   freeModeMomentum: false
+})
+
+let infiniteStrokeSwiper = new Swiper('.infinite-stroke-1', {
+  slidesPerView: 'auto',
+	direction: 'horizontal',
+  spaceBetween: 30,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: 2,
+  loop: true,
+  freeMode: true,
+  speed: 50000,
+  freeModeMomentum: false,
+  waitForTransition: false
+})
+
+let infiniteStrokeSwiper2 = new Swiper('.infinite-stroke-2', {
+  slidesPerView: 'auto',
+	direction: 'horizontal',
+  spaceBetween: 30,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: 2,
+  loop: true,
+  freeMode: true,
+  speed: 20000,
+  freeModeMomentum: false,
+  waitForTransition: false
+})
+
+let infiniteStrokeSwiper3 = new Swiper('.infinite-stroke-3', {
+  slidesPerView: 'auto',
+	direction: 'horizontal',
+  spaceBetween: 30,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: 2,
+  loop: true,
+  freeMode: true,
+  speed: 50000,
+  freeModeMomentum: false,
+  waitForTransition: false
 })
 
 const progressBar = document.querySelector('.orange-line')
