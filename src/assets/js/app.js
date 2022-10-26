@@ -120,24 +120,41 @@ let swiper4 = new Swiper(".keysesSwiper", {
 
 });
 
+const  mySwiper5_wrapper = document.querySelector(".ticker__swiper .swiper-wrapper")
+
 const swiper5 = new Swiper('.ticker__swiper', {
   slidesPerView: 'auto',
+	direction: 'horizontal',
   spaceBetween: 30,
-  loop: true,
-  grabCursor: true,
   autoplay: {
-    delay: 2000
-  }
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: mySwiper5_wrapper.childNodes.length,
+  loop: true,
+  freeMode: true,
+  speed: 5000,
+  freeModeMomentum: false,
+  waitForTransition: false
 })
 
+const  mySwiper6_wrapper = document.querySelector(".contacts__swiper .swiper-wrapper")
 const swiper6 = new Swiper('.contacts__swiper', {
-  slidesPerView: 4,
+  slidesPerView: 'auto',
+	direction: 'horizontal',
   spaceBetween: 30,
-  loop: true,
-  grabCursor: true,
   autoplay: {
-    delay: 2000
-  }
+    delay: 1,
+    disableOnInteraction: false,
+    preventInteractionOnTransition: true
+  },
+  loopedSlides: mySwiper6_wrapper.childNodes.length,
+  loop: true,
+  freeMode: true,
+  speed: 5000,
+  freeModeMomentum: false,
+  waitForTransition: false
 })
 
 let ourComandSwiper = new Swiper('.our-comand__swiper', {
@@ -169,7 +186,7 @@ let loopSwiper = new Swiper('.loopSwiper', {
   loopedSlides: mySwiper2_wrapper.childNodes.length,
   loop: true,
   freeMode: true,
-  speed: 5000,
+  speed: 7000,
   freeModeMomentum: false
 })
 
@@ -422,23 +439,25 @@ ScrollTrigger.create({
   // scrub: true,
 })
 
-
+const tl99 = gsap.timeline();
 const tl7 = gsap.timeline();
 if (window.matchMedia("(min-width: 961px)").matches) {
 
 if (window.matchMedia("(max-width: 1440px)").matches) {
-  tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-300.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
-  
+  tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1365.46rem', height: '950rem', left: '-288.541%', bottom: '-81.0101%'})
+  tl99.fromTo('#whiteColor', {fill: "transparent"}, {fill: "#F9F9F9"})
 }
 
+
+// if (window.matchMedia("(min-width: 1440px)").matches) {
+//   tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-200.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
+  
+// }
 
 if (window.matchMedia("(min-width: 1440px)").matches) {
-  tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1000.455rem', height: '950rem', left: '-200.5411%', bottom: '-71.0101%', fill: "#F9F9F9", stroke: '#F9F9F9'})
-  
+  tl7.fromTo('.helpAnimateArrowBg', {bottom: '0', fill: 'transparent'}, {width: '1365.46rem', height: '950rem', left: '-215.541%', bottom: '-84.0101%'})
+  tl99.fromTo('#whiteColor', {fill: "transparent"}, {fill: "#F9F9F9"})
 }
-
-
-
 
 
   ScrollTrigger.create({
@@ -449,8 +468,19 @@ if (window.matchMedia("(min-width: 1440px)").matches) {
     scrub: true,
     pin: '.more2'
   })
-}
 
+  
+
+
+  ScrollTrigger.create({
+    animation: tl99,
+    trigger: '.triggerArrow',
+    start: "top 80%",
+    end: "top 0",
+    scrub: true,
+    pin: '.more2'
+  })
+}
 
 
 
@@ -506,14 +536,20 @@ if (window.matchMedia("(min-width: 960px)").matches) {
   tl11.from('.img2', {y: -800, duration: 0.3}),
   tl11.to('.cta2TitleSpan', {color: '#9FF612'})
   tl11.from('.img3', {y: -750, x: 230, duration: 0.3}),
+  tl11.from('.img3', {rotate: '15deg'}),
   tl11.from('.img4', {y: -700, x: 200, duration: 0.3}),
+  tl11.from('.img4', {rotate: '10deg'}),
   tl11.from('.img5', {y: -650, duration: 0.3}),
   tl11.from('.img6', {y: -650, x: -200, duration: 0.3}),
+  tl11.from('.img6', {rotate: '-10deg'}),
   tl3.from('.cta2Subtitle', {opacity: 0, y: 100}),
   tl11.from('.img7', {y: -600, duration: 0.3}),
   tl11.from('.img8', {y: -600, x: -200, duration: 0.3}),
+  tl11.from('.img8', {rotate: '-8deg'}),
   tl11.from('.img9', {y: -500, x: 200, duration: 0.3}),
+  tl11.from('.img9', {rotate: '8deg'}),
   tl11.from('.img10', {y: -450, x: 150, duration: 0.3}),
+  tl11.from('.img10', {rotate: '11deg'}),
   tl11.from('.img11', {y: -400, x: 150, duration: 0.3}),
   
   ScrollTrigger.create({
@@ -576,7 +612,8 @@ ScrollTrigger.create({
 
 if (window.matchMedia("(min-width: 960px)").matches) {
   const tl14 = gsap.timeline();
-  tl14.to('.giftTitle', {display: 'flex', fontSize: '5rem', gap: '1rem', justifyContent: 'center'})
+  tl14.to('.giftTitle', {fontSize: '5rem'})
+  tl14.to('.giftTitle', {display: 'flex', fontSize: '5rem', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap'})
   
   
   ScrollTrigger.create({
@@ -842,7 +879,7 @@ ScrollTrigger.create({
 const tl31 = gsap.timeline();
 
 if (window.matchMedia("(min-width: 640px)").matches) {
-  tl31.to('.founder', {background: '#f9f9f9'})
+  tl31.to('.founder', {background: '#f9f9f9', duration: 0.7})
   tl31.to('.founderRightTitle1', {color: '#3A3A3B',})
   tl31.from('.arrow-img', {x: -320})
   tl31.to('.founderRightTitle2', {color: '#3A3A3B',})
@@ -885,12 +922,19 @@ tl33.from('.cta4Img1', {y: 600, duration: 0.3})
 tl33.from('.cta4Img2', {y: 600, duration: 0.3})
 tl33.from('.cta4Img3', {y: 600, x: -200, duration: 0.3})
 tl33.from('.cta4Img4', {y: 550, x: 200, duration: 0.3})
+tl33.from('.cta4Img4', {rotate: '9deg', duration: 0.3})
 tl33.from('.cta4Img5', {y: 550, duration: 0.3})
+tl33.from('.cta4Img5', {rotate: '-9deg', duration: 0.3})
 tl33.from('.cta4Img6', {y: 500, x: -200, duration: 0.3})
+tl33.from('.cta4Img6', {rotate: '-11deg', duration: 0.3})
 tl33.from('.cta4Img7', {y: 500, duration: 0.3})
+tl33.from('.cta4Img7', {rotate: '4deg', duration: 0.3})
 tl33.from('.cta4Img8', {y: 500, x: 100, duration: 0.3})
+tl33.from('.cta4Img8', {rotate: '-4deg', duration: 0.3})
 tl33.from('.cta4Img9', {y: 450, x: -100, duration: 0.3})
+tl33.from('.cta4Img9', {rotate: '10deg', duration: 0.3})
 tl33.from('.cta4Img10', {y: 450, x: 300, duration: 0.3})
+tl33.from('.cta4Img10', {rotate: '12deg', duration: 0.3})
 tl33.from('.cta4Img11', {y: 450, duration: 0.3})
 
 
